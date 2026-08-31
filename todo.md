@@ -1,19 +1,19 @@
 # CRC Market Monitor：GitHub 私人市場監察網站實作清單
 
-- [ ] 建立一個名為 CRC Market Monitor、只包含市場監察程式、網站模板及 GitHub Actions 的可攜式專案資料夾。
-- [ ] 以本地資料結構建立每日 `latest.json` 與日期歸檔報告的生成流程。
-- [ ] 建立收市後每日執行及手動重跑兩種觸發方式的 GitHub Actions 工作流。
-- [ ] 僅以 GitHub Secrets 讀取資料服務 API key，並在缺少 key 時安全結束。
-- [ ] 產出私人閱讀用靜態儀表板，顯示資料狀態、更新時間及方法定義。
-- [ ] 在 private repository 的 GitHub Secret 安全加入市場資料服務憑證，絕不把 key 寫入任何檔案或日誌。
-- [ ] 比較可用的市場資料服務，選出能支援首次真實資料試跑且使用者帳戶操作最少的方案。
-- [ ] 開啟所選供應商的註冊或 API key 建立頁面，由使用者自行完成涉及身份、條款及付款的確認。
+- [x] 建立一個名為 CRC Market Monitor、只包含市場監察程式、網站模板及 GitHub Actions 的可攜式專案資料夾。
+- [x] 以本地資料結構建立每日 `latest.json` 與日期歸檔報告的生成流程。
+- [x] 建立收市後每日執行及手動重跑兩種觸發方式的 GitHub Actions 工作流。
+- [x] 僅以 GitHub Secrets 讀取資料服務 API key，並在缺少 key 時安全結束。
+- [x] 產出私人閱讀用靜態儀表板，顯示資料狀態、更新時間及方法定義。
+- [x] 在 private repository 的 GitHub Secret 安全加入市場資料服務憑證，絕不把 key 寫入任何檔案或日誌。
+- [x] 比較可用的市場資料服務，選出能支援首次真實資料試跑且使用者帳戶操作最少的方案。
+- [x] 開啟所選供應商的註冊或 API key 建立頁面，由使用者自行完成涉及身份、條款及付款的確認。
 - [ ] 如註冊頁無法載入，改用已驗證可開啟的備用入口或資料服務，並重試前先測試其可用性。
-- [ ] 經使用者個人瀏覽器完成 Massive 免費帳戶註冊或登入，並只由使用者確認服務條款。
-- [ ] 將 Massive API key 直接寫入 private GitHub repository 的 Secret，不在對話、原始碼或網站資料檔中顯示。
-- [ ] 將帳戶建立、資料 key 設定和首次資料試跑流程改為可從手機完成，不要求使用者使用桌面電腦或終端機。
-- [ ] 在手機剪貼簿無法貼入 GitHub Secret 時，測試不揭露 key 的替代輸入與憑證設定流程。
-- [ ] 以 Bootstrap 手動執行首次真實資料運算，並驗證資料日、股票池數量及指標分母後才寫入最新報告頁。
-- [ ] 保存首次成功運行的 Actions 結果和輸出版本，作為日後每日更新的基線。
-- [ ] 撰寫從建立 private repository、設定 Secrets、測試每日工作到個人查看的逐步說明。
-- [ ] 驗證程式碼及工作流格式，然後推送至使用者的 private GitHub repository。
+- [x] 經使用者個人瀏覽器完成 Massive 免費帳戶註冊或登入，並只由使用者確認服務條款。
+- [x] 將 Massive API key 直接寫入 private GitHub repository 的 Secret，不在對話、原始碼或網站資料檔中顯示。
+- [x] 將帳戶建立、資料 key 設定和首次資料試跑流程改為可從手機完成，不要求使用者使用桌面電腦或終端機。
+- [x] 在手機剪貼簿無法貼入 GitHub Secret 時，測試不揭露 key 的替代輸入與憑證設定流程。
+- [x] 以 Bootstrap 手動執行首次真實資料運算，並驗證資料日、股票池數量及指標分母後才寫入最新報告頁。
+- [x] 保存首次成功運行的 Actions 結果和輸出版本，作為日後每日更新的基線。
+- [x] 撰寫從建立 private repository、設定 Secrets、測試每日工作到個人查看的逐步說明。
+- [x] 驗證程式碼及工作流格式，然後推送至使用者的 private GitHub repository。
