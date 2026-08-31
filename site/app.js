@@ -60,7 +60,11 @@ function renderLeaderKpis(summary) {
     <article class="leader-kpi"><p class="metric-label">上升比例</p><div class="metric-value">${percentage(summary.mliUpPct)}</div><p class="metric-detail">領導股之內的升股比例</p></article>`;
 }
 
-function renderIndustry(rows) {
+function renderIndustry(rows, status, message) {
+  if (status === "awaiting_sic_verification") {
+    $("#industry-body").innerHTML = `<div class="industry-pending" role="status"><strong>行業分類校對中</strong><span>${message}</span></div>`;
+    return;
+  }
   const max = Math.max(1, ...rows.map(row => row.leaderShare || 0));
   $("#industry-body").innerHTML = rows.map(row => {
     const fill = Math.max(2, row.leaderShare / max * 100);
@@ -93,7 +97,7 @@ async function loadDashboard() {
     $("#breadth-date").textContent = data.asOf || "尚未更新";
     $("#header-meta").textContent = `收市 ${data.asOf || "—"}　｜　總分析股票 ${number(data.summary?.universeN)} 隻　｜　${data.source || "未設定資料來源"}`;
     if (data.status !== "live") { const box = $("#data-status"); box.classList.add("visible"); box.textContent = data.message || "目前尚未載入已驗證的市場資料。"; }
-    renderKpis(data.summary || {}); renderHistory(data.history || []); renderPulse(data.history || []); renderLeaderKpis(data.summary || {}); renderIndustry(data.industry || []); renderTrend(data.leaderTrend || []);
+    renderKpis(data.summary || {}); renderHistory(data.history || []); renderPulse(data.history || []); renderLeaderKpis(data.summary || {}); renderIndustry(data.industry || [], data.industryStatus, data.industryMessage); renderTrend(data.leaderTrend || []);
   } catch (error) { $("#data-status").classList.add("visible"); $("#data-status").textContent = `無法載入每日資料：${error.message}`; }
 }
 loadDashboard();
