@@ -40,10 +40,10 @@ function renderHistory(history) {
 }
 
 function renderPulse(history) {
-  const max = Math.max(300, ...history.flatMap(item => [item.up4 || 0, item.down4 || 0]));
+  const max = Math.max(800, ...history.flatMap(item => [item.up4 || 0, item.down4 || 0]));
   $("#pulse-chart").innerHTML = [...history].reverse().map(item => {
-    const up = Math.max(2, ((item.up4 || 0) / max) * 96);
-    const down = Math.max(2, ((item.down4 || 0) / max) * 96);
+    const up = Math.max(2, ((item.up4 || 0) / max) * 100);
+    const down = Math.max(2, ((item.down4 || 0) / max) * 100);
     const upColor = item.up4 >= 300 ? "var(--green)" : "#5fb397";
     const downColor = item.down4 >= 300 ? "var(--red)" : "#d4786e";
     return `<div class="pulse-item" data-tooltip="${item.date} · UP ${number(item.up4)} / DN ${number(item.down4)}"><div class="pulse-up" style="height:${up}px;background:${upColor}"></div><div class="pulse-down" style="height:${down}px;background:${downColor}"></div></div>`;
@@ -51,10 +51,11 @@ function renderPulse(history) {
 }
 
 function renderLeaderKpis(summary) {
-  const leaderShare = summary.universeN ? summary.mliN / summary.universeN * 100 : null;
+  const analysisN = summary.analysisN || summary.universeN;
+  const leaderShare = analysisN ? summary.mliN / analysisN * 100 : null;
   $("#leader-kpis").innerHTML = `
     <article class="leader-kpi"><p class="metric-label">領導股數目</p><div class="metric-value">${number(summary.mliN)}</div><p class="metric-detail">前一日 ${summary.mliN ? "已計算" : "—"}</p></article>
-    <article class="leader-kpi"><p class="metric-label">佔總分析股票比率</p><div class="metric-value">${percentage(leaderShare)}</div><p class="metric-detail">分母 ${number(summary.universeN)} 隻</p></article>
+    <article class="leader-kpi"><p class="metric-label">佔總分析股票比率</p><div class="metric-value">${percentage(leaderShare)}</div><p class="metric-detail">分母 ${number(analysisN)} 隻</p></article>
     <article class="leader-kpi"><p class="metric-label">領導股當日升幅</p><div class="metric-value ${summary.mliReturn >= 0 ? "up" : "down"}">${percentage(summary.mliReturn, 2)}</div><p class="metric-detail">等權平均日回報</p></article>
     <article class="leader-kpi"><p class="metric-label">上升比例</p><div class="metric-value">${percentage(summary.mliUpPct)}</div><p class="metric-detail">領導股之內的升股比例</p></article>`;
 }

@@ -79,7 +79,10 @@
           <p class="section-note">上半部為升幅至少 4% 的證券數目；下半部為跌幅至少 4% 的證券數目。</p>
         </div>
         <article class="panel chart-panel">
-          <div id="pulse-chart" class="pulse-chart" aria-label="4% 動量脈搏柱狀圖"></div>
+          <div class="pulse-frame">
+            <div class="pulse-y-axis" aria-hidden="true"><span class="axis-top">800</span><span class="axis-plus">+300</span><span class="axis-zero">0</span><span class="axis-minus">−300</span><span class="axis-bottom">800</span></div>
+            <div id="pulse-chart" class="pulse-chart" aria-label="4% 動量脈搏柱狀圖；綠色柱位於零線上，紅色柱位於零線下"></div>
+          </div>
           <div class="chart-axis"><span>較早</span><span>最新</span></div>
           <div class="legend"><span><i class="swatch up-strong"></i>Up 4% ≥ 300</span><span><i class="swatch down-strong"></i>Down 4% ≥ 300</span></div>
         </article>

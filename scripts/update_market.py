@@ -31,10 +31,65 @@ STATE_PATH = ROOT / "data" / "market-state.json"
 OUTPUT_PATH = ROOT / "site" / "data" / "latest.json"
 OVERRIDES_PATH = ROOT / "config" / "security-overrides.json"
 WINDOW_DAYS = 84
+BENCHMARK_WINDOW_DAYS = 320
 MIN_EXPECTED_UNIVERSE = 500
-EXCLUDED_TYPES = {"ETF", "ETN", "FUND", "MF", "WARRANT", "WT", "RIGHT", "RT", "UNIT", "PFD", "PREF"}
+# Polygon-compatible reference data distinguishes common stock (CS) and ADR
+# common stock (ADRC) from exchange-traded products such as ETV and ETS.
+# The reference methodology admits only these two classes.
+ALLOWED_SECURITY_TYPES = {"CS", "ADRC"}
 MIN_SECONDS_BETWEEN_REQUESTS = 12.5
 LAST_REQUEST_AT = 0.0
+NASDAQ_SCREENER_URL = "https://api.nasdaq.com/api/screener/stocks?tableonly=true&limit=10000&download=true"
+
+
+def classify_industry(raw_industry: str | None, raw_sector: str | None) -> str:
+    """Map Nasdaq's live industry labels into compact display buckets.
+
+    This is a transparent display taxonomy, rather than a claim that Nasdaq
+    labels are SEC SIC values. Unknown labels remain Unclassified.
+    """
+    text = f"{raw_industry or ''} {raw_sector or ''}".upper()
+    groups = (
+        ("Software & IT Services", ("COMPUTER SOFTWARE", "EDP SERVICES", "INTERNET", "IT SERVICES", "TECHNOLOGY SERVICES")),
+        ("Biotech & Pharma", ("BIOTECH", "PHARMACEUT", "MEDICAL SPECIAL", "LIFE SCIENCE")),
+        ("Instruments & Medical Devices", ("MEDICAL/DENTAL", "MEDICAL EQUIPMENT", "LABORATORY", "DIAGNOSTIC", "ELECTROMEDICAL")),
+        ("Insurance", ("INSURANCE",)),
+        ("Banks & Financial Services", ("BANK", "SAVINGS", "INVESTMENT BANK", "FINANCE", "CREDIT", "ASSET MANAGEMENT", "SECURITIES")),
+        ("Health Care Services", ("HOSPITAL", "HEALTH CARE", "NURSING", "CARE SERVICES")),
+        ("Retail", ("RETAIL", "CATALOG", "DEPARTMENT STORE")),
+        ("Metals & Coal Mining", ("MINING", "COAL", "METAL", "GOLD", "SILVER")),
+        ("Petroleum Refining", ("PETROLEUM", "OIL", "NATURAL GAS", "ENERGY")),
+        ("Transportation & Logistics", ("TRANSPORT", "TRUCK", "SHIPPING", "AIR FREIGHT", "RAILROAD", "MARINE")),
+        ("Computer Hardware", ("COMPUTER HARDWARE", "SEMICONDUCTOR", "ELECTRONIC COMPONENT", "ELECTRONICS")),
+        ("Industrial Materials", ("CHEMICAL", "STEEL", "BUILDING MATERIAL", "CEMENT", "LUMBER", "PACKAGING")),
+        ("Wholesale", ("WHOLESALE",)),
+        ("Consumer Products", ("APPAREL", "FOOD", "BEVERAGE", "TOBACCO", "TEXTILE", "COSMETIC", "HOUSEHOLD")),
+        ("Telecom & Media", ("TELECOMMUNICATION", "BROADCAST", "PUBLISHING", "ENTERTAINMENT", "MEDIA")),
+        ("Real Estate", ("REAL ESTATE", "REIT")),
+        ("Utilities", ("ELECTRIC UTIL", "GAS UTIL", "WATER UTIL", "UTILITY")),
+        ("Business Services", ("BUSINESS SERVICE", "PROFESSIONAL SERVICE", "CONSULTING")),
+    )
+    for label, needles in groups:
+        if any(needle in text for needle in needles):
+            return label
+    return "Unclassified"
+
+
+def fetch_nasdaq_industry_map() -> dict[str, str]:
+    """Fetch public Nasdaq screener labels for transparent display grouping."""
+    response = requests.get(
+        NASDAQ_SCREENER_URL,
+        headers={"User-Agent": "Mozilla/5.0", "Accept": "application/json"},
+        timeout=60,
+    )
+    response.raise_for_status()
+    rows = response.json().get("data", {}).get("rows", [])
+    industry_map: dict[str, str] = {}
+    for row in rows:
+        ticker = str(row.get("symbol") or "").upper()
+        if ticker:
+            industry_map[ticker] = classify_industry(row.get("industry"), row.get("sector"))
+    return industry_map
 
 
 def load_json(path: Path, fallback: dict[str, Any]) -> dict[str, Any]:
@@ -82,6 +137,27 @@ def fetch_grouped_bars(base_url: str, api_key: str, session: date) -> list[dict[
     return payload.get("results") or []
 
 
+def fetch_benchmark_history(base_url: str, api_key: str, ticker: str, start: date, end: date) -> list[dict[str, Any]]:
+    """Fetch a long adjusted daily series for SPY/QQQ so EMA50 is warmed up."""
+    payload = get_json(
+        base_url,
+        f"/v2/aggs/ticker/{ticker}/range/1/day/{start.isoformat()}/{end.isoformat()}",
+        api_key,
+        {"adjusted": "true", "sort": "asc", "limit": 5000},
+    )
+    bars: list[dict[str, Any]] = []
+    for raw in payload.get("results") or []:
+        stamp = raw.get("t")
+        if stamp is None:
+            continue
+        session = datetime.fromtimestamp(stamp / 1000, timezone.utc).date()
+        normalized = normalize_bar(raw, session)
+        if normalized:
+            _, bar = normalized
+            bars.append(bar)
+    return sorted(bars, key=lambda row: row["date"])[-BENCHMARK_WINDOW_DAYS:]
+
+
 def fetch_metadata(base_url: str, api_key: str) -> dict[str, dict[str, Any]]:
     """Retrieve the active U.S. stock reference list, following pagination."""
     metadata: dict[str, dict[str, Any]] = {}
@@ -127,7 +203,8 @@ def ingest_bars(state: dict[str, Any], raw_bars: list[dict[str, Any]], session: 
             continue
         series = [row for row in state["bars"].get(ticker, []) if row["date"] != bar["date"]]
         series.append(bar)
-        state["bars"][ticker] = sorted(series, key=lambda row: row["date"])[-WINDOW_DAYS:]
+        limit = BENCHMARK_WINDOW_DAYS if ticker in {"SPY", "QQQ"} else WINDOW_DAYS
+        state["bars"][ticker] = sorted(series, key=lambda row: row["date"])[-limit:]
 
 
 def normalize_bar(raw: dict[str, Any], session: date) -> tuple[str, dict[str, Any]] | None:
@@ -137,14 +214,14 @@ def normalize_bar(raw: dict[str, Any], session: date) -> tuple[str, dict[str, An
         return None
     if close <= 0 or high < low or volume < 0:
         return None
-    return ticker, {"date": session.isoformat(), "o": raw.get("o"), "h": high, "l": low, "c": close, "v": volume}
+    return ticker, {"date": session.isoformat(), "o": raw.get("o"), "h": high, "l": low, "c": close, "v": volume, "vw": raw.get("vw") or close}
 
 
 def is_allowed(ticker: str, metadata: dict[str, Any], overrides: dict[str, Any]) -> bool:
     if ticker in set(overrides.get("excludedTickers") or []):
         return False
     security_type = (metadata.get(ticker, {}).get("type") or "").upper()
-    return security_type not in EXCLUDED_TYPES
+    return security_type in ALLOWED_SECURITY_TYPES
 
 
 def ema(values: list[float], span: int) -> float | None:
@@ -183,6 +260,7 @@ def security_metric(bars: list[dict[str, Any]]) -> dict[str, float | None]:
 def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) -> dict[str, Any] | None:
     bars_by_ticker = state["bars"]
     metadata = state.get("metadata") or {}
+    eligible: list[tuple[str, dict[str, Any]]] = []
     pool: list[tuple[str, dict[str, Any], dict[str, Any]]] = []
     for ticker, bars in bars_by_ticker.items():
         series = [bar for bar in bars if bar["date"] <= session]
@@ -191,19 +269,21 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
         latest = series[-1]
         if latest["c"] < 5 or latest["v"] < 300_000:
             continue
+        eligible.append((ticker, latest))
         metric = security_metric(series)
         if metric["return1d"] is None:
             continue
         pool.append((ticker, latest, metric))
-    if len(pool) < MIN_EXPECTED_UNIVERSE:
-        print(f"QUALITY GATE: candidate pool is {len(pool)}, lower than expected {MIN_EXPECTED_UNIVERSE}; retain previous published result.")
+    if len(eligible) < MIN_EXPECTED_UNIVERSE:
+        print(f"QUALITY GATE: candidate pool is {len(eligible)}, lower than expected {MIN_EXPECTED_UNIVERSE}; retain previous published result.")
         return None
 
     up4 = sum(metric["return1d"] >= 0.04 for _, _, metric in pool)
     down4 = sum(metric["return1d"] <= -0.04 for _, _, metric in pool)
     sma20_valid = [metric for _, _, metric in pool if metric["sma20"] is not None]
     sma50_valid = [metric for _, _, metric in pool if metric["sma50"] is not None]
-    leaders = [(ticker, latest, metric) for ticker, latest, metric in pool if latest["c"] * latest["v"] >= 5_000_000 and metric["return63d"] is not None and metric["return63d"] >= 0.20]
+    analysis_pool = [(ticker, latest, metric) for ticker, latest, metric in pool if (latest.get("vw") or latest["c"]) * latest["v"] >= 5_000_000]
+    leaders = [(ticker, latest, metric) for ticker, latest, metric in analysis_pool if metric["return63d"] is not None and metric["return63d"] >= 0.20]
 
     def etf_atr_distance(ticker: str) -> float | None:
         bars = [bar for bar in bars_by_ticker.get(ticker, []) if bar["date"] <= session]
@@ -216,16 +296,19 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
 
     industry_pool: dict[str, int] = defaultdict(int)
     industry_leaders: dict[str, int] = defaultdict(int)
-    for ticker, _, _ in pool:
-        industry_pool[overrides.get("industryOverrides", {}).get(ticker, "Unclassified")] += 1
+    industry_map = state.get("industryMap") or {}
+    reviewed_overrides = overrides.get("industryOverrides", {})
+    industry_for = lambda ticker: reviewed_overrides.get(ticker, industry_map.get(ticker, "Unclassified"))
+    for ticker, _, _ in analysis_pool:
+        industry_pool[industry_for(ticker)] += 1
     for ticker, _, _ in leaders:
-        industry_leaders[overrides.get("industryOverrides", {}).get(ticker, "Unclassified")] += 1
+        industry_leaders[industry_for(ticker)] += 1
     leader_n = len(leaders)
     industry = []
     for name, count in industry_leaders.items():
         pool_n = industry_pool[name]
         leader_share = count / leader_n * 100 if leader_n else 0
-        pool_share = pool_n / len(pool) * 100
+        pool_share = pool_n / len(analysis_pool) * 100
         industry.append({"name": name, "leaderN": count, "leaderShare": round(leader_share, 1), "poolShare": round(pool_share, 1), "penetration": round(count / pool_n * 100, 1), "excess": round(leader_share - pool_share, 1)})
     industry.sort(key=lambda row: row["leaderN"], reverse=True)
 
@@ -242,9 +325,11 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
         "mliReturn": round(mean(metric["return1d"] for _, _, metric in leaders) * 100, 2) if leaders else None,
         "mliUpPct": round(sum(metric["return1d"] > 0 for _, _, metric in leaders) / leader_n * 100, 1) if leaders else None,
         "mliN": leader_n,
-        "universeN": len(pool),
+        "universeN": len(eligible),
+        "analysisN": len(analysis_pool),
         "sp500Close": None,
         "industry": industry[:20],
+        "industrySource": "Nasdaq screener labels mapped to CRC display taxonomy",
     }
 
 
@@ -265,13 +350,14 @@ def main() -> int:
     parser.add_argument("--bootstrap", action="store_true")
     parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
     parser.add_argument("--refresh-metadata", action="store_true")
+    parser.add_argument("--refresh-benchmarks", action="store_true")
     args = parser.parse_args()
     api_key, base_url = environment()
     if not api_key:
         print("SAFE EXIT: MASSIVE_API_KEY is not configured. Add it to GitHub Secrets; existing published output is untouched.")
         return 0
 
-    state = load_json(STATE_PATH, {"bars": {}, "metadata": {}, "summaries": [], "lastMetadataRefresh": None, "schemaVersion": 1})
+    state = load_json(STATE_PATH, {"bars": {}, "metadata": {}, "industryMap": {}, "summaries": [], "lastMetadataRefresh": None, "lastIndustryRefresh": None, "schemaVersion": 1})
     overrides = load_json(OVERRIDES_PATH, {"excludedTickers": [], "industryOverrides": {}})
     today = datetime.now(timezone.utc).date()
     metadata_is_old = not state.get("lastMetadataRefresh") or date.fromisoformat(state["lastMetadataRefresh"]) < today - timedelta(days=7)
@@ -279,6 +365,14 @@ def main() -> int:
         print("Refreshing ticker reference metadata…")
         state["metadata"] = fetch_metadata(base_url, api_key)
         state["lastMetadataRefresh"] = today.isoformat()
+    industry_is_old = not state.get("lastIndustryRefresh") or date.fromisoformat(state["lastIndustryRefresh"]) < today - timedelta(days=7)
+    if args.bootstrap or industry_is_old:
+        print("Refreshing public industry mapping…")
+        try:
+            state["industryMap"] = fetch_nasdaq_industry_map()
+            state["lastIndustryRefresh"] = today.isoformat()
+        except requests.RequestException as error:
+            print(f"Industry mapping refresh failed; preserving cached mapping: {error}")
 
     candidates = session_candidates(args.as_of, args.bootstrap)
     if args.bootstrap:
@@ -309,6 +403,18 @@ def main() -> int:
     else:
         fetched_sessions = []
         requested_sessions = candidates
+
+    should_refresh_benchmarks = args.bootstrap or args.refresh_benchmarks or any(len(state["bars"].get(ticker, [])) < 150 for ticker in ("SPY", "QQQ"))
+    benchmark_end = target_date if args.bootstrap and target_date else args.as_of
+    if should_refresh_benchmarks:
+        benchmark_start = benchmark_end - timedelta(days=450)
+        for ticker in ("SPY", "QQQ"):
+            try:
+                long_series = fetch_benchmark_history(base_url, api_key, ticker, benchmark_start, benchmark_end)
+                if long_series:
+                    state["bars"][ticker] = long_series
+            except requests.RequestException as error:
+                print(f"Benchmark history refresh failed for {ticker}; preserving cached history: {error}")
 
     for candidate in requested_sessions:
         try:

@@ -1,0 +1,7 @@
+# CRC 行業組成資料來源與界線
+
+價格、成交量、均線、ATR 和動力股計算使用 Massive 的日線資料。行業組成則需要公司分類資料，並不是日線彙總端點的一部分。
+
+本版本使用 Nasdaq 公開 screener 的 `industry` 與 `sector` 欄位，將其映射到 CRC 的精簡展示分類。這讓每個分類都有實際供應商回傳的公司行業標籤作來源，但它不是 SEC SIC 的逐碼重分類，也不應標示為 SEC SIC。
+
+Massive 的逐代號 Ticker Overview 官方文件列出 `sic_code` 與 `sic_description` 欄位；日後如帳戶限額和更新時間允許，可將映射升級為其逐代號 SIC 資料或 SEC EDGAR 的公司申報資料。[Massive Ticker Overview](https://massive.com/docs/rest/stocks/tickers/ticker-overview)；[SEC SIC Code List](https://www.sec.gov/search-filings/standard-industrial-classification-sic-code-list)。

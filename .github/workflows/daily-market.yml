@@ -17,6 +17,11 @@ on:
         required: false
         default: ""
         type: string
+      refresh_benchmarks:
+        description: "Refresh long SPY/QQQ history to warm EMA50 accurately"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -51,6 +56,7 @@ jobs:
           ARGS=""
           if [ "${{ inputs.bootstrap }}" = "true" ]; then ARGS="$ARGS --bootstrap"; fi
           if [ -n "${{ inputs.as_of }}" ]; then ARGS="$ARGS --as-of ${{ inputs.as_of }}"; fi
+          if [ "${{ inputs.refresh_benchmarks }}" = "true" ]; then ARGS="$ARGS --refresh-benchmarks"; fi
           python scripts/update_market.py $ARGS
 
       - name: Synchronize Pages files after a verified update
