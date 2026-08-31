@@ -32,6 +32,28 @@
 
       <section id="data-status" class="data-status" aria-live="polite"></section>
 
+      <section class="screening-summary" aria-labelledby="screening-title">
+        <div class="screening-heading">
+          <p class="section-index">SCREENING / DAILY RESET</p>
+          <h2 id="screening-title">今日股票篩選條件</h2>
+          <p>每個交易日重新篩選；以下條件和頁面上的真實讀數使用同一套規則。</p>
+        </div>
+        <div class="screening-grid">
+          <article class="screen-rule">
+            <p class="rule-label">市場廣度股票池</p>
+            <h3>普通股及 ADR</h3>
+            <p><b>收市價 ≥ US$5</b><br /><b>成交量 ≥ 300,000 股</b></p>
+            <small>只納入 Massive 類別 CS（普通股）及 ADRC（ADR 普通股）；不納入 ETF、基金、權證、單位及優先股。</small>
+          </article>
+          <article class="screen-rule featured-rule">
+            <p class="rule-label">MOMENTUM LEADERS / MLI</p>
+            <h3>動力股額外條件</h3>
+            <p><b>成交金額 ≥ US$5 million</b><br /><b>相對 63 個交易日前升幅 ≥ 20%</b></p>
+            <small>必須先符合左邊所有條件；成交金額按當日 VWAP × 成交量計算，日線已使用供應商調整後數值。</small>
+          </article>
+        </div>
+      </section>
+
       <section id="breadth" class="section-block">
         <div class="section-heading">
           <div>
@@ -128,9 +150,9 @@
       <section id="methods" class="methods-section">
         <div class="methods-title"><p class="section-index">05 / METHODS</p><h2>方法與資料狀態</h2></div>
         <div class="methods-grid">
-          <p><strong>股票範圍。</strong> 普通股及 ADR；系統設計預留 ETF、基金、認股權證、單位及優先股的排除規則。收市價、成交量和成交金額條件會在每日更新程序中重新套用。</p>
+          <p><strong>股票範圍。</strong> 每個交易日只納入 Massive 類別 CS（普通股）及 ADRC（ADR 普通股），收市價 ≥ US$5、成交量 ≥ 300,000 股。ETF、基金、認股權證、單位及優先股不會通過類別篩選。</p>
           <p><strong>技術讀數。</strong> 20／50 日線百分比的分母只包括擁有足夠交易日資料的證券；SPY 和 QQQ 讀數使用收市價相對 50 日 EMA 的 14 日 ATR 距離。</p>
-          <p><strong>領導股與行業。</strong> 領導股條件為符合分析股票池、成交金額門檻及相對 63 個交易日前收市價的動量門檻。行業組成以 SEC submissions 的逐公司 SIC 資料套用 CRC SIC taxonomy v1；沒有 CIK、沒有 SIC 或不在固定對照範圍的公司歸入 Unclassified。這是 CRC 的固定研究規則，不是其他網站的未公開分類規則。</p>
+          <p><strong>領導股與行業。</strong> 領導股必須先符合股票範圍，再符合成交金額 ≥ US$5 million（當日 VWAP × 成交量）及相對 63 個交易日前收市價升幅 ≥ 20%。行業組成以 SEC submissions 的逐公司 SIC 資料套用 CRC SIC taxonomy v1；沒有 CIK、沒有 SIC 或不在固定對照範圍的公司歸入 Unclassified。這是 CRC 的固定研究規則，不是其他網站的未公開分類規則。</p>
           <p><strong>資料更新。</strong> GitHub Actions 只在資料完整和品質檢查通過後寫入每日結果；如資料尚未完成，網站保留上一個成功交易日。</p>
         </div>
       </section>
