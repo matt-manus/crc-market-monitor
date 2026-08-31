@@ -1,47 +1,62 @@
 {
-  "status": "reference_preview",
+  "status": "live",
   "asOf": "2026-08-28",
-  "updatedAt": null,
-  "source": "參考版面預覽；尚未連接個人市場資料服務",
-  "message": "此頁現正顯示參考版面數字，並非即時資料。請在 private repository 的 Secrets 加入 MASSIVE_API_KEY，然後在 Actions 手動執行一次 Bootstrap。",
+  "updatedAt": "2026-08-31T06:26:48.032369+00:00",
+  "source": "個人 Massive 資料服務 · 私人用途",
+  "message": "",
   "summary": {
-    "up4": 47,
-    "down4": 350,
-    "sma20Pct": 44.2,
-    "sma20N": 2374,
-    "sma50Pct": 52.2,
-    "sma50N": 2350,
-    "spyAtr": 2.7,
-    "qqqAtr": 0.81,
-    "mliReturn": -0.53,
-    "mliUpPct": 44.9,
-    "mliN": 492,
-    "universeN": 2386,
-    "sp500Close": 7711.76
+    "date": "2026-08-28",
+    "up4": 51,
+    "down4": 370,
+    "sma20Pct": 45.2,
+    "sma20N": 2452,
+    "sma50Pct": 52.8,
+    "sma50N": 2424,
+    "spyAtr": 2.25,
+    "qqqAtr": 0.18,
+    "mliReturn": -0.68,
+    "mliUpPct": 44.1,
+    "mliN": 499,
+    "universeN": 2459,
+    "sp500Close": null,
+    "industry": [
+      {
+        "name": "Unclassified",
+        "leaderN": 499,
+        "leaderShare": 100.0,
+        "poolShare": 100.0,
+        "penetration": 20.3,
+        "excess": 0.0
+      }
+    ]
   },
   "history": [
-    {"date":"08-28","up4":47,"down4":350,"sma20Pct":44.2,"sma50Pct":52.2,"spyAtr":2.7,"qqqAtr":0.81,"mliReturn":-0.53,"mliUpPct":44.9,"mliN":492,"universeN":2386,"sp500Close":7711.76},
-    {"date":"08-27","up4":289,"down4":81,"sma20Pct":48.7,"sma50Pct":54.8,"spyAtr":3.32,"qqqAtr":1.46,"mliReturn":1.43,"mliUpPct":59.7,"mliN":509,"universeN":2403,"sp500Close":7728.65},
-    {"date":"08-26","up4":81,"down4":109,"sma20Pct":50.7,"sma50Pct":57.1,"spyAtr":2.46,"qqqAtr":0.31,"mliReturn":0.49,"mliUpPct":44.8,"mliN":533,"universeN":2391,"sp500Close":7676.31},
-    {"date":"08-25","up4":225,"down4":53,"sma20Pct":53.2,"sma50Pct":61.1,"spyAtr":2.49,"qqqAtr":0.23,"mliReturn":0.88,"mliUpPct":56.7,"mliN":531,"universeN":2415,"sp500Close":7676.62},
-    {"date":"08-24","up4":79,"down4":226,"sma20Pct":52.2,"sma50Pct":65.3,"spyAtr":1.98,"qqqAtr":-0.27,"mliReturn":0.06,"mliUpPct":50.7,"mliN":564,"universeN":2447,"sp500Close":7552.86},
-    {"date":"08-21","up4":249,"down4":40,"sma20Pct":53.2,"sma50Pct":57.8,"spyAtr":2.14,"qqqAtr":0.48,"mliReturn":2.47,"mliUpPct":77.5,"mliN":581,"universeN":2531,"sp500Close":7674.37},
-    {"date":"08-20","up4":92,"down4":277,"sma20Pct":49.9,"sma50Pct":55.4,"spyAtr":1.58,"qqqAtr":0.22,"mliReturn":-0.68,"mliUpPct":36.2,"mliN":542,"universeN":2466,"sp500Close":7641.6},
-    {"date":"08-19","up4":417,"down4":178,"sma20Pct":57,"sma50Pct":59.9,"spyAtr":2.54,"qqqAtr":0.69,"mliReturn":2.25,"mliUpPct":69.1,"mliN":576,"universeN":2567,"sp500Close":7737.42},
-    {"date":"08-18","up4":96,"down4":330,"sma20Pct":55.1,"sma50Pct":58.5,"spyAtr":2.21,"qqqAtr":0.77,"mliReturn":0.34,"mliUpPct":47.3,"mliN":582,"universeN":2471,"sp500Close":7691.76},
-    {"date":"08-17","up4":133,"down4":173,"sma20Pct":61.8,"sma50Pct":62.6,"spyAtr":2.8,"qqqAtr":1.78,"mliReturn":-0.4,"mliUpPct":34.6,"mliN":653,"universeN":2497,"sp500Close":7745.06},
-    {"date":"08-14","up4":176,"down4":96,"sma20Pct":67,"sma50Pct":65.8,"spyAtr":3.1,"qqqAtr":1.85,"mliReturn":1.5,"mliUpPct":43.1,"mliN":592,"universeN":2597,"sp500Close":7745.76},
-    {"date":"08-13","up4":269,"down4":117,"sma20Pct":66.6,"sma50Pct":64.6,"spyAtr":3.44,"qqqAtr":1.9,"mliReturn":2.16,"mliUpPct":68,"mliN":653,"universeN":2520,"sp500Close":7798.99}
+    {
+      "date": "08-28",
+      "up4": 51,
+      "down4": 370,
+      "sma20Pct": 45.2,
+      "sma50Pct": 52.8,
+      "spyAtr": 2.25,
+      "qqqAtr": 0.18,
+      "mliReturn": -0.68,
+      "mliUpPct": 44.1,
+      "mliN": 499,
+      "universeN": 2459,
+      "sp500Close": null
+    }
   ],
   "industry": [
-    {"name":"Software & IT Services","leaderN":124,"leaderShare":25.2,"poolShare":12.1,"penetration":45.8,"excess":13.1},
-    {"name":"Biotech & Pharma","leaderN":98,"leaderShare":19.9,"poolShare":9.4,"penetration":46.9,"excess":10.6},
-    {"name":"Unclassified","leaderN":47,"leaderShare":9.6,"poolShare":11.5,"penetration":18.3,"excess":-2},
-    {"name":"Instruments & Medical Devices","leaderN":36,"leaderShare":7.3,"poolShare":3.9,"penetration":40.9,"excess":3.4},
-    {"name":"Insurance","leaderN":23,"leaderShare":4.7,"poolShare":2.7,"penetration":38.3,"excess":2},
-    {"name":"Banks & Financial Services","leaderN":22,"leaderShare":4.5,"poolShare":8.7,"penetration":11.3,"excess":-4.2},
-    {"name":"Health Care Services","leaderN":20,"leaderShare":4.1,"poolShare":3.9,"penetration":45.5,"excess":2.1},
-    {"name":"Retail","leaderN":18,"leaderShare":3.7,"poolShare":4.3,"penetration":18.6,"excess":-0.7}
+    {
+      "name": "Unclassified",
+      "leaderN": 499,
+      "leaderShare": 100.0,
+      "poolShare": 100.0,
+      "penetration": 20.3,
+      "excess": 0.0
+    }
   ],
-  "leaderTrend": [18,16,17,15,18,16,19,21,18,20,19,21,20,22,23,21,24,20,22,25,24,27,32,28,31,34,29,31,39,38,33,31,28,26,23,20,17,19,21,20,24,21,25,22,24,26,28,25,27,22]
+  "leaderTrend": [
+    20.3
+  ]
 }
