@@ -148,13 +148,13 @@ def fetch_benchmark_history(base_url: str, api_key: str, ticker: str, start: dat
     bars: list[dict[str, Any]] = []
     for raw in payload.get("results") or []:
         stamp = raw.get("t")
-        if stamp is None:
+        close, high, low, volume = raw.get("c"), raw.get("h"), raw.get("l"), raw.get("v")
+        if stamp is None or any(value is None for value in (close, high, low, volume)):
             continue
         session = datetime.fromtimestamp(stamp / 1000, timezone.utc).date()
-        normalized = normalize_bar(raw, session)
-        if normalized:
-            _, bar = normalized
-            bars.append(bar)
+        if close <= 0 or high < low or volume < 0:
+            continue
+        bars.append({"date": session.isoformat(), "o": raw.get("o"), "h": high, "l": low, "c": close, "v": volume, "vw": raw.get("vw") or close})
     return sorted(bars, key=lambda row: row["date"])[-BENCHMARK_WINDOW_DAYS:]
 
 
