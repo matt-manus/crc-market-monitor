@@ -1,4 +1,4 @@
-# CRC Market Monitor：GitHub 私人市場監察網站實作清單
+# CRC Market Monitor：GitHub 市場監察網站實作清單
 
 - [x] 建立一個名為 CRC Market Monitor、只包含市場監察程式、網站模板及 GitHub Actions 的可攜式專案資料夾。
 - [x] 以本地資料結構建立每日 `latest.json` 與日期歸檔報告的生成流程。
@@ -17,8 +17,8 @@
 - [x] 保存首次成功運行的 Actions 結果和輸出版本，作為日後每日更新的基線。
 - [x] 撰寫從建立 private repository、設定 Secrets、測試每日工作到個人查看的逐步說明。
 - [x] 驗證程式碼及工作流格式，然後推送至使用者的 private GitHub repository。
-- [ ] 確認網站網址採公開存取或登入保護模式，並記錄相應的資料展示界線。
-- [ ] 選擇可由手機完成授權的靜態網站部署服務，將 private GitHub repository 的 `site/` 資料夾連接為部署來源。
-- [ ] 部署 CRC Market Monitor，確保首頁載入 `site/data/latest.json` 的已驗證真實市場數據。
-- [ ] 用瀏覽器檢查部署網址的圖表、繁體中文排版與資料日期，並驗證後續 GitHub 更新會觸發網站部署。
-- [ ] 提供使用者可在手機打開的網站網址與最簡查看指南。
+- [x] 確認網站網址採公開存取模式，並記錄相應的資料展示界線。
+- [x] 選擇 GitHub Pages 作手機可直接開啟的靜態網站部署服務，從 `main/docs` 資料夾發布。
+- [x] 部署 CRC Market Monitor，確保首頁載入 `docs/data/latest.json` 的已驗證真實市場數據。
+- [x] 用瀏覽器檢查部署網址的圖表、繁體中文排版與資料日期，並確認每日工作流會同步 `docs/` 發布資料。
+- [x] 提供使用者可在手機打開的網站網址與最簡查看指南。
