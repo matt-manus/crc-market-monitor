@@ -1,7 +1,7 @@
 {
   "status": "live",
   "asOf": "2026-08-28",
-  "updatedAt": "2026-08-31T08:16:20.726725+00:00",
+  "updatedAt": "2026-08-31T08:18:20.998927+00:00",
   "source": "個人 Massive 資料服務 · 私人用途",
   "message": "",
   "summary": {
@@ -17,8 +17,8 @@
     "mliReturn": -0.62,
     "mliUpPct": 44.6,
     "mliN": 489,
-    "universeN": 2384,
-    "analysisN": 2271,
+    "universeN": 2386,
+    "analysisN": 2272,
     "sp500Close": null,
     "industry": [
       {
@@ -106,8 +106,8 @@
         "leaderN": 7,
         "leaderShare": 1.4,
         "poolShare": 4.3,
-        "penetration": 7.2,
-        "excess": -2.8
+        "penetration": 7.1,
+        "excess": -2.9
       },
       {
         "name": "Industrial Materials",
@@ -172,7 +172,7 @@
       "mliReturn": -0.62,
       "mliUpPct": 44.6,
       "mliN": 489,
-      "universeN": 2384,
+      "universeN": 2386,
       "sp500Close": null
     },
     {
@@ -528,8 +528,8 @@
       "leaderN": 7,
       "leaderShare": 1.4,
       "poolShare": 4.3,
-      "penetration": 7.2,
-      "excess": -2.8
+      "penetration": 7.1,
+      "excess": -2.9
     },
     {
       "name": "Industrial Materials",
