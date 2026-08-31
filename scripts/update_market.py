@@ -185,12 +185,13 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
     metadata = state.get("metadata") or {}
     pool: list[tuple[str, dict[str, Any], dict[str, Any]]] = []
     for ticker, bars in bars_by_ticker.items():
-        if not bars or bars[-1]["date"] != session or not is_allowed(ticker, metadata, overrides):
+        series = [bar for bar in bars if bar["date"] <= session]
+        if not series or series[-1]["date"] != session or not is_allowed(ticker, metadata, overrides):
             continue
-        latest = bars[-1]
+        latest = series[-1]
         if latest["c"] < 5 or latest["v"] < 300_000:
             continue
-        metric = security_metric(bars)
+        metric = security_metric(series)
         if metric["return1d"] is None:
             continue
         pool.append((ticker, latest, metric))
@@ -205,7 +206,7 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
     leaders = [(ticker, latest, metric) for ticker, latest, metric in pool if latest["c"] * latest["v"] >= 5_000_000 and metric["return63d"] is not None and metric["return63d"] >= 0.20]
 
     def etf_atr_distance(ticker: str) -> float | None:
-        bars = bars_by_ticker.get(ticker, [])
+        bars = [bar for bar in bars_by_ticker.get(ticker, []) if bar["date"] <= session]
         if not bars or bars[-1]["date"] != session:
             return None
         metric = security_metric(bars)
