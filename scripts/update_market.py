@@ -333,7 +333,11 @@ def main() -> int:
     if not fetched_sessions:
         print("SAFE EXIT: no completed provider session was returned; existing published output is untouched.")
         return 0
-    target_session = fetched_sessions[-1]
+    # Bootstrap fetches historical sessions after the latest completed market
+    # day. Keep publishing anchored to that latest session rather than the
+    # final history request, otherwise every series ends one day ahead of the
+    # selected summary and the quality gate correctly rejects the mismatch.
+    target_session = target_date.isoformat() if args.bootstrap and target_date else fetched_sessions[-1]
     summary = summarize(state, target_session, overrides)
     if summary is None:
         return 0
