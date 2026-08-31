@@ -1,0 +1,4014 @@
+{
+  "version": "crc-sic-industry-audit-v1",
+  "asOf": "2026-08-28",
+  "taxonomyVersion": "crc-sic-taxonomy-v1",
+  "sicCoverage": {
+    "taxonomyVersion": "crc-sic-taxonomy-v1",
+    "candidateCikMatched": 2271,
+    "withSic": 2251
+  },
+  "groups": {
+    "Banks & Financial Services": {
+      "leaderN": 34,
+      "members": [
+        {
+          "ticker": "AAMI",
+          "name": "Acadian Asset Management Inc.",
+          "cik": "0001748824",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 32.4
+        },
+        {
+          "ticker": "APPS",
+          "name": "Digital Turbine, Inc.",
+          "cik": "0000317788",
+          "sic": "6794",
+          "sicDescription": "Patent Owners & Lessors",
+          "return63Pct": 26.3
+        },
+        {
+          "ticker": "ASST",
+          "name": "Strive, Inc. Class A Common Stock",
+          "cik": "0001920406",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 23.0
+        },
+        {
+          "ticker": "BAC",
+          "name": "Bank of America Corporation",
+          "cik": "0000070858",
+          "sic": "6021",
+          "sicDescription": "National Commercial Banks",
+          "return63Pct": 20.8
+        },
+        {
+          "ticker": "BBVA",
+          "name": "Banco Bilbao Vizcaya Argentaria, S.A.",
+          "cik": "0000842180",
+          "sic": "6029",
+          "sicDescription": "Commercial Banks, NEC",
+          "return63Pct": 24.0
+        },
+        {
+          "ticker": "BMNR",
+          "name": "BitMine Immersion Technologies, Inc.",
+          "cik": "0001829311",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 23.5
+        },
+        {
+          "ticker": "BULL",
+          "name": "Webull Corporation Class A Ordinary Shares",
+          "cik": "0001866364",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 46.4
+        },
+        {
+          "ticker": "BX",
+          "name": "Blackstone Inc.",
+          "cik": "0001393818",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 21.7
+        },
+        {
+          "ticker": "CHYM",
+          "name": "Chime Financial, Inc. Class A Common Stock",
+          "cik": "0001795586",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 78.5
+        },
+        {
+          "ticker": "CIB",
+          "name": "Grupo Cibest S.A. American Depositary Shares (each representing four (4) Preferred Shares)",
+          "cik": "0002058897",
+          "sic": "6029",
+          "sicDescription": "Commercial Banks, NEC",
+          "return63Pct": 41.8
+        },
+        {
+          "ticker": "CXW",
+          "name": "CoreCivic, Inc.",
+          "cik": "0001070985",
+          "sic": "6798",
+          "sicDescription": "Real Estate Investment Trusts",
+          "return63Pct": 60.4
+        },
+        {
+          "ticker": "DAVE",
+          "name": "Dave Inc. Class A Common Stock",
+          "cik": "0001841408",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 34.0
+        },
+        {
+          "ticker": "DB",
+          "name": "Deutsche Bank Aktiengesellschaft",
+          "cik": "0001159508",
+          "sic": "6022",
+          "sicDescription": "State Commercial Banks",
+          "return63Pct": 25.0
+        },
+        {
+          "ticker": "ECPG",
+          "name": "Encore Capital Group, Inc.",
+          "cik": "0001084961",
+          "sic": "6153",
+          "sicDescription": "Short-Term Business Credit Institutions",
+          "return63Pct": 23.8
+        },
+        {
+          "ticker": "FWDI",
+          "name": "Forward Industries, Inc. Common Stock",
+          "cik": "0000038264",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 25.3
+        },
+        {
+          "ticker": "GCMG",
+          "name": "GCM Grosvenor Inc. Class A Common Stock",
+          "cik": "0001819796",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 29.1
+        },
+        {
+          "ticker": "HLNE",
+          "name": "Hamilton Lane Incorporated Class A Common Stock",
+          "cik": "0001433642",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 21.7
+        },
+        {
+          "ticker": "LPLA",
+          "name": "LPL Financial Holdings Inc.",
+          "cik": "0001397911",
+          "sic": "6200",
+          "sicDescription": "Security & Commodity Brokers, Dealers, Exchanges & Services",
+          "return63Pct": 35.4
+        },
+        {
+          "ticker": "MKTX",
+          "name": "MarketAxess Holdings Inc.",
+          "cik": "0001278021",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 25.1
+        },
+        {
+          "ticker": "MRX",
+          "name": "Marex Group Limited Ordinary Shares",
+          "cik": "0001997464",
+          "sic": "6200",
+          "sicDescription": "Security & Commodity Brokers, Dealers, Exchanges & Services",
+          "return63Pct": 37.6
+        },
+        {
+          "ticker": "MUFG",
+          "name": "Mitsubishi UFJ Financial Group, Inc.",
+          "cik": "0000067088",
+          "sic": "6029",
+          "sicDescription": "Commercial Banks, NEC",
+          "return63Pct": 22.4
+        },
+        {
+          "ticker": "NMR",
+          "name": "Nomura Holdings, Inc",
+          "cik": "0001163653",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 27.0
+        },
+        {
+          "ticker": "PEB",
+          "name": "Pebblebrook Hotel Trust",
+          "cik": "0001474098",
+          "sic": "6798",
+          "sicDescription": "Real Estate Investment Trusts",
+          "return63Pct": 21.2
+        },
+        {
+          "ticker": "PGY",
+          "name": "Pagaya Technologies Ltd. Class A Ordinary Shares",
+          "cik": "0001883085",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 45.4
+        },
+        {
+          "ticker": "RJF",
+          "name": "Raymond James Financial, Inc.",
+          "cik": "0000720005",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 25.1
+        },
+        {
+          "ticker": "SBET",
+          "name": "Sharplink, Inc. Common Stock",
+          "cik": "0001981535",
+          "sic": "6199",
+          "sicDescription": "Finance Services",
+          "return63Pct": 34.2
+        },
+        {
+          "ticker": "SCHW",
+          "name": "The Charles Schwab Corporation",
+          "cik": "0000316709",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 26.1
+        },
+        {
+          "ticker": "SEIC",
+          "name": "SEI Investments Co",
+          "cik": "0000350894",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 27.0
+        },
+        {
+          "ticker": "SLG",
+          "name": "SL Green Realty Corp.",
+          "cik": "0001040971",
+          "sic": "6798",
+          "sicDescription": "Real Estate Investment Trusts",
+          "return63Pct": 26.7
+        },
+        {
+          "ticker": "STT",
+          "name": "State Street Corporation",
+          "cik": "0000093751",
+          "sic": "6022",
+          "sicDescription": "State Commercial Banks",
+          "return63Pct": 24.2
+        },
+        {
+          "ticker": "TPG",
+          "name": "TPG Inc. Class A Common Stock",
+          "cik": "0001880661",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 26.8
+        },
+        {
+          "ticker": "VCTR",
+          "name": "Victory Capital Holdings, Inc. Class A Common Stock",
+          "cik": "0001570827",
+          "sic": "6282",
+          "sicDescription": "Investment Advice",
+          "return63Pct": 39.9
+        },
+        {
+          "ticker": "VIRT",
+          "name": "Virtu Financial, Inc. Class A",
+          "cik": "0001592386",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 32.4
+        },
+        {
+          "ticker": "WT",
+          "name": "WisdomTree, Inc.",
+          "cik": "0000880631",
+          "sic": "6211",
+          "sicDescription": "Security Brokers, Dealers & Flotation Companies",
+          "return63Pct": 28.2
+        }
+      ]
+    },
+    "Biotech & Pharma": {
+      "leaderN": 106,
+      "members": [
+        {
+          "ticker": "ABCL",
+          "name": "AbCellera Biologics Inc. Common Shares",
+          "cik": "0001703057",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 84.0
+        },
+        {
+          "ticker": "ABSI",
+          "name": "Absci Corporation Common Stock",
+          "cik": "0001672688",
+          "sic": "8731",
+          "sicDescription": "Services-Commercial Physical & Biological Research",
+          "return63Pct": 29.0
+        },
+        {
+          "ticker": "ABT",
+          "name": "Abbott Laboratories",
+          "cik": "0000001800",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 31.4
+        },
+        {
+          "ticker": "ACAD",
+          "name": "Acadia Pharmaceuticals Inc.",
+          "cik": "0001070494",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 34.4
+        },
+        {
+          "ticker": "ACHV",
+          "name": "Achieve Life Sciences, Inc.",
+          "cik": "0000949858",
+          "sic": "2835",
+          "sicDescription": "In Vitro & In Vivo Diagnostic Substances",
+          "return63Pct": 54.6
+        },
+        {
+          "ticker": "ACRS",
+          "name": "Aclaris Therapeutics, Inc.",
+          "cik": "0001557746",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 32.1
+        },
+        {
+          "ticker": "ADPT",
+          "name": "Adaptive Biotechnologies Corporation Common Stock",
+          "cik": "0001478320",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 66.3
+        },
+        {
+          "ticker": "AGEN",
+          "name": "Agenus Inc.",
+          "cik": "0001098972",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 118.9
+        },
+        {
+          "ticker": "AKTS",
+          "name": "Aktis Oncology, Inc. Common stock",
+          "cik": "0002035832",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 24.3
+        },
+        {
+          "ticker": "AMGN",
+          "name": "Amgen Inc",
+          "cik": "0000318154",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 28.4
+        },
+        {
+          "ticker": "AMLX",
+          "name": "Amylyx Pharmaceuticals, Inc. Common Stock",
+          "cik": "0001658551",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 142.1
+        },
+        {
+          "ticker": "AMRX",
+          "name": "Amneal Pharmaceuticals, Inc. Class A Common Stock",
+          "cik": "0001723128",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 33.2
+        },
+        {
+          "ticker": "APGE",
+          "name": "Apogee Therapeutics, Inc. Common Stock",
+          "cik": "0001974640",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 64.3
+        },
+        {
+          "ticker": "AQST",
+          "name": "Aquestive Therapeutics, Inc. Common Stock",
+          "cik": "0001398733",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 24.9
+        },
+        {
+          "ticker": "ARCT",
+          "name": "Arcturus Therapeutics Holdings Inc. Common Stock",
+          "cik": "0001768224",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 91.8
+        },
+        {
+          "ticker": "ATAI",
+          "name": "AtaiBeckley Inc. Common Stock",
+          "cik": "0002081043",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 60.9
+        },
+        {
+          "ticker": "AVTX",
+          "name": "Avalo Therapeutics, Inc. Common Stock",
+          "cik": "0001534120",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 22.8
+        },
+        {
+          "ticker": "BHVN",
+          "name": "Biohaven Ltd.",
+          "cik": "0001935979",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 40.0
+        },
+        {
+          "ticker": "CADL",
+          "name": "Candel Therapeutics, Inc. Common Stock",
+          "cik": "0001841387",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 57.5
+        },
+        {
+          "ticker": "CGEM",
+          "name": "Cullinan Therapeutics, Inc. Common Stock",
+          "cik": "0001789972",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 32.0
+        },
+        {
+          "ticker": "CLDX",
+          "name": "Celldex Therapeutics, Inc",
+          "cik": "0000744218",
+          "sic": "2835",
+          "sicDescription": "In Vitro & In Vivo Diagnostic Substances",
+          "return63Pct": 24.5
+        },
+        {
+          "ticker": "CLYM",
+          "name": "Climb Bio, Inc. Common Stock",
+          "cik": "0001768446",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 32.9
+        },
+        {
+          "ticker": "CORT",
+          "name": "Corcept Therapeutics Inc.",
+          "cik": "0001088856",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 63.9
+        },
+        {
+          "ticker": "CRBP",
+          "name": "Corbus Pharmaceuticals Holdings, Inc.",
+          "cik": "0001595097",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 37.9
+        },
+        {
+          "ticker": "CRL",
+          "name": "Charles River Laboratories International, Inc.",
+          "cik": "0001100682",
+          "sic": "8731",
+          "sicDescription": "Services-Commercial Physical & Biological Research",
+          "return63Pct": 61.3
+        },
+        {
+          "ticker": "CRNX",
+          "name": "Crinetics Pharmaceuticals, Inc.",
+          "cik": "0001658247",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 138.6
+        },
+        {
+          "ticker": "CTNM",
+          "name": "Contineum Therapeutics, Inc. Class A Common Stock",
+          "cik": "0001855175",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 26.4
+        },
+        {
+          "ticker": "DFTX",
+          "name": "Definium Therapeutics, Inc. Common Shares",
+          "cik": "0001813814",
+          "sic": "2833",
+          "sicDescription": "Medicinal Chemicals & Botanical Products",
+          "return63Pct": 69.4
+        },
+        {
+          "ticker": "DSGN",
+          "name": "Design Therapeutics, Inc. Common Stock",
+          "cik": "0001807120",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 44.2
+        },
+        {
+          "ticker": "DYN",
+          "name": "Dyne Therapeutics, Inc. Common Stock",
+          "cik": "0001818794",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 29.7
+        },
+        {
+          "ticker": "ELVN",
+          "name": "Enliven Therapeutics, Inc. Common Stock",
+          "cik": "0001672619",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 46.2
+        },
+        {
+          "ticker": "EOLS",
+          "name": "Evolus, Inc. Common Stock",
+          "cik": "0001570562",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 35.4
+        },
+        {
+          "ticker": "ERAS",
+          "name": "Erasca, Inc. Common Stock",
+          "cik": "0001761918",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 40.4
+        },
+        {
+          "ticker": "ETON",
+          "name": "Eton Pharmaceutcials, Inc. Common Stock",
+          "cik": "0001710340",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 96.3
+        },
+        {
+          "ticker": "EWTX",
+          "name": "Edgewise Therapeutics, Inc. Common Stock",
+          "cik": "0001710072",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 25.2
+        },
+        {
+          "ticker": "FDMT",
+          "name": "4D Molecular Therapeutics, Inc. Common Stock",
+          "cik": "0001650648",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 48.0
+        },
+        {
+          "ticker": "FENC",
+          "name": "Fennec Pharmaceuticals Inc. Common Stock",
+          "cik": "0001211583",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 23.6
+        },
+        {
+          "ticker": "GMAB",
+          "name": "Genmab A/S ADS",
+          "cik": "0001434265",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 26.2
+        },
+        {
+          "ticker": "GPCR",
+          "name": "Structure Therapeutics Inc. American Depositary Shares",
+          "cik": "0001888886",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 20.4
+        },
+        {
+          "ticker": "HALO",
+          "name": "Halozyme Therapeutics, Inc.",
+          "cik": "0001159036",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 58.3
+        },
+        {
+          "ticker": "HELP",
+          "name": "Cybin Inc. Common Stock",
+          "cik": "0001833141",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 167.7
+        },
+        {
+          "ticker": "HRMY",
+          "name": "Harmony Biosciences Holdings, Inc. Common Stock",
+          "cik": "0001802665",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 24.1
+        },
+        {
+          "ticker": "ICLR",
+          "name": "Icon Plc",
+          "cik": "0001060955",
+          "sic": "8731",
+          "sicDescription": "Services-Commercial Physical & Biological Research",
+          "return63Pct": 25.0
+        },
+        {
+          "ticker": "IDYA",
+          "name": "IDEAYA Biosciences, Inc. Common Stock",
+          "cik": "0001676725",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 36.1
+        },
+        {
+          "ticker": "IMCR",
+          "name": "Immunocore Holdings plc American Depositary Shares",
+          "cik": "0001671927",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 26.8
+        },
+        {
+          "ticker": "IMMX",
+          "name": "Immix Biopharma, Inc. Common Stock",
+          "cik": "0001873835",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 54.9
+        },
+        {
+          "ticker": "IMNM",
+          "name": "Immunome, Inc.",
+          "cik": "0001472012",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 26.3
+        },
+        {
+          "ticker": "IMVT",
+          "name": "Immunovant, Inc. Common Stock",
+          "cik": "0001764013",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 23.7
+        },
+        {
+          "ticker": "INCY",
+          "name": "Incyte Genomics Inc",
+          "cik": "0000879169",
+          "sic": "8731",
+          "sicDescription": "Services-Commercial Physical & Biological Research",
+          "return63Pct": 28.6
+        },
+        {
+          "ticker": "IOVA",
+          "name": "Iovance Biotherapeutics, Inc. Common Stock",
+          "cik": "0001425205",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 95.4
+        },
+        {
+          "ticker": "IQV",
+          "name": "IQVIA Holdings Inc.",
+          "cik": "0001478242",
+          "sic": "8731",
+          "sicDescription": "Services-Commercial Physical & Biological Research",
+          "return63Pct": 43.7
+        },
+        {
+          "ticker": "JANX",
+          "name": "Janux Therapeutics, Inc. Common Stock",
+          "cik": "0001817713",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 23.6
+        },
+        {
+          "ticker": "KNSA",
+          "name": "Kiniksa Pharmaceuticals International, plc Class A Ordinary Shares",
+          "cik": "0001730430",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 61.4
+        },
+        {
+          "ticker": "KURA",
+          "name": "Kura Oncology, Inc.",
+          "cik": "0001422143",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 24.1
+        },
+        {
+          "ticker": "KYMR",
+          "name": "Kymera Therapeutics, Inc. Common Stock",
+          "cik": "0001815442",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 45.1
+        },
+        {
+          "ticker": "MBX",
+          "name": "MBX Biosciences, Inc. Common Stock",
+          "cik": "0001776111",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 100.2
+        },
+        {
+          "ticker": "MGTX",
+          "name": "MeiraGTx Holdings plc Ordinary Shares",
+          "cik": "0001735438",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 29.8
+        },
+        {
+          "ticker": "MRK",
+          "name": "Merck & Co., Inc.",
+          "cik": "0000310158",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 25.0
+        },
+        {
+          "ticker": "MRNA",
+          "name": "Moderna, Inc. Common Stock",
+          "cik": "0001682852",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 192.4
+        },
+        {
+          "ticker": "MRVI",
+          "name": "Maravai LifeSciences Holdings, Inc. Class A Common Stock",
+          "cik": "0001823239",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 60.0
+        },
+        {
+          "ticker": "NEOG",
+          "name": "Neogen Corp",
+          "cik": "0000711377",
+          "sic": "2835",
+          "sicDescription": "In Vitro & In Vivo Diagnostic Substances",
+          "return63Pct": 30.0
+        },
+        {
+          "ticker": "NRIX",
+          "name": "Nurix Therapeutics, Inc. Common stock",
+          "cik": "0001549595",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 47.6
+        },
+        {
+          "ticker": "NUVB",
+          "name": "Nuvation Bio Inc.",
+          "cik": "0001811063",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 39.3
+        },
+        {
+          "ticker": "OMER",
+          "name": "Omeros Corporation",
+          "cik": "0001285819",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 68.6
+        },
+        {
+          "ticker": "ONC",
+          "name": "BeOne Medicines Ltd. American Depositary Shares",
+          "cik": "0001651308",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 27.4
+        },
+        {
+          "ticker": "ORIC",
+          "name": "Oric Pharmaceuticals, Inc. Common Stock",
+          "cik": "0001796280",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 56.7
+        },
+        {
+          "ticker": "ORKA",
+          "name": "Oruka Therapeutics, Inc. Common Stock",
+          "cik": "0000907654",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 55.7
+        },
+        {
+          "ticker": "PAHC",
+          "name": "Phibro Animal Health Corporation Class A",
+          "cik": "0001069899",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 22.3
+        },
+        {
+          "ticker": "PGEN",
+          "name": "Precigen, Inc. Common Stock",
+          "cik": "0001356090",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 60.1
+        },
+        {
+          "ticker": "PRGO",
+          "name": "PERRIGO COMPANY PLC",
+          "cik": "0001585364",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 31.0
+        },
+        {
+          "ticker": "PTGX",
+          "name": "Protagonist Therapeutics, Inc",
+          "cik": "0001377121",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 45.0
+        },
+        {
+          "ticker": "QNRX",
+          "name": "Quoin Pharmaceuticals, Ltd. American Depositary Shares",
+          "cik": "0001671502",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 20.9
+        },
+        {
+          "ticker": "QTTB",
+          "name": "Q32 Bio Inc. Common Stock",
+          "cik": "0001661998",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 36.0
+        },
+        {
+          "ticker": "QURE",
+          "name": "uniQure N.V.",
+          "cik": "0001590560",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 70.8
+        },
+        {
+          "ticker": "RAPP",
+          "name": "Rapport Therapeutics, Inc. Common Stock",
+          "cik": "0002012593",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 23.5
+        },
+        {
+          "ticker": "REGN",
+          "name": "Regeneron Pharmaceuticals Inc",
+          "cik": "0000872589",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 29.2
+        },
+        {
+          "ticker": "REPL",
+          "name": "Replimune Group, Inc.",
+          "cik": "0001737953",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 231.2
+        },
+        {
+          "ticker": "RGEN",
+          "name": "Repligen Corp",
+          "cik": "0000730272",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 42.2
+        },
+        {
+          "ticker": "RGNX",
+          "name": "REGENXBIO Inc.",
+          "cik": "0001590877",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 37.8
+        },
+        {
+          "ticker": "RLAY",
+          "name": "Relay Therapeutics, Inc. Common Stock",
+          "cik": "0001812364",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 33.6
+        },
+        {
+          "ticker": "RVMD",
+          "name": "Revolution Medicines, Inc. Common Stock",
+          "cik": "0001628171",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 32.0
+        },
+        {
+          "ticker": "RYTM",
+          "name": "Rhythm Pharmaceuticals, Inc. Common Stock",
+          "cik": "0001649904",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 21.3
+        },
+        {
+          "ticker": "SDGR",
+          "name": "Schrodinger, Inc. Common Stock",
+          "cik": "0001490978",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 29.6
+        },
+        {
+          "ticker": "SEPN",
+          "name": "Septerna, Inc. Common Stock",
+          "cik": "0001984086",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 28.8
+        },
+        {
+          "ticker": "SGMT",
+          "name": "Sagimet Biosciences Inc. Series A Common Stock",
+          "cik": "0001400118",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 44.7
+        },
+        {
+          "ticker": "SLDB",
+          "name": "Solid Biosciences Inc. Common Stock",
+          "cik": "0001707502",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 33.1
+        },
+        {
+          "ticker": "SLN",
+          "name": "Silence Therapeutics Plc American Depository Share",
+          "cik": "0001479615",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 94.5
+        },
+        {
+          "ticker": "SLS",
+          "name": "SELLAS Life Sciences Group, Inc. Common Stock",
+          "cik": "0001390478",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 41.9
+        },
+        {
+          "ticker": "SYRE",
+          "name": "Spyre Therapeutics, Inc. Common Stock",
+          "cik": "0001636282",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 22.9
+        },
+        {
+          "ticker": "TARS",
+          "name": "Tarsus Pharmaceuticals, Inc. Common Stock",
+          "cik": "0001819790",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 20.8
+        },
+        {
+          "ticker": "TECH",
+          "name": "Bio-Techne Corp.",
+          "cik": "0000842023",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 40.0
+        },
+        {
+          "ticker": "TGTX",
+          "name": "TG Therapeutics, Inc.",
+          "cik": "0001001316",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 42.1
+        },
+        {
+          "ticker": "TRAX",
+          "name": "First Tracks Biotherapeutics, Inc. Ordinary Shares",
+          "cik": "0002091349",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 162.3
+        },
+        {
+          "ticker": "TVTX",
+          "name": "Travere Therapeutics, Inc. Common Stock",
+          "cik": "0001438533",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 39.2
+        },
+        {
+          "ticker": "TWST",
+          "name": "Twist Bioscience Corporation Common Stock",
+          "cik": "0001581280",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 111.4
+        },
+        {
+          "ticker": "URGN",
+          "name": "UroGen Pharma Ltd. Ordinary Shares",
+          "cik": "0001668243",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 55.1
+        },
+        {
+          "ticker": "VCEL",
+          "name": "Vericel Corporation",
+          "cik": "0000887359",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 22.9
+        },
+        {
+          "ticker": "VOR",
+          "name": "Vor Biopharma Inc. Common Stock",
+          "cik": "0001817229",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 51.3
+        },
+        {
+          "ticker": "VRDN",
+          "name": "Viridian Therapeutics, Inc. Common Stock",
+          "cik": "0001590750",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 31.0
+        },
+        {
+          "ticker": "VRTX",
+          "name": "Vertex Pharmaceuticals Inc",
+          "cik": "0000875320",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 21.0
+        },
+        {
+          "ticker": "VSTM",
+          "name": "Verastem, Inc.",
+          "cik": "0001526119",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 66.7
+        },
+        {
+          "ticker": "XERS",
+          "name": "Xeris Biopharma Holdings, Inc. Common Stock",
+          "cik": "0001867096",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 37.7
+        },
+        {
+          "ticker": "XNCR",
+          "name": "Xencor, Inc.",
+          "cik": "0001326732",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 119.4
+        },
+        {
+          "ticker": "ZBIO",
+          "name": "Zenas BioPharma, Inc. Common Stock",
+          "cik": "0001953926",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 69.9
+        },
+        {
+          "ticker": "ZLAB",
+          "name": "Zai Lab Limited American Depositary Shares",
+          "cik": "0001704292",
+          "sic": "2834",
+          "sicDescription": "Pharmaceutical Preparations",
+          "return63Pct": 47.4
+        },
+        {
+          "ticker": "ZURA",
+          "name": "Zura Bio Limited Class A Ordinary Shares",
+          "cik": "0001855644",
+          "sic": "2836",
+          "sicDescription": "Biological Products, (No Diagnostic Substances)",
+          "return63Pct": 33.0
+        }
+      ]
+    },
+    "Business Services": {
+      "leaderN": 35,
+      "members": [
+        {
+          "ticker": "ABM",
+          "name": "ABM Industries, Inc.",
+          "cik": "0000771497",
+          "sic": "7340",
+          "sicDescription": "Services-To Dwellings & Other Buildings",
+          "return63Pct": 20.8
+        },
+        {
+          "ticker": "ABNB",
+          "name": "Airbnb, Inc. Class A Common Stock",
+          "cik": "0001559720",
+          "sic": "7340",
+          "sicDescription": "Services-To Dwellings & Other Buildings",
+          "return63Pct": 42.1
+        },
+        {
+          "ticker": "ALLE",
+          "name": "Allegion Public Limited Company",
+          "cik": "0001579241",
+          "sic": "7381",
+          "sicDescription": "Services-Detective, Guard & Armored Car Services",
+          "return63Pct": 21.1
+        },
+        {
+          "ticker": "ANDG",
+          "name": "Andersen Group Inc.",
+          "cik": "0002065708",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 50.6
+        },
+        {
+          "ticker": "CART",
+          "name": "Maplebear Inc. Common Stock",
+          "cik": "0001579091",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 27.0
+        },
+        {
+          "ticker": "CBZ",
+          "name": "CBIZ, Inc.",
+          "cik": "0000944148",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 64.2
+        },
+        {
+          "ticker": "DASH",
+          "name": "DoorDash, Inc. Class A Common Stock",
+          "cik": "0001792789",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 48.6
+        },
+        {
+          "ticker": "DFIN",
+          "name": "Donnelley Financial Solutions, Inc.",
+          "cik": "0001669811",
+          "sic": "7380",
+          "sicDescription": "Services-Miscellaneous Business Services",
+          "return63Pct": 21.7
+        },
+        {
+          "ticker": "DLO",
+          "name": "DLocal Limited Class A Common Shares",
+          "cik": "0001846832",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 26.7
+        },
+        {
+          "ticker": "EFOR",
+          "name": "Everforth, Inc.",
+          "cik": "0000890564",
+          "sic": "7363",
+          "sicDescription": "Services-Help Supply Services",
+          "return63Pct": 40.9
+        },
+        {
+          "ticker": "ETSY",
+          "name": "Etsy, Inc.",
+          "cik": "0001370637",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 23.1
+        },
+        {
+          "ticker": "EXLS",
+          "name": "ExlService Holdings, Inc.",
+          "cik": "0001297989",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 32.3
+        },
+        {
+          "ticker": "FTDR",
+          "name": "Frontdoor, Inc. Common Stock",
+          "cik": "0001727263",
+          "sic": "7340",
+          "sicDescription": "Services-To Dwellings & Other Buildings",
+          "return63Pct": 33.5
+        },
+        {
+          "ticker": "GPN",
+          "name": "Global Payments, Inc.",
+          "cik": "0001123360",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 21.6
+        },
+        {
+          "ticker": "KELYA",
+          "name": "Kelly Services Inc",
+          "cik": "0000055135",
+          "sic": "7363",
+          "sicDescription": "Services-Help Supply Services",
+          "return63Pct": 48.7
+        },
+        {
+          "ticker": "KFY",
+          "name": "Korn Ferry",
+          "cik": "0000056679",
+          "sic": "7361",
+          "sicDescription": "Services-Employment Agencies",
+          "return63Pct": 23.3
+        },
+        {
+          "ticker": "LYFT",
+          "name": "Lyft, Inc. Class A Common Stock",
+          "cik": "0001759509",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 25.4
+        },
+        {
+          "ticker": "MA",
+          "name": "Mastercard Incorporated",
+          "cik": "0001141391",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 20.5
+        },
+        {
+          "ticker": "MAN",
+          "name": "ManpowerGroup",
+          "cik": "0000871763",
+          "sic": "7363",
+          "sicDescription": "Services-Help Supply Services",
+          "return63Pct": 97.2
+        },
+        {
+          "ticker": "MAX",
+          "name": "MediaAlpha, Inc.",
+          "cik": "0001818383",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 44.4
+        },
+        {
+          "ticker": "MNTN",
+          "name": "MNTN, Inc.",
+          "cik": "0001891027",
+          "sic": "7310",
+          "sicDescription": "Services-Advertising",
+          "return63Pct": 40.3
+        },
+        {
+          "ticker": "OMC",
+          "name": "Omnicom Group Inc.",
+          "cik": "0000029989",
+          "sic": "7311",
+          "sicDescription": "Services-Advertising Agencies",
+          "return63Pct": 21.4
+        },
+        {
+          "ticker": "PAY",
+          "name": "Paymentus Holdings, Inc.",
+          "cik": "0001841156",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 53.2
+        },
+        {
+          "ticker": "PAYO",
+          "name": "Payoneer Global Inc. Common Stock",
+          "cik": "0001845815",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 36.7
+        },
+        {
+          "ticker": "PAYS",
+          "name": "Paysign, Inc. Common Stock",
+          "cik": "0001496443",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 77.3
+        },
+        {
+          "ticker": "PHR",
+          "name": "Phreesia, Inc.",
+          "cik": "0001412408",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 23.2
+        },
+        {
+          "ticker": "QNST",
+          "name": "QuinStreet, Inc.",
+          "cik": "0001117297",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 53.2
+        },
+        {
+          "ticker": "RELY",
+          "name": "Remitly Global, Inc. Common Stock",
+          "cik": "0001782170",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 32.6
+        },
+        {
+          "ticker": "RHI",
+          "name": "Robert Half Inc.",
+          "cik": "0000315213",
+          "sic": "7363",
+          "sicDescription": "Services-Help Supply Services",
+          "return63Pct": 53.9
+        },
+        {
+          "ticker": "RMNI",
+          "name": "Rimini Street, Inc. (DE) Common Stock",
+          "cik": "0001635282",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 44.5
+        },
+        {
+          "ticker": "RSKD",
+          "name": "Riskified Ltd.",
+          "cik": "0001851112",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 29.3
+        },
+        {
+          "ticker": "SE",
+          "name": "Sea Limited American Depositary Shares, each representing one Class A Ordinary Share",
+          "cik": "0001703399",
+          "sic": "7380",
+          "sicDescription": "Services-Miscellaneous Business Services",
+          "return63Pct": 31.8
+        },
+        {
+          "ticker": "STGW",
+          "name": "Stagwell Inc. Class A Common Stock",
+          "cik": "0000876883",
+          "sic": "7311",
+          "sicDescription": "Services-Advertising Agencies",
+          "return63Pct": 24.7
+        },
+        {
+          "ticker": "WEX",
+          "name": "WEX Inc.",
+          "cik": "0001309108",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 36.1
+        },
+        {
+          "ticker": "XHLD",
+          "name": "TEN Holdings, Inc. Common Stock",
+          "cik": "0002030954",
+          "sic": "7389",
+          "sicDescription": "Services-Business Services, NEC",
+          "return63Pct": 554.9
+        }
+      ]
+    },
+    "Computer Hardware": {
+      "leaderN": 8,
+      "members": [
+        {
+          "ticker": "ANET",
+          "name": "Arista Networks",
+          "cik": "0001596532",
+          "sic": "3576",
+          "sicDescription": "Computer Communications Equipment",
+          "return63Pct": 22.5
+        },
+        {
+          "ticker": "FTNT",
+          "name": "Fortinet, Inc.",
+          "cik": "0001262039",
+          "sic": "3577",
+          "sicDescription": "Computer Peripheral Equipment, NEC",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "MEI",
+          "name": "Methode Electronics",
+          "cik": "0000065270",
+          "sic": "3678",
+          "sicDescription": "Electronic Connectors",
+          "return63Pct": 57.8
+        },
+        {
+          "ticker": "PANW",
+          "name": "Palo Alto Networks, Inc. Common Stock",
+          "cik": "0001327567",
+          "sic": "3577",
+          "sicDescription": "Computer Peripheral Equipment, NEC",
+          "return63Pct": 31.9
+        },
+        {
+          "ticker": "PAR",
+          "name": "PAR Technology Corp.",
+          "cik": "0000708821",
+          "sic": "3578",
+          "sicDescription": "Calculating & Accounting Machines (No Electronic Computers)",
+          "return63Pct": 24.0
+        },
+        {
+          "ticker": "QMCO",
+          "name": "Quantum Corporation",
+          "cik": "0000709283",
+          "sic": "3572",
+          "sicDescription": "Computer Storage Devices",
+          "return63Pct": 129.2
+        },
+        {
+          "ticker": "VREX",
+          "name": "Varex Imaging Corporation Common Stock",
+          "cik": "0001681622",
+          "sic": "3679",
+          "sicDescription": "Electronic Components, NEC",
+          "return63Pct": 80.8
+        },
+        {
+          "ticker": "VYX",
+          "name": "NCR Voyix Corporation",
+          "cik": "0000070866",
+          "sic": "3578",
+          "sicDescription": "Calculating & Accounting Machines (No Electronic Computers)",
+          "return63Pct": 22.1
+        }
+      ]
+    },
+    "Consumer Products": {
+      "leaderN": 23,
+      "members": [
+        {
+          "ticker": "AMCR",
+          "name": "Amcor plc Ordinary Shares",
+          "cik": "0001748790",
+          "sic": "3990",
+          "sicDescription": "Miscellaneous Manufacturing Industries",
+          "return63Pct": 20.2
+        },
+        {
+          "ticker": "BRBR",
+          "name": "BellRing Brands, Inc.",
+          "cik": "0001772016",
+          "sic": "2000",
+          "sicDescription": "Food and Kindred Products",
+          "return63Pct": 27.9
+        },
+        {
+          "ticker": "CAG",
+          "name": "Conagra Brands, Inc.",
+          "cik": "0000023217",
+          "sic": "2000",
+          "sicDescription": "Food and Kindred Products",
+          "return63Pct": 21.2
+        },
+        {
+          "ticker": "CCEP",
+          "name": "Coca-Cola Europacific Partners plc Ordinary Shares",
+          "cik": "0001650107",
+          "sic": "2086",
+          "sicDescription": "Bottled & Canned Soft Drinks & Carbonated Waters",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "EMBJ",
+          "name": "Embraer S.A. American Depositary Shares (Each representing Four Common Shares)",
+          "cik": "0001355444",
+          "sic": "3721",
+          "sicDescription": "Aircraft",
+          "return63Pct": 25.6
+        },
+        {
+          "ticker": "ENR",
+          "name": "Energizer Holdings, Inc",
+          "cik": "0001632790",
+          "sic": "3690",
+          "sicDescription": "Miscellaneous Electrical Machinery, Equipment & Supplies",
+          "return63Pct": 22.2
+        },
+        {
+          "ticker": "FIGS",
+          "name": "FIGS, Inc.",
+          "cik": "0001846576",
+          "sic": "2300",
+          "sicDescription": "Apparel & Other Finishd Prods of  Fabrics & Similar Matl",
+          "return63Pct": 31.1
+        },
+        {
+          "ticker": "FNKO",
+          "name": "Funko, Inc. Class A Common Stock",
+          "cik": "0001704711",
+          "sic": "3944",
+          "sicDescription": "Games, Toys & Children's Vehicles (No Dolls & Bicycles)",
+          "return63Pct": 25.0
+        },
+        {
+          "ticker": "FRPT",
+          "name": "Freshpet, Inc.",
+          "cik": "0001611647",
+          "sic": "2040",
+          "sicDescription": "Grain Mill Products",
+          "return63Pct": 37.2
+        },
+        {
+          "ticker": "GIS",
+          "name": "General Mills, Inc.",
+          "cik": "0000040704",
+          "sic": "2040",
+          "sicDescription": "Grain Mill Products",
+          "return63Pct": 22.9
+        },
+        {
+          "ticker": "GRMN",
+          "name": "Garmin Ltd",
+          "cik": "0001121788",
+          "sic": "3812",
+          "sicDescription": "Search, Detection, Navigation, Guidance, Aeronautical Sys",
+          "return63Pct": 21.9
+        },
+        {
+          "ticker": "IMAX",
+          "name": "Imax Corp",
+          "cik": "0000921582",
+          "sic": "3861",
+          "sicDescription": "Photographic Equipment & Supplies",
+          "return63Pct": 27.0
+        },
+        {
+          "ticker": "LW",
+          "name": "Lamb Weston Holdings, Inc.",
+          "cik": "0001679273",
+          "sic": "2030",
+          "sicDescription": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties",
+          "return63Pct": 27.3
+        },
+        {
+          "ticker": "MHK",
+          "name": "Mohawk Industries, Inc.",
+          "cik": "0000851968",
+          "sic": "2273",
+          "sicDescription": "Carpets & Rugs",
+          "return63Pct": 20.9
+        },
+        {
+          "ticker": "MICC",
+          "name": "The Magnum Ice Cream Company N.V.",
+          "cik": "0002071668",
+          "sic": "2024",
+          "sicDescription": "Ice Cream & Frozen Desserts",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "MSI",
+          "name": "Motorola Solutions, Inc. New",
+          "cik": "0000068505",
+          "sic": "3663",
+          "sicDescription": "Radio & Tv Broadcasting & Communications Equipment",
+          "return63Pct": 20.5
+        },
+        {
+          "ticker": "NCI",
+          "name": "Neo-Concept International Group Holdings Limited Class A Ordinary Shares",
+          "cik": "0001916331",
+          "sic": "2300",
+          "sicDescription": "Apparel & Other Finishd Prods of  Fabrics & Similar Matl",
+          "return63Pct": 24.5
+        },
+        {
+          "ticker": "RACE",
+          "name": "Ferrari N.V.",
+          "cik": "0001648416",
+          "sic": "3711",
+          "sicDescription": "Motor Vehicles & Passenger Car Bodies",
+          "return63Pct": 23.6
+        },
+        {
+          "ticker": "SJM",
+          "name": "The J.M. Smucker Company",
+          "cik": "0000091419",
+          "sic": "2033",
+          "sicDescription": "Canned, Fruits, Veg, Preserves, Jams & Jellies",
+          "return63Pct": 28.2
+        },
+        {
+          "ticker": "SN",
+          "name": "SharkNinja, Inc.",
+          "cik": "0001957132",
+          "sic": "3630",
+          "sicDescription": "Household Appliances",
+          "return63Pct": 56.9
+        },
+        {
+          "ticker": "TILE",
+          "name": "Interface Inc",
+          "cik": "0000715787",
+          "sic": "2273",
+          "sicDescription": "Carpets & Rugs",
+          "return63Pct": 30.3
+        },
+        {
+          "ticker": "UTZ",
+          "name": "Utz Brands, Inc.",
+          "cik": "0001739566",
+          "sic": "2090",
+          "sicDescription": "Miscellaneous Food Preparations & Kindred Products",
+          "return63Pct": 94.0
+        },
+        {
+          "ticker": "WNC",
+          "name": "Wabash National Corp.",
+          "cik": "0000879526",
+          "sic": "3715",
+          "sicDescription": "Truck Trailers",
+          "return63Pct": 68.1
+        }
+      ]
+    },
+    "Health Care Services": {
+      "leaderN": 19,
+      "members": [
+        {
+          "ticker": "ACHC",
+          "name": "Acadia Healthcare Company, Inc.",
+          "cik": "0001520697",
+          "sic": "8093",
+          "sicDescription": "Services-Specialty Outpatient Facilities, NEC",
+          "return63Pct": 23.1
+        },
+        {
+          "ticker": "AVAH",
+          "name": "Aveanna Healthcare Holdings Inc. Common Stock",
+          "cik": "0001832332",
+          "sic": "8082",
+          "sicDescription": "Services-Home Health Care Services",
+          "return63Pct": 85.8
+        },
+        {
+          "ticker": "CAI",
+          "name": "Caris Life Sciences, Inc. Common Stock",
+          "cik": "0002019410",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 53.3
+        },
+        {
+          "ticker": "CDNA",
+          "name": "CareDx, Inc.",
+          "cik": "0001217234",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 118.2
+        },
+        {
+          "ticker": "CON",
+          "name": "Concentra Group Holdings Parent, Inc.",
+          "cik": "0002014596",
+          "sic": "8093",
+          "sicDescription": "Services-Specialty Outpatient Facilities, NEC",
+          "return63Pct": 37.8
+        },
+        {
+          "ticker": "CSTL",
+          "name": "Castle Biosciences, Inc. Common Stock",
+          "cik": "0001447362",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 58.9
+        },
+        {
+          "ticker": "DGX",
+          "name": "Quest Diagnostics Inc.",
+          "cik": "0001022079",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "FTRE",
+          "name": "Fortrea Holdings Inc. Common Stock",
+          "cik": "0001965040",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 22.2
+        },
+        {
+          "ticker": "GH",
+          "name": "Guardant Health, Inc. Common Stock",
+          "cik": "0001576280",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 24.5
+        },
+        {
+          "ticker": "LFST",
+          "name": "LifeStance Health Group, Inc. Common Stock",
+          "cik": "0001845257",
+          "sic": "8000",
+          "sicDescription": "Services-Health Services",
+          "return63Pct": 59.7
+        },
+        {
+          "ticker": "LH",
+          "name": "Labcorp Holdings Inc.",
+          "cik": "0000920148",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 28.9
+        },
+        {
+          "ticker": "MD",
+          "name": "Pediatrix Medical Group, Inc.",
+          "cik": "0000893949",
+          "sic": "8060",
+          "sicDescription": "Services-Hospitals",
+          "return63Pct": 23.5
+        },
+        {
+          "ticker": "NTRA",
+          "name": "Natera, Inc. Common Stock",
+          "cik": "0001604821",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 46.1
+        },
+        {
+          "ticker": "OMDA",
+          "name": "Omada Health, Inc. Common Stock",
+          "cik": "0001611115",
+          "sic": "8000",
+          "sicDescription": "Services-Health Services",
+          "return63Pct": 31.8
+        },
+        {
+          "ticker": "PSNL",
+          "name": "Personalis, Inc. Common Stock",
+          "cik": "0001527753",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 49.7
+        },
+        {
+          "ticker": "RDNT",
+          "name": "RadNet, Inc. Common Stock",
+          "cik": "0000790526",
+          "sic": "8071",
+          "sicDescription": "Services-Medical Laboratories",
+          "return63Pct": 34.4
+        },
+        {
+          "ticker": "SHC",
+          "name": "Sotera Health Company Common Stock",
+          "cik": "0001822479",
+          "sic": "8090",
+          "sicDescription": "Services-Misc Health & Allied Services, NEC",
+          "return63Pct": 23.2
+        },
+        {
+          "ticker": "THC",
+          "name": "Tenet Healthcare Corporation New",
+          "cik": "0000070318",
+          "sic": "8062",
+          "sicDescription": "Services-General Medical & Surgical Hospitals, NEC",
+          "return63Pct": 52.2
+        },
+        {
+          "ticker": "WGS",
+          "name": "GeneDx Holdings Corp. Class A Common Stock",
+          "cik": "0001818331",
+          "sic": "8000",
+          "sicDescription": "Services-Health Services",
+          "return63Pct": 66.1
+        }
+      ]
+    },
+    "Industrial Materials": {
+      "leaderN": 18,
+      "members": [
+        {
+          "ticker": "AMBP",
+          "name": "Ardagh Metal Packaging S.A.",
+          "cik": "0001845097",
+          "sic": "3411",
+          "sicDescription": "Metal Cans",
+          "return63Pct": 27.5
+        },
+        {
+          "ticker": "ATI",
+          "name": "ATI Inc.",
+          "cik": "0001018963",
+          "sic": "3317",
+          "sicDescription": "Steel Pipe & Tubes",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "AVNT",
+          "name": "Avient Corporation",
+          "cik": "0001122976",
+          "sic": "2821",
+          "sicDescription": "Plastic Materials, Synth Resins & Nonvulcan Elastomers",
+          "return63Pct": 26.1
+        },
+        {
+          "ticker": "AXON",
+          "name": "Axon Enterprise, Inc. Common Stock",
+          "cik": "0001069183",
+          "sic": "3480",
+          "sicDescription": "Ordnance & Accessories, (No Vehicles/Guided Missiles)",
+          "return63Pct": 33.9
+        },
+        {
+          "ticker": "AXTA",
+          "name": "Axalta Coating Systems Ltd.",
+          "cik": "0001616862",
+          "sic": "2851",
+          "sicDescription": "Paints, Varnishes, Lacquers, Enamels & Allied Prods",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "CCK",
+          "name": "Crown Holdings Inc.",
+          "cik": "0001219601",
+          "sic": "3411",
+          "sicDescription": "Metal Cans",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "CXT",
+          "name": "Crane NXT, Co.",
+          "cik": "0000025445",
+          "sic": "3490",
+          "sicDescription": "Miscellaneous Fabricated Metal Products",
+          "return63Pct": 29.1
+        },
+        {
+          "ticker": "ELF",
+          "name": "e.l.f. Beauty, Inc.",
+          "cik": "0001600033",
+          "sic": "2844",
+          "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations",
+          "return63Pct": 85.9
+        },
+        {
+          "ticker": "EPC",
+          "name": "Edgewell Personal Care Company",
+          "cik": "0001096752",
+          "sic": "2844",
+          "sicDescription": "Perfumes, Cosmetics & Other Toilet Preparations",
+          "return63Pct": 65.8
+        },
+        {
+          "ticker": "HNI",
+          "name": "HNI Corporation",
+          "cik": "0000048287",
+          "sic": "2522",
+          "sicDescription": "Office Furniture (No Wood)",
+          "return63Pct": 57.5
+        },
+        {
+          "ticker": "JHX",
+          "name": "James Hardie Industries plc",
+          "cik": "0001159152",
+          "sic": "3272",
+          "sicDescription": "Concrete Products, Except Block & Brick",
+          "return63Pct": 28.6
+        },
+        {
+          "ticker": "MATV",
+          "name": "Mativ Holdings, Inc.",
+          "cik": "0001000623",
+          "sic": "2621",
+          "sicDescription": "Paper Mills",
+          "return63Pct": 36.6
+        },
+        {
+          "ticker": "MLKN",
+          "name": "MillerKnoll, Inc. Common Stock",
+          "cik": "0000066382",
+          "sic": "2520",
+          "sicDescription": "Office Furniture",
+          "return63Pct": 43.0
+        },
+        {
+          "ticker": "NWL",
+          "name": "Newell Brands Inc.",
+          "cik": "0000814453",
+          "sic": "3089",
+          "sicDescription": "Plastics Products, NEC",
+          "return63Pct": 81.5
+        },
+        {
+          "ticker": "SKY",
+          "name": "Champion Homes, Inc.",
+          "cik": "0000090896",
+          "sic": "2451",
+          "sicDescription": "Mobile Homes",
+          "return63Pct": 22.5
+        },
+        {
+          "ticker": "SWK",
+          "name": "Stanley Black & Decker, Inc.",
+          "cik": "0000093556",
+          "sic": "3420",
+          "sicDescription": "Cutlery, Handtools & General Hardware",
+          "return63Pct": 23.1
+        },
+        {
+          "ticker": "TRI",
+          "name": "Thomson Reuters Corporation Common Shares",
+          "cik": "0001075124",
+          "sic": "2741",
+          "sicDescription": "Miscellaneous Publishing",
+          "return63Pct": 22.8
+        },
+        {
+          "ticker": "WLY",
+          "name": "John Wiley & Sons, Inc. Class A",
+          "cik": "0000107140",
+          "sic": "2731",
+          "sicDescription": "Books: Publishing or  Publishing & Printing",
+          "return63Pct": 27.6
+        }
+      ]
+    },
+    "Instruments & Medical Devices": {
+      "leaderN": 38,
+      "members": [
+        {
+          "ticker": "AORT",
+          "name": "Artivion, Inc.",
+          "cik": "0000784199",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 20.6
+        },
+        {
+          "ticker": "ATEC",
+          "name": "Alphatec Holdings, Inc.",
+          "cik": "0001350653",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 21.8
+        },
+        {
+          "ticker": "ATRC",
+          "name": "AtriCure, Inc.",
+          "cik": "0001323885",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 75.4
+        },
+        {
+          "ticker": "AVTR",
+          "name": "Avantor, Inc.",
+          "cik": "0001722482",
+          "sic": "3826",
+          "sicDescription": "Laboratory Analytical Instruments",
+          "return63Pct": 59.9
+        },
+        {
+          "ticker": "AXGN",
+          "name": "Axogen, Inc. Common Stock",
+          "cik": "0000805928",
+          "sic": "3845",
+          "sicDescription": "Electromedical & Electrotherapeutic Apparatus",
+          "return63Pct": 30.4
+        },
+        {
+          "ticker": "BAX",
+          "name": "Baxter International Inc.",
+          "cik": "0000010456",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 39.1
+        },
+        {
+          "ticker": "BBNX",
+          "name": "Beta Bionics, Inc. Common Stock",
+          "cik": "0001674632",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 62.7
+        },
+        {
+          "ticker": "BDX",
+          "name": "Becton, Dickinson and Co.",
+          "cik": "0000010795",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 28.8
+        },
+        {
+          "ticker": "BFLY",
+          "name": "Butterfly Network, Inc.",
+          "cik": "0001804176",
+          "sic": "3844",
+          "sicDescription": "X-Ray Apparatus & Tubes & Related Irradiation Apparatus",
+          "return63Pct": 85.3
+        },
+        {
+          "ticker": "BLFS",
+          "name": "BioLife Solutions Inc.",
+          "cik": "0000834365",
+          "sic": "3845",
+          "sicDescription": "Electromedical & Electrotherapeutic Apparatus",
+          "return63Pct": 46.0
+        },
+        {
+          "ticker": "BVS",
+          "name": "Bioventus Inc. Class A Common Stock",
+          "cik": "0001665988",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 62.6
+        },
+        {
+          "ticker": "CLPT",
+          "name": "ClearPoint Neuro, Inc. Common Stock",
+          "cik": "0001285550",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 22.7
+        },
+        {
+          "ticker": "DCTH",
+          "name": "Delcath Systems Inc",
+          "cik": "0000872912",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 51.6
+        },
+        {
+          "ticker": "DRTS",
+          "name": "Alpha Tau Medical Ltd. Ordinary Shares",
+          "cik": "0001871321",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 35.2
+        },
+        {
+          "ticker": "DXCM",
+          "name": "DexCom, Inc.",
+          "cik": "0001093557",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 23.2
+        },
+        {
+          "ticker": "EMBC",
+          "name": "Embecta Corp. Common Stock",
+          "cik": "0001872789",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 49.4
+        },
+        {
+          "ticker": "GKOS",
+          "name": "Glaukos Corporation",
+          "cik": "0001192448",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 74.0
+        },
+        {
+          "ticker": "HAE",
+          "name": "Haemonetics Corporation",
+          "cik": "0000313143",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 53.3
+        },
+        {
+          "ticker": "HTFL",
+          "name": "Heartflow, Inc. Common Stock",
+          "cik": "0001464521",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 54.2
+        },
+        {
+          "ticker": "ILMN",
+          "name": "Illumina Inc",
+          "cik": "0001110803",
+          "sic": "3826",
+          "sicDescription": "Laboratory Analytical Instruments",
+          "return63Pct": 32.3
+        },
+        {
+          "ticker": "INSP",
+          "name": "Inspire Medical Systems, Inc.",
+          "cik": "0001609550",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 48.5
+        },
+        {
+          "ticker": "ITGR",
+          "name": "Integer Holdings Corporation",
+          "cik": "0001114483",
+          "sic": "3845",
+          "sicDescription": "Electromedical & Electrotherapeutic Apparatus",
+          "return63Pct": 40.2
+        },
+        {
+          "ticker": "KIDS",
+          "name": "OrthoPediatrics Corp. Common Stock",
+          "cik": "0001425450",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 37.7
+        },
+        {
+          "ticker": "MASS",
+          "name": "908 Devices Inc. Common Stock",
+          "cik": "0001555279",
+          "sic": "3826",
+          "sicDescription": "Laboratory Analytical Instruments",
+          "return63Pct": 27.6
+        },
+        {
+          "ticker": "MDT",
+          "name": "Medtronic plc",
+          "cik": "0001613103",
+          "sic": "3845",
+          "sicDescription": "Electromedical & Electrotherapeutic Apparatus",
+          "return63Pct": 23.6
+        },
+        {
+          "ticker": "MMED",
+          "name": "MiniMed Group, Inc. Common Stock",
+          "cik": "0002062583",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 66.9
+        },
+        {
+          "ticker": "MMSI",
+          "name": "Merit Medical Systems Inc",
+          "cik": "0000856982",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 43.5
+        },
+        {
+          "ticker": "RMD",
+          "name": "ResMed Inc.",
+          "cik": "0000943819",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 26.1
+        },
+        {
+          "ticker": "ROP",
+          "name": "Roper Technologies, Inc. Common Stock",
+          "cik": "0000882835",
+          "sic": "3823",
+          "sicDescription": "Industrial Instruments For Measurement, Display, and Control",
+          "return63Pct": 30.9
+        },
+        {
+          "ticker": "RVTY",
+          "name": "Revvity, Inc.",
+          "cik": "0000031791",
+          "sic": "3826",
+          "sicDescription": "Laboratory Analytical Instruments",
+          "return63Pct": 23.2
+        },
+        {
+          "ticker": "SIBN",
+          "name": "SI-BONE, Inc. Common Stock",
+          "cik": "0001459839",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 36.2
+        },
+        {
+          "ticker": "SMTI",
+          "name": "Sanara MedTech Inc. Common Stock",
+          "cik": "0000714256",
+          "sic": "3842",
+          "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies",
+          "return63Pct": 51.7
+        },
+        {
+          "ticker": "SOLV",
+          "name": "Solventum Corporation",
+          "cik": "0001964738",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 21.6
+        },
+        {
+          "ticker": "TMDX",
+          "name": "TransMedics Group, Inc. Common Stock",
+          "cik": "0001756262",
+          "sic": "3845",
+          "sicDescription": "Electromedical & Electrotherapeutic Apparatus",
+          "return63Pct": 31.6
+        },
+        {
+          "ticker": "TMO",
+          "name": "Thermo Fisher Scientific, Inc.",
+          "cik": "0000097745",
+          "sic": "3829",
+          "sicDescription": "Measuring & Controlling Devices, NEC",
+          "return63Pct": 26.3
+        },
+        {
+          "ticker": "TNDM",
+          "name": "Tandem Diabetes Care, Inc.",
+          "cik": "0001438133",
+          "sic": "3841",
+          "sicDescription": "Surgical & Medical Instruments & Apparatus",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "TXG",
+          "name": "10x Genomics, Inc. Class A Common Stock",
+          "cik": "0001770787",
+          "sic": "3826",
+          "sicDescription": "Laboratory Analytical Instruments",
+          "return63Pct": 117.4
+        },
+        {
+          "ticker": "ZBH",
+          "name": "Zimmer Biomet Holdings, Inc.",
+          "cik": "0001136869",
+          "sic": "3842",
+          "sicDescription": "Orthopedic, Prosthetic & Surgical Appliances & Supplies",
+          "return63Pct": 22.6
+        }
+      ]
+    },
+    "Insurance": {
+      "leaderN": 14,
+      "members": [
+        {
+          "ticker": "ALL",
+          "name": "The Allstate Corporation",
+          "cik": "0000899051",
+          "sic": "6331",
+          "sicDescription": "Fire, Marine & Casualty Insurance",
+          "return63Pct": 26.4
+        },
+        {
+          "ticker": "CNO",
+          "name": "CNO Financial Group, Inc.",
+          "cik": "0001224608",
+          "sic": "6321",
+          "sicDescription": "Accident & Health Insurance",
+          "return63Pct": 20.4
+        },
+        {
+          "ticker": "CRBG",
+          "name": "Corebridge Financial, Inc.",
+          "cik": "0001889539",
+          "sic": "6311",
+          "sicDescription": "Life Insurance",
+          "return63Pct": 20.8
+        },
+        {
+          "ticker": "HUM",
+          "name": "Humana Inc.",
+          "cik": "0000049071",
+          "sic": "6324",
+          "sicDescription": "Hospital & Medical Service Plans",
+          "return63Pct": 26.2
+        },
+        {
+          "ticker": "JXN",
+          "name": "Jackson Financial Inc.",
+          "cik": "0001822993",
+          "sic": "6311",
+          "sicDescription": "Life Insurance",
+          "return63Pct": 30.1
+        },
+        {
+          "ticker": "LNC",
+          "name": "Lincoln National Corp.",
+          "cik": "0000059558",
+          "sic": "6311",
+          "sicDescription": "Life Insurance",
+          "return63Pct": 22.7
+        },
+        {
+          "ticker": "MTG",
+          "name": "MGIC Investment Corp.",
+          "cik": "0000876437",
+          "sic": "6351",
+          "sicDescription": "Surety Insurance",
+          "return63Pct": 22.9
+        },
+        {
+          "ticker": "NMIH",
+          "name": "NMI Holdings Inc. Common Stock",
+          "cik": "0001547903",
+          "sic": "6351",
+          "sicDescription": "Surety Insurance",
+          "return63Pct": 24.8
+        },
+        {
+          "ticker": "OSCR",
+          "name": "Oscar Health, Inc.",
+          "cik": "0001568651",
+          "sic": "6324",
+          "sicDescription": "Hospital & Medical Service Plans",
+          "return63Pct": 37.1
+        },
+        {
+          "ticker": "RLI",
+          "name": "RLI Corp.",
+          "cik": "0000084246",
+          "sic": "6331",
+          "sicDescription": "Fire, Marine & Casualty Insurance",
+          "return63Pct": 28.5
+        },
+        {
+          "ticker": "SLDE",
+          "name": "Slide Insurance Holdings, Inc. Common Stock",
+          "cik": "0001886428",
+          "sic": "6331",
+          "sicDescription": "Fire, Marine & Casualty Insurance",
+          "return63Pct": 30.2
+        },
+        {
+          "ticker": "TRUP",
+          "name": "Trupanion, Inc.",
+          "cik": "0001371285",
+          "sic": "6324",
+          "sicDescription": "Hospital & Medical Service Plans",
+          "return63Pct": 35.7
+        },
+        {
+          "ticker": "TRV",
+          "name": "The Travelers Companies, Inc.",
+          "cik": "0000086312",
+          "sic": "6331",
+          "sicDescription": "Fire, Marine & Casualty Insurance",
+          "return63Pct": 26.7
+        },
+        {
+          "ticker": "VOYA",
+          "name": "VOYA FINANCIAL, INC.",
+          "cik": "0001535929",
+          "sic": "6311",
+          "sicDescription": "Life Insurance",
+          "return63Pct": 26.3
+        }
+      ]
+    },
+    "Metals & Coal Mining": {
+      "leaderN": 7,
+      "members": [
+        {
+          "ticker": "AYA",
+          "name": "Aya Gold & Silver Inc. Common Shares",
+          "cik": "0001826836",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 33.2
+        },
+        {
+          "ticker": "CGAU",
+          "name": "Centerra Gold Inc.",
+          "cik": "0001854640",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 32.7
+        },
+        {
+          "ticker": "EGO",
+          "name": "Eldorado Gold Corporation",
+          "cik": "0000918608",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 34.4
+        },
+        {
+          "ticker": "ERO",
+          "name": "Ero Copper Corp.",
+          "cik": "0001853860",
+          "sic": "1000",
+          "sicDescription": "Metal Mining",
+          "return63Pct": 27.6
+        },
+        {
+          "ticker": "FSM",
+          "name": "Fortuna Mining Corp.",
+          "cik": "0001341335",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 21.9
+        },
+        {
+          "ticker": "NEWP",
+          "name": "New Pacific Metals Corp.",
+          "cik": "0001369085",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 42.7
+        },
+        {
+          "ticker": "TGB",
+          "name": "Trekor Metals Limited",
+          "cik": "0000878518",
+          "sic": "1040",
+          "sicDescription": "Gold and Silver Ores",
+          "return63Pct": 23.7
+        }
+      ]
+    },
+    "Petroleum Refining": {
+      "leaderN": 10,
+      "members": [
+        {
+          "ticker": "CLMT",
+          "name": "Calumet, Inc. Common Stock",
+          "cik": "0002013745",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 34.6
+        },
+        {
+          "ticker": "CVI",
+          "name": "CVR ENERGY, INC.",
+          "cik": "0001376139",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 25.7
+        },
+        {
+          "ticker": "DK",
+          "name": "Delek US Holdings, Inc.",
+          "cik": "0001694426",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 62.3
+        },
+        {
+          "ticker": "MPC",
+          "name": "MARATHON PETROLEUM CORPORATION",
+          "cik": "0001510295",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 48.3
+        },
+        {
+          "ticker": "NESR",
+          "name": "National Energy Services Reunited Corp. Ordinary Shares",
+          "cik": "0001698514",
+          "sic": "1389",
+          "sicDescription": "Oil & Gas Field Services, NEC",
+          "return63Pct": 41.4
+        },
+        {
+          "ticker": "OII",
+          "name": "Oceaneering International Inc.",
+          "cik": "0000073756",
+          "sic": "1389",
+          "sicDescription": "Oil & Gas Field Services, NEC",
+          "return63Pct": 32.3
+        },
+        {
+          "ticker": "PARR",
+          "name": "Par Pacific Holdings, Inc. Common Stock",
+          "cik": "0000821483",
+          "sic": "1311",
+          "sicDescription": "Crude Petroleum & Natural Gas",
+          "return63Pct": 40.4
+        },
+        {
+          "ticker": "PBF",
+          "name": "PBF ENERGY INC.",
+          "cik": "0001534504",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 75.1
+        },
+        {
+          "ticker": "PSX",
+          "name": "PHILLIPS 66",
+          "cik": "0001534701",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 38.7
+        },
+        {
+          "ticker": "VLO",
+          "name": "Valero Energy Corporation",
+          "cik": "0001035002",
+          "sic": "2911",
+          "sicDescription": "Petroleum Refining",
+          "return63Pct": 43.9
+        }
+      ]
+    },
+    "Professional Services": {
+      "leaderN": 4,
+      "members": [
+        {
+          "ticker": "IT",
+          "name": "Gartner, Inc.",
+          "cik": "0000749251",
+          "sic": "8741",
+          "sicDescription": "Services-Management Services",
+          "return63Pct": 22.3
+        },
+        {
+          "ticker": "NEO",
+          "name": "NeoGenomics, Inc.",
+          "cik": "0001077183",
+          "sic": "8734",
+          "sicDescription": "Services-Testing Laboratories",
+          "return63Pct": 71.6
+        },
+        {
+          "ticker": "PAYX",
+          "name": "Paychex Inc",
+          "cik": "0000723531",
+          "sic": "8700",
+          "sicDescription": "Services-Engineering, Accounting, Research, Management",
+          "return63Pct": 31.0
+        },
+        {
+          "ticker": "TTEK",
+          "name": "Tetra Tech Inc",
+          "cik": "0000831641",
+          "sic": "8711",
+          "sicDescription": "Services-Engineering Services",
+          "return63Pct": 32.9
+        }
+      ]
+    },
+    "Real Estate": {
+      "leaderN": 2,
+      "members": [
+        {
+          "ticker": "CBRE",
+          "name": "CBRE GROUP, INC.",
+          "cik": "0001138118",
+          "sic": "6500",
+          "sicDescription": "Real Estate",
+          "return63Pct": 20.6
+        },
+        {
+          "ticker": "COMP",
+          "name": "Compass, Inc.",
+          "cik": "0001563190",
+          "sic": "6531",
+          "sicDescription": "Real Estate Agents & Managers (For Others)",
+          "return63Pct": 33.3
+        }
+      ]
+    },
+    "Retail": {
+      "leaderN": 19,
+      "members": [
+        {
+          "ticker": "ANF",
+          "name": "Abercrombie & Fitch Co.",
+          "cik": "0001018840",
+          "sic": "5651",
+          "sicDescription": "Retail-Family Clothing Stores",
+          "return63Pct": 92.2
+        },
+        {
+          "ticker": "ARHS",
+          "name": "Arhaus, Inc. Class A Common Stock",
+          "cik": "0001875444",
+          "sic": "5712",
+          "sicDescription": "Retail-Furniture Stores",
+          "return63Pct": 32.6
+        },
+        {
+          "ticker": "BJRI",
+          "name": "BJ's Restaurants, Inc.",
+          "cik": "0001013488",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 38.4
+        },
+        {
+          "ticker": "BLMN",
+          "name": "Bloomin' Brands, Inc. Common Stock",
+          "cik": "0001546417",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 25.4
+        },
+        {
+          "ticker": "BOBS",
+          "name": "Bobs Discount Furniture, Inc.",
+          "cik": "0002085187",
+          "sic": "5712",
+          "sicDescription": "Retail-Furniture Stores",
+          "return63Pct": 27.3
+        },
+        {
+          "ticker": "CAKE",
+          "name": "Cheesecake Factory (The)",
+          "cik": "0000887596",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 69.7
+        },
+        {
+          "ticker": "CBRL",
+          "name": "Cracker Barrel Old Country Store, Inc,.",
+          "cik": "0001067294",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 64.6
+        },
+        {
+          "ticker": "EAT",
+          "name": "Brinker International, Inc.",
+          "cik": "0000703351",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 61.7
+        },
+        {
+          "ticker": "GCT",
+          "name": "GigaCloud Technology Inc Class A Ordinary Shares",
+          "cik": "0001857816",
+          "sic": "5961",
+          "sicDescription": "Retail-Catalog & Mail-Order Houses",
+          "return63Pct": 46.9
+        },
+        {
+          "ticker": "GO",
+          "name": "Grocery Outlet Holding Corp. Common Stock",
+          "cik": "0001771515",
+          "sic": "5411",
+          "sicDescription": "Retail-Grocery Stores",
+          "return63Pct": 43.0
+        },
+        {
+          "ticker": "HNST",
+          "name": "The Honest Company, Inc. Common Stock",
+          "cik": "0001530979",
+          "sic": "5961",
+          "sicDescription": "Retail-Catalog & Mail-Order Houses",
+          "return63Pct": 62.0
+        },
+        {
+          "ticker": "HZO",
+          "name": "MarineMax, Inc.",
+          "cik": "0001057060",
+          "sic": "5531",
+          "sicDescription": "Retail-Auto & Home Supply Stores",
+          "return63Pct": 51.5
+        },
+        {
+          "ticker": "JACK",
+          "name": "Jack in the Box Inc.",
+          "cik": "0000807882",
+          "sic": "5812",
+          "sicDescription": "Retail-Eating  Places",
+          "return63Pct": 30.0
+        },
+        {
+          "ticker": "KMX",
+          "name": "CarMax Inc.",
+          "cik": "0001170010",
+          "sic": "5500",
+          "sicDescription": "Retail-Auto Dealers & Gasoline Stations",
+          "return63Pct": 39.2
+        },
+        {
+          "ticker": "KSS",
+          "name": "Kohls Corporation",
+          "cik": "0000885639",
+          "sic": "5311",
+          "sicDescription": "Retail-Department Stores",
+          "return63Pct": 21.9
+        },
+        {
+          "ticker": "SBH",
+          "name": "Sally Beauty Holdings, Inc.",
+          "cik": "0001368458",
+          "sic": "5990",
+          "sicDescription": "Retail-Retail Stores, NEC",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "TBBB",
+          "name": "BBB Foods Inc.",
+          "cik": "0001978954",
+          "sic": "5411",
+          "sicDescription": "Retail-Grocery Stores",
+          "return63Pct": 29.5
+        },
+        {
+          "ticker": "TGT",
+          "name": "Target Corporation",
+          "cik": "0000027419",
+          "sic": "5331",
+          "sicDescription": "Retail-Variety Stores",
+          "return63Pct": 28.4
+        },
+        {
+          "ticker": "W",
+          "name": "Wayfair Inc.",
+          "cik": "0001616707",
+          "sic": "5961",
+          "sicDescription": "Retail-Catalog & Mail-Order Houses",
+          "return63Pct": 43.6
+        }
+      ]
+    },
+    "Software & IT Services": {
+      "leaderN": 97,
+      "members": [
+        {
+          "ticker": "ACIW",
+          "name": "ACI Worldwide, Inc.",
+          "cik": "0000935036",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 23.3
+        },
+        {
+          "ticker": "ADP",
+          "name": "Automatic Data Processing",
+          "cik": "0000008670",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 29.6
+        },
+        {
+          "ticker": "ALRM",
+          "name": "Alarm.com Holdings, Inc.",
+          "cik": "0001459200",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 27.4
+        },
+        {
+          "ticker": "AMPL",
+          "name": "Amplitude, Inc. Class A Common Stock",
+          "cik": "0001866692",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 82.9
+        },
+        {
+          "ticker": "APPF",
+          "name": "AppFolio, Inc. Class A",
+          "cik": "0001433195",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 45.5
+        },
+        {
+          "ticker": "APPN",
+          "name": "Appian Corporation Class A Common Stock",
+          "cik": "0001441683",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 81.7
+        },
+        {
+          "ticker": "ASAN",
+          "name": "Asana, Inc. Class A Common Stock",
+          "cik": "0001477720",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 32.3
+        },
+        {
+          "ticker": "ATHM",
+          "name": "Autohome Inc. American Depositary Shares, each representing four Class A Ordinary Shares",
+          "cik": "0001527636",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 30.8
+        },
+        {
+          "ticker": "AVPT",
+          "name": "AvePoint, Inc. Class A Common Stock",
+          "cik": "0001777921",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 28.3
+        },
+        {
+          "ticker": "BILL",
+          "name": "BILL Holdings, Inc.",
+          "cik": "0001786352",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 35.9
+        },
+        {
+          "ticker": "BLZE",
+          "name": "Backblaze, Inc. Class A Common Stock",
+          "cik": "0001462056",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 73.1
+        },
+        {
+          "ticker": "BOX",
+          "name": "BOX, INC.",
+          "cik": "0001372612",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 29.7
+        },
+        {
+          "ticker": "BRZE",
+          "name": "Braze, Inc. Class A Common Stock",
+          "cik": "0001676238",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 34.7
+        },
+        {
+          "ticker": "BZ",
+          "name": "KANZHUN LIMITED American Depository Shares",
+          "cik": "0001842827",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 31.2
+        },
+        {
+          "ticker": "CARG",
+          "name": "CarGurus, Inc. Class A Common Stock",
+          "cik": "0001494259",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 22.4
+        },
+        {
+          "ticker": "CCC",
+          "name": "CCC Intelligent Solutions Holdings Inc. Common Stock",
+          "cik": "0001818201",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 59.4
+        },
+        {
+          "ticker": "CERT",
+          "name": "Certara, Inc. Common Stock",
+          "cik": "0001827090",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 43.5
+        },
+        {
+          "ticker": "COUR",
+          "name": "Coursera, Inc.",
+          "cik": "0001651562",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 20.0
+        },
+        {
+          "ticker": "CRM",
+          "name": "Salesforce, Inc.",
+          "cik": "0001108524",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 34.0
+        },
+        {
+          "ticker": "CXM",
+          "name": "Sprinklr, Inc.",
+          "cik": "0001569345",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 46.2
+        },
+        {
+          "ticker": "DBX",
+          "name": "Dropbox, Inc. Class A",
+          "cik": "0001467623",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 32.8
+        },
+        {
+          "ticker": "DOCS",
+          "name": "Doximity, Inc.",
+          "cik": "0001516513",
+          "sic": "7371",
+          "sicDescription": "Services-Computer Programming Services",
+          "return63Pct": 24.9
+        },
+        {
+          "ticker": "DOCU",
+          "name": "DocuSign, Inc. Common Stock",
+          "cik": "0001261333",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 21.9
+        },
+        {
+          "ticker": "DT",
+          "name": "Dynatrace, Inc.",
+          "cik": "0001773383",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 26.0
+        },
+        {
+          "ticker": "DUOL",
+          "name": "Duolingo, Inc. Class A Common Stock",
+          "cik": "0001562088",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 32.0
+        },
+        {
+          "ticker": "DV",
+          "name": "DoubleVerify Holdings, Inc.",
+          "cik": "0001819928",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 37.9
+        },
+        {
+          "ticker": "ESTC",
+          "name": "Elastic N.V.",
+          "cik": "0001707753",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 54.4
+        },
+        {
+          "ticker": "EVER",
+          "name": "EverQuote, Inc. Class A Common Stock",
+          "cik": "0001640428",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 33.4
+        },
+        {
+          "ticker": "EVTC",
+          "name": "EVERTEC, INC.",
+          "cik": "0001559865",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 22.5
+        },
+        {
+          "ticker": "FA",
+          "name": "First Advantage Corporation Common Stock",
+          "cik": "0001210677",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 31.5
+        },
+        {
+          "ticker": "FDS",
+          "name": "Factset Research Systems",
+          "cik": "0001013237",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 25.9
+        },
+        {
+          "ticker": "FIVN",
+          "name": "FIVE9, INC.",
+          "cik": "0001288847",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 39.8
+        },
+        {
+          "ticker": "FROG",
+          "name": "JFrog Ltd. Ordinary Shares",
+          "cik": "0001800667",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 24.2
+        },
+        {
+          "ticker": "FRSH",
+          "name": "Freshworks Inc. Class A Common Stock",
+          "cik": "0001544522",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 42.7
+        },
+        {
+          "ticker": "FSLY",
+          "name": "Fastly, Inc. Class A Common Stock",
+          "cik": "0001517413",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 29.7
+        },
+        {
+          "ticker": "GEN",
+          "name": "Gen Digital Inc. Common Stock",
+          "cik": "0000849399",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "GLBE",
+          "name": "Global-E Online Ltd. Ordinary Shares",
+          "cik": "0001835963",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 30.4
+        },
+        {
+          "ticker": "GRND",
+          "name": "Grindr Inc.",
+          "cik": "0001820144",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 24.7
+        },
+        {
+          "ticker": "GTLB",
+          "name": "GitLab Inc. Class A Common Stock",
+          "cik": "0001653482",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 44.5
+        },
+        {
+          "ticker": "GWRE",
+          "name": "GUIDEWIRE SOFTWARE, INC.",
+          "cik": "0001528396",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 34.8
+        },
+        {
+          "ticker": "HNGE",
+          "name": "Hinge Health, Inc.",
+          "cik": "0001673743",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 55.4
+        },
+        {
+          "ticker": "INTA",
+          "name": "Intapp, Inc. Common Stock",
+          "cik": "0001565687",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 88.3
+        },
+        {
+          "ticker": "JKHY",
+          "name": "Henry (Jack) & Associates",
+          "cik": "0000779152",
+          "sic": "7373",
+          "sicDescription": "Services-Computer Integrated Systems Design",
+          "return63Pct": 24.5
+        },
+        {
+          "ticker": "KVYO",
+          "name": "Klaviyo, Inc.",
+          "cik": "0001835830",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 27.2
+        },
+        {
+          "ticker": "MANH",
+          "name": "Manhattan Associates Inc",
+          "cik": "0001056696",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 48.8
+        },
+        {
+          "ticker": "MDB",
+          "name": "MongoDB, Inc. Class A",
+          "cik": "0001441816",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 33.1
+        },
+        {
+          "ticker": "MGNI",
+          "name": "Magnite, Inc. Common Stock",
+          "cik": "0001595974",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 65.4
+        },
+        {
+          "ticker": "MNDY",
+          "name": "monday.com Ltd. Ordinary Shares",
+          "cik": "0001845338",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 20.4
+        },
+        {
+          "ticker": "NAVN",
+          "name": "Navan, Inc. Class A Common Stock",
+          "cik": "0001639723",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 33.4
+        },
+        {
+          "ticker": "NCNO",
+          "name": "nCino, Inc. Common Stock",
+          "cik": "0001902733",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 43.0
+        },
+        {
+          "ticker": "NET",
+          "name": "Cloudflare, Inc. Class A common stock, par value $0.001 per share",
+          "cik": "0001477333",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 24.0
+        },
+        {
+          "ticker": "NIQ",
+          "name": "NIQ Global Intelligence plc",
+          "cik": "0002054696",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 130.2
+        },
+        {
+          "ticker": "NTNX",
+          "name": "Nutanix, Inc. Class A Common Stock",
+          "cik": "0001618732",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 32.8
+        },
+        {
+          "ticker": "NTSK",
+          "name": "Netskope, Inc. Class A Common Stock",
+          "cik": "0002063196",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 24.3
+        },
+        {
+          "ticker": "OKTA",
+          "name": "Okta, Inc. Class A Common Stock",
+          "cik": "0001660134",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 34.9
+        },
+        {
+          "ticker": "OOMA",
+          "name": "Ooma, Inc. Common Stock",
+          "cik": "0001327688",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 29.8
+        },
+        {
+          "ticker": "PATH",
+          "name": "UiPath, Inc.",
+          "cik": "0001734722",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 54.9
+        },
+        {
+          "ticker": "PAYC",
+          "name": "PAYCOM SOFTWARE, INC.",
+          "cik": "0001590955",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 70.8
+        },
+        {
+          "ticker": "PCOR",
+          "name": "Procore Technologies, Inc.",
+          "cik": "0001611052",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 28.8
+        },
+        {
+          "ticker": "PCTY",
+          "name": "Paylocity Holding Corporation Common Stock",
+          "cik": "0001591698",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 37.4
+        },
+        {
+          "ticker": "PD",
+          "name": "PagerDuty, Inc.",
+          "cik": "0001568100",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 39.0
+        },
+        {
+          "ticker": "PRCH",
+          "name": "Porch Group, Inc. Common Stock",
+          "cik": "0001784535",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 67.0
+        },
+        {
+          "ticker": "PRGS",
+          "name": "Progress Software Corp (DE)",
+          "cik": "0000876167",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 36.3
+        },
+        {
+          "ticker": "PUBM",
+          "name": "PubMatic, Inc. Class A Common Stock",
+          "cik": "0001422930",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 44.0
+        },
+        {
+          "ticker": "QLYS",
+          "name": "Qualys, Inc. Common Stock",
+          "cik": "0001107843",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 71.2
+        },
+        {
+          "ticker": "QTWO",
+          "name": "Q2 Holdings Inc",
+          "cik": "0001410384",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 37.6
+        },
+        {
+          "ticker": "RNG",
+          "name": "RINGCENTRAL, INC.",
+          "cik": "0001384905",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 60.2
+        },
+        {
+          "ticker": "RPD",
+          "name": "Rapid7, Inc. Common Stock",
+          "cik": "0001560327",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 58.6
+        },
+        {
+          "ticker": "S",
+          "name": "SentinelOne, Inc.",
+          "cik": "0001583708",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 30.2
+        },
+        {
+          "ticker": "SAIC",
+          "name": "Science Applications International Corporation Common Stock",
+          "cik": "0001571123",
+          "sic": "7373",
+          "sicDescription": "Services-Computer Integrated Systems Design",
+          "return63Pct": 20.9
+        },
+        {
+          "ticker": "SAP",
+          "name": "SAP SE",
+          "cik": "0001000184",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 21.9
+        },
+        {
+          "ticker": "SHOP",
+          "name": "Shopify Inc. Class A subordinate voting shares",
+          "cik": "0001594805",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 28.8
+        },
+        {
+          "ticker": "SMWB",
+          "name": "Similarweb Ltd.",
+          "cik": "0001842731",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 118.8
+        },
+        {
+          "ticker": "SNOW",
+          "name": "Snowflake Inc.",
+          "cik": "0001640147",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 28.4
+        },
+        {
+          "ticker": "SPSC",
+          "name": "SPS Commerce, Inc.",
+          "cik": "0001092699",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 49.6
+        },
+        {
+          "ticker": "SPT",
+          "name": "Sprout Social, Inc Class A Common Stock",
+          "cik": "0001517375",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 53.6
+        },
+        {
+          "ticker": "SSNC",
+          "name": "SS&C Technologies Inc",
+          "cik": "0001402436",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 23.5
+        },
+        {
+          "ticker": "TASK",
+          "name": "TaskUs, Inc. Class A Common Stock",
+          "cik": "0001829864",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 32.5
+        },
+        {
+          "ticker": "TEAM",
+          "name": "Atlassian Corporation Class A Common Stock",
+          "cik": "0001650372",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 76.9
+        },
+        {
+          "ticker": "TEM",
+          "name": "Tempus AI, Inc. Class A Common Stock",
+          "cik": "0001717115",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 26.9
+        },
+        {
+          "ticker": "TENB",
+          "name": "Tenable Holdings, Inc.",
+          "cik": "0001660280",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 33.4
+        },
+        {
+          "ticker": "TOST",
+          "name": "Toast, Inc.",
+          "cik": "0001650164",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 35.0
+        },
+        {
+          "ticker": "TTAN",
+          "name": "ServiceTitan, Inc. Class A Common Stock",
+          "cik": "0001638826",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 38.0
+        },
+        {
+          "ticker": "TWLO",
+          "name": "Twilio Inc.",
+          "cik": "0001447669",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 24.7
+        },
+        {
+          "ticker": "TYL",
+          "name": "Tyler Technologies, Inc.",
+          "cik": "0000860731",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 20.7
+        },
+        {
+          "ticker": "U",
+          "name": "Unity Software Inc.",
+          "cik": "0001810806",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 42.1
+        },
+        {
+          "ticker": "VEEV",
+          "name": "Veeva Systems Inc.",
+          "cik": "0001393052",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 58.7
+        },
+        {
+          "ticker": "VIA",
+          "name": "Via Transportation, Inc.",
+          "cik": "0001603015",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 87.6
+        },
+        {
+          "ticker": "VRNS",
+          "name": "Varonis Systems, Inc.",
+          "cik": "0001361113",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 28.6
+        },
+        {
+          "ticker": "WAY",
+          "name": "Waystar Holding Corp. Common Stock",
+          "cik": "0001990354",
+          "sic": "7373",
+          "sicDescription": "Services-Computer Integrated Systems Design",
+          "return63Pct": 31.8
+        },
+        {
+          "ticker": "WDAY",
+          "name": "Workday, Inc. Class A Common Stock",
+          "cik": "0001327811",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 40.0
+        },
+        {
+          "ticker": "WEAV",
+          "name": "Weave Communications, Inc.",
+          "cik": "0001609151",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 21.1
+        },
+        {
+          "ticker": "WIX",
+          "name": "WIX.com Ltd.",
+          "cik": "0001576789",
+          "sic": "7370",
+          "sicDescription": "Services-Computer Programming, Data Processing, Etc.",
+          "return63Pct": 56.3
+        },
+        {
+          "ticker": "WK",
+          "name": "Workiva Inc.",
+          "cik": "0001445305",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 59.0
+        },
+        {
+          "ticker": "YEXT",
+          "name": "Yext, Inc.",
+          "cik": "0001614178",
+          "sic": "7374",
+          "sicDescription": "Services-Computer Processing & Data Preparation",
+          "return63Pct": 65.3
+        },
+        {
+          "ticker": "ZETA",
+          "name": "Zeta Global Holdings Corp.",
+          "cik": "0001851003",
+          "sic": "7372",
+          "sicDescription": "Services-Prepackaged Software",
+          "return63Pct": 33.4
+        },
+        {
+          "ticker": "ZS",
+          "name": "Zscaler, Inc. Common Stock",
+          "cik": "0001713683",
+          "sic": "7371",
+          "sicDescription": "Services-Computer Programming Services",
+          "return63Pct": 31.8
+        }
+      ]
+    },
+    "Telecom & Media": {
+      "leaderN": 2,
+      "members": [
+        {
+          "ticker": "NMAX",
+          "name": "Newsmax, Inc.",
+          "cik": "0002026478",
+          "sic": "4833",
+          "sicDescription": "Television Broadcasting Stations",
+          "return63Pct": 25.9
+        },
+        {
+          "ticker": "ROKU",
+          "name": "Roku, Inc. Class A Common Stock",
+          "cik": "0001428439",
+          "sic": "4841",
+          "sicDescription": "Cable & Other Pay Television Services",
+          "return63Pct": 21.1
+        }
+      ]
+    },
+    "Transportation & Logistics": {
+      "leaderN": 15,
+      "members": [
+        {
+          "ticker": "BKNG",
+          "name": "Booking Holdings Inc. Common Stock",
+          "cik": "0001075531",
+          "sic": "4700",
+          "sicDescription": "Transportation Services",
+          "return63Pct": 22.8
+        },
+        {
+          "ticker": "BWLP",
+          "name": "BW LPG Limited",
+          "cik": "0001649313",
+          "sic": "4700",
+          "sicDescription": "Transportation Services",
+          "return63Pct": 22.1
+        },
+        {
+          "ticker": "DHT",
+          "name": "DHT HOLDINGS, INC.",
+          "cik": "0001331284",
+          "sic": "4412",
+          "sicDescription": "Deep Sea Foreign Transportation of  Freight",
+          "return63Pct": 20.5
+        },
+        {
+          "ticker": "DINO",
+          "name": "HF Sinclair Corporation",
+          "cik": "0001915657",
+          "sic": "4610",
+          "sicDescription": "Pipe Lines (No Natural Gas)",
+          "return63Pct": 42.7
+        },
+        {
+          "ticker": "ECO",
+          "name": "Okeanis Eco Tankers Corp.",
+          "cik": "0001964954",
+          "sic": "4412",
+          "sicDescription": "Deep Sea Foreign Transportation of  Freight",
+          "return63Pct": 41.6
+        },
+        {
+          "ticker": "EXPD",
+          "name": "Expeditors International of Washington, Inc.",
+          "cik": "0000746515",
+          "sic": "4731",
+          "sicDescription": "Arrangement of  Transportation of  Freight & Cargo",
+          "return63Pct": 20.9
+        },
+        {
+          "ticker": "EXPE",
+          "name": "Expedia Group, Inc. Common Stock",
+          "cik": "0001324424",
+          "sic": "4700",
+          "sicDescription": "Transportation Services",
+          "return63Pct": 45.9
+        },
+        {
+          "ticker": "FRO",
+          "name": "Frontline Plc",
+          "cik": "0000913290",
+          "sic": "4412",
+          "sicDescription": "Deep Sea Foreign Transportation of  Freight",
+          "return63Pct": 27.5
+        },
+        {
+          "ticker": "FWRD",
+          "name": "Forward Air Corp",
+          "cik": "0000912728",
+          "sic": "4731",
+          "sicDescription": "Arrangement of  Transportation of  Freight & Cargo",
+          "return63Pct": 60.6
+        },
+        {
+          "ticker": "INSW",
+          "name": "International Seaways, Inc. Common Stock",
+          "cik": "0001679049",
+          "sic": "4400",
+          "sicDescription": "Water Transportation",
+          "return63Pct": 28.0
+        },
+        {
+          "ticker": "LIND",
+          "name": "Lindblad Expeditions Holdings Inc. Common Stock",
+          "cik": "0001512499",
+          "sic": "4700",
+          "sicDescription": "Transportation Services",
+          "return63Pct": 28.9
+        },
+        {
+          "ticker": "NAT",
+          "name": "Nordic American Tanker",
+          "cik": "0001000177",
+          "sic": "4400",
+          "sicDescription": "Water Transportation",
+          "return63Pct": 31.5
+        },
+        {
+          "ticker": "SB",
+          "name": "Safe Bulkers, Inc.",
+          "cik": "0001434754",
+          "sic": "4412",
+          "sicDescription": "Deep Sea Foreign Transportation of  Freight",
+          "return63Pct": 36.3
+        },
+        {
+          "ticker": "TDW",
+          "name": "Tidewater, Inc.",
+          "cik": "0000098222",
+          "sic": "4400",
+          "sicDescription": "Water Transportation",
+          "return63Pct": 26.0
+        },
+        {
+          "ticker": "TNK",
+          "name": "Teekay Tankers Ltd.",
+          "cik": "0001419945",
+          "sic": "4400",
+          "sicDescription": "Water Transportation",
+          "return63Pct": 26.1
+        }
+      ]
+    },
+    "Unclassified": {
+      "leaderN": 38,
+      "members": [
+        {
+          "ticker": "AJG",
+          "name": "Arthur J. Gallagher & Co.",
+          "cik": "0000354190",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 33.0
+        },
+        {
+          "ticker": "ARX",
+          "name": "Accelerant Holdings",
+          "cik": "0001997350",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 23.7
+        },
+        {
+          "ticker": "ASH",
+          "name": "Ashland Inc.",
+          "cik": "0001674862",
+          "sic": "5160",
+          "sicDescription": "Wholesale-Chemicals & Allied Products",
+          "return63Pct": 28.4
+        },
+        {
+          "ticker": "AZTA",
+          "name": "Azenta, Inc.",
+          "cik": "0000933974",
+          "sic": "3559",
+          "sicDescription": "Special Industry Machinery, NEC",
+          "return63Pct": 44.0
+        },
+        {
+          "ticker": "BRO",
+          "name": "Brown & Brown, Inc.",
+          "cik": "0000079282",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 30.3
+        },
+        {
+          "ticker": "BWIN",
+          "name": "The Baldwin Insurance Group, Inc. Class A Common Stock",
+          "cik": "0001781755",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 58.0
+        },
+        {
+          "ticker": "BZH",
+          "name": "Beazer Homes USA, Inc. New",
+          "cik": "0000915840",
+          "sic": "1531",
+          "sicDescription": "Operative Builders",
+          "return63Pct": 30.8
+        },
+        {
+          "ticker": "CCXI",
+          "name": "Churchill Capital Corp XI Class A Ordinary Shares",
+          "cik": "0002074973",
+          "sic": "3569",
+          "sicDescription": "General Industrial Machinery & Equipment, NEC",
+          "return63Pct": 35.9
+        },
+        {
+          "ticker": "CHEF",
+          "name": "The Chef's Warehouse Inc",
+          "cik": "0001517175",
+          "sic": "5141",
+          "sicDescription": "Wholesale-Groceries, General Line",
+          "return63Pct": 50.2
+        },
+        {
+          "ticker": "CNK",
+          "name": "Cinemark Holdings, Inc.",
+          "cik": "0001385280",
+          "sic": "7830",
+          "sicDescription": "Services-Motion Picture Theaters",
+          "return63Pct": 28.5
+        },
+        {
+          "ticker": "DNOW",
+          "name": "DNOW Inc.",
+          "cik": "0001599617",
+          "sic": "3533",
+          "sicDescription": "Oil & Gas Field Machinery & Equipment",
+          "return63Pct": 24.6
+        },
+        {
+          "ticker": "EDU",
+          "name": "New Oriental Education and Technology Group, Inc. American Depositary Shares (each representing ten (10) Common Shares)",
+          "cik": "0001372920",
+          "sic": "8200",
+          "sicDescription": "Services-Educational Services",
+          "return63Pct": 28.5
+        },
+        {
+          "ticker": "EQH",
+          "name": "Equitable Holdings, Inc.",
+          "cik": "0001333986",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 21.4
+        },
+        {
+          "ticker": "GENI",
+          "name": "Genius Sports Limited",
+          "cik": "0001834489",
+          "sic": "7990",
+          "sicDescription": "Services-Miscellaneous Amusement & Recreation",
+          "return63Pct": 36.9
+        },
+        {
+          "ticker": "GEO",
+          "name": "The GEO Group, Inc.",
+          "cik": "0000923796",
+          "sic": "1520",
+          "sicDescription": "General Bldg Contractors - Residential Bldgs",
+          "return63Pct": 42.4
+        },
+        {
+          "ticker": "GFL",
+          "name": "GFL Environmental Inc. Subordinate Voting Shares",
+          "cik": "0001780232",
+          "sic": "4953",
+          "sicDescription": "Refuse Systems",
+          "return63Pct": 27.7
+        },
+        {
+          "ticker": "GPC",
+          "name": "Genuine Parts Company",
+          "cik": "0000040987",
+          "sic": "5013",
+          "sicDescription": "Wholesale-Motor Vehicle Supplies & New Parts",
+          "return63Pct": 39.3
+        },
+        {
+          "ticker": "HPE",
+          "name": "Hewlett Packard Enterprise Company",
+          "cik": "0001645590",
+          "sic": "3570",
+          "sicDescription": "Computer & office Equipment",
+          "return63Pct": 21.5
+        },
+        {
+          "ticker": "HRB",
+          "name": "H&R Block, Inc.",
+          "cik": "0000012659",
+          "sic": "7200",
+          "sicDescription": "Services-Personal Services",
+          "return63Pct": 36.3
+        },
+        {
+          "ticker": "J",
+          "name": "Jacobs Solutions Inc.",
+          "cik": "0000052988",
+          "sic": "1600",
+          "sicDescription": "Heavy Construction Other Than Bldg Const - Contractors",
+          "return63Pct": 26.8
+        },
+        {
+          "ticker": "LAUR",
+          "name": "Laureate Education, Inc. Common Stock",
+          "cik": "0000912766",
+          "sic": "8200",
+          "sicDescription": "Services-Educational Services",
+          "return63Pct": 21.3
+        },
+        {
+          "ticker": "LIFE",
+          "name": "Ethos Technologies Inc. Class A Common Stock",
+          "cik": "0001788451",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 104.4
+        },
+        {
+          "ticker": "LNG",
+          "name": "Cheniere Energy Inc",
+          "cik": "0000003570",
+          "sic": "4924",
+          "sicDescription": "Natural Gas Distribution",
+          "return63Pct": 25.6
+        },
+        {
+          "ticker": "LTH",
+          "name": "Life Time Group Holdings, Inc.",
+          "cik": "0001869198",
+          "sic": "7997",
+          "sicDescription": "Services-Membership Sports & Recreation Clubs",
+          "return63Pct": 31.5
+        },
+        {
+          "ticker": "MCK",
+          "name": "McKesson Corporation",
+          "cik": "0000927653",
+          "sic": "5122",
+          "sicDescription": "Wholesale-Drugs, Proprietaries & Druggists' Sundries",
+          "return63Pct": 20.3
+        },
+        {
+          "ticker": "MRSH",
+          "name": "Marsh",
+          "cik": "0000062709",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 20.4
+        },
+        {
+          "ticker": "MTW",
+          "name": "The Manitowoc Company, Inc.",
+          "cik": "0000061986",
+          "sic": "3531",
+          "sicDescription": "Construction Machinery & Equip",
+          "return63Pct": 65.6
+        },
+        {
+          "ticker": "NP",
+          "name": "Neptune Insurance Holdings Inc.",
+          "cik": "0002067129",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 20.7
+        },
+        {
+          "ticker": "PK",
+          "name": "Park Hotels & Resorts Inc. Common Stock",
+          "cik": "0001617406",
+          "sic": "7011",
+          "sicDescription": "Hotels & Motels",
+          "return63Pct": 30.5
+        },
+        {
+          "ticker": "RYAN",
+          "name": "Ryan Specialty Holdings, Inc.",
+          "cik": "0001849253",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 37.7
+        },
+        {
+          "ticker": "TAL",
+          "name": "TAL Education Group",
+          "cik": "0001499620",
+          "sic": "8200",
+          "sicDescription": "Services-Educational Services",
+          "return63Pct": 23.0
+        },
+        {
+          "ticker": "TPC",
+          "name": "Tutor Perini Corporation",
+          "cik": "0000077543",
+          "sic": "1540",
+          "sicDescription": "General Bldg Contractors - Nonresidential Bldgs",
+          "return63Pct": 24.3
+        },
+        {
+          "ticker": "UGP",
+          "name": "Ultrapar Participacoes S.A.",
+          "cik": "0001094972",
+          "sic": "4924",
+          "sicDescription": "Natural Gas Distribution",
+          "return63Pct": 24.5
+        },
+        {
+          "ticker": "USFD",
+          "name": "US Foods Holding Corp.",
+          "cik": "0001665918",
+          "sic": "5140",
+          "sicDescription": "Wholesale-Groceries & Related Products",
+          "return63Pct": 31.1
+        },
+        {
+          "ticker": "WHD",
+          "name": "Cactus, Inc.",
+          "cik": "0001699136",
+          "sic": "3533",
+          "sicDescription": "Oil & Gas Field Machinery & Equipment",
+          "return63Pct": 20.0
+        },
+        {
+          "ticker": "WKC",
+          "name": "World Kinect Corporation",
+          "cik": "0000789460",
+          "sic": "5172",
+          "sicDescription": "Wholesale-Petroleum & Petroleum Products (No Bulk Stations)",
+          "return63Pct": 23.0
+        },
+        {
+          "ticker": "WTW",
+          "name": "Willis Towers Watson Public Limited Company Ordinary Shares",
+          "cik": "0001140536",
+          "sic": "6411",
+          "sicDescription": "Insurance Agents, Brokers & Service",
+          "return63Pct": 37.7
+        },
+        {
+          "ticker": "ZBRA",
+          "name": "Zebra Technologies Corporation",
+          "cik": "0000877212",
+          "sic": "3560",
+          "sicDescription": "General Industrial Machinery & Equipment",
+          "return63Pct": 46.3
+        }
+      ]
+    }
+  }
+}

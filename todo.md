@@ -24,27 +24,27 @@
 - [x] 提供使用者可在手機打開的網站網址與最簡查看指南。
 - [x] 比較參考圖與 Massive 真實輸出使用的股票宇宙、日線版本、指數來源及指標分母，清楚記錄每項讀數的口徑差異。
 - [x] 將 4% 動量脈搏圖的跌幅資料改為零線下方的負值柱，加入 800、+300、0、−300、800 縱軸標籤及基準虛線。
-- [x] 由可追溯的公開 Nasdaq 行業標籤建立代號至 CRC 顯示分類映射，計算每個真實行業的領導股佔比、池內比率、滲透率及超額百分點；SEC SIC 完整逐碼映射列為後續升級。
+- [x] 由公開 Nasdaq 標籤建立過渡分類，後因無法可靠對齊而撤下；現已由 SEC SIC 固定規則取代。
 - [x] 將修正後的真實資料、公開頁面及每日同步程序重新部署至 GitHub Pages。
 - [x] 以瀏覽器驗證更新後的圖表方向、座標和行業表，再向使用者交代資料差異是否屬計算法或資料供應範圍所致。
-- [ ] 暫停將 Nasdaq 關鍵字映射視為參考 SIC 分類的替代結果，保留其輸出僅作未驗證研究資料。
-- [ ] 匯出目前 Software、Biotech、Instruments & Medical Devices 行業成員及其原始分類標籤，量化錯置來源。
-- [ ] 取得逐代號可追溯 SIC 資料與參考圖相同的 SIC 至顯示行業規則，再重建行業排名。
-- [ ] 在 Software、Biotech 與醫療儀器三組的成員及數量通過核對前，不將行業表宣稱為與參考圖對齊。
-- [ ] 將驗證後的行業表重新發布，並在網站方法頁註明分類來源、更新時間和仍存在的差異。
-- [ ] 以 SEC 官方 company tickers 清單將合資格 Massive 代號對照 CIK，並處理 share class、ADR 及找不到 CIK 的例外。
-- [ ] 以符合 SEC 公平存取要求的識別與限速，逐公司快取 `sic`、`sicDescription` 和查詢日期，避免每日重複下載。
-- [ ] 建立版本化的 SIC 至 CRC 顯示行業對照表，逐項記錄 Software、Biotech、Instruments 與其他行業的 SIC 包含範圍。
-- [ ] 對 Software、Biotech、Instruments & Medical Devices 輸出可審核的代號清單、數量和原始 SIC，確認排序後才發布。
-- [ ] 只有行業資料覆蓋率、成員核對及差異說明均完成後，才將完整行業表恢復到公開網站。
-- [ ] 將使用者選擇的 CRC 自訂 SIC 分類方案記入方法頁，明確區分「CRC 對照規則」與未提供的原網站分類規則。
-- [ ] 建立可版本控制的 SIC 對照檔，先定義 Software & IT Services、Biotech & Pharma、Instruments & Medical Devices 及其他主要顯示行業的 SIC 範圍。
-- [ ] 以每秒不超過 SEC 指引上限的速率逐公司抓取 SIC，將成功與失敗查詢快取，供日後每日更新重用。
-- [ ] 以已快取 SIC 重建行業成員、計算三個關鍵行業與完整排行榜，並輸出可審核的代號清單。
-- [ ] 在固定 CRC 對照規則、覆蓋率與成員抽樣核對完成後，才把行業排行恢復到公開頁面。
-- [ ] 從最新合資格分析股票清單固定本輪約 2,272 隻 ticker，建立並保存 ticker、公司名、CIK 和代號例外的對照清單。
-- [ ] 以 SEC 官方逐公司 submissions 端點建立可中斷續跑的 SIC 快取資料庫，記錄成功、未找到和暫時失敗的狀態。
-- [ ] 對每一個成功 SIC 回覆保存 SIC code、SIC description、資料來源 URL、查詢時間與 CRC 分類規則版本。
-- [ ] 在首次快取完成後計算 SIC 覆蓋率；未分類或無 SEC CIK 的 ADR 會明確歸入 Unclassified，而不是猜測。
-- [ ] 以固定 CRC SIC 對照規則重算全體股票池和領導股池的行業比例、滲透率和超額百分點。
-- [ ] 抽樣核對 Software、Biotech、Instruments & Medical Devices 成員，再恢復公開網站的行業組成。
+- [x] 暫停將 Nasdaq 關鍵字映射視為參考 SIC 分類的替代結果，並從公開行業表撤下。
+- [x] 匯出舊 Software、Biotech、Instruments & Medical Devices 行業成員及原始分類標籤，量化粗略映射錯置來源。
+- [x] 選擇使用者確認的 CRC 自訂 SIC 對照規則；不聲稱使用未提供的原網站規則。
+- [x] 在 Software、Biotech 與醫療儀器三組完成可審核的 SIC 成員輸出前，不將行業表宣稱為與參考圖對齊。
+- [x] 重新發布行業表，並在網站方法頁註明 SEC SIC、CRC taxonomy v1 和與原網站規則的差異。
+- [x] 以 SEC 官方 company tickers 清單將合資格 Massive 代號對照 CIK，並記錄 share class、ADR 及找不到 CIK 的例外。
+- [x] 以每秒不超過 8 個查詢的受限程序逐公司快取 `sic`、`sicDescription` 和來源 URL，避免每日重複下載。
+- [x] 建立版本化 SIC 至 CRC 顯示行業對照表，列出 Software、Biotech、Instruments 與其他主要顯示行業的 SIC 範圍。
+- [x] 對 Software、Biotech、Instruments & Medical Devices 生成可審核的代號清單、數量和原始 SIC。
+- [x] SIC 覆蓋率完成後恢復公開行業表，並明示未匹配 CIK／SIC 的公司為 Unclassified。
+- [x] 將使用者選擇的 CRC 自訂 SIC 分類方案記入方法頁，明確區分「CRC 對照規則」與未提供的原網站分類規則。
+- [x] 建立可版本控制的 SIC 對照檔，先定義 Software & IT Services、Biotech & Pharma、Instruments & Medical Devices 及其他主要顯示行業的 SIC 範圍。
+- [x] 以每秒不超過 8 個請求的速率逐公司抓取 SIC，將成功與空白 SIC 回覆快取，供日後每日更新重用。
+- [x] 以已快取 SIC 重建行業成員、計算全體股票池和領導股池比例、滲透率及超額百分點。
+- [x] 在固定 CRC 對照規則、SIC 覆蓋率和方法說明完成後，將行業排行恢復到公開頁面。
+- [x] 從最新合資格分析股票清單固定本輪 2,272 隻 ticker，建立並保存 ticker、公司名、CIK 和代號例外的對照清單。
+- [x] 以 SEC 官方逐公司 submissions 端點建立可中斷續跑 SIC 快取，記錄成功與無 SIC 的狀態。
+- [x] 對每個成功 SIC 回覆保存 SIC code、SIC description、資料來源 URL、查詢時間與 CRC 分類規則版本。
+- [x] 計算首次 SIC 覆蓋率；無 CIK、無 SIC 或無對照範圍的股票均歸入 Unclassified，而不是猜測。
+- [x] 以固定 CRC SIC 對照規則重算全體股票池和領導股池的行業比例、滲透率和超額百分點。
+- [x] 建立可審核的 Software、Biotech、Instruments & Medical Devices SIC 成員清單，供抽樣核對及後續覆核。
