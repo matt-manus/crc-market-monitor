@@ -342,7 +342,7 @@ def build_output(state: dict[str, Any]) -> dict[str, Any]:
             "date": summary["date"][5:], "up4": summary["up4"], "down4": summary["down4"], "sma20Pct": summary["sma20Pct"], "sma50Pct": summary["sma50Pct"], "spyAtr": summary["spyAtr"], "qqqAtr": summary["qqqAtr"], "mliReturn": summary["mliReturn"], "mliUpPct": summary["mliUpPct"], "mliN": summary["mliN"], "universeN": summary["universeN"], "sp500Close": summary["sp500Close"]
         })
     trend = [round(summary["mliN"] / summary["universeN"] * 100, 1) for summary in summaries[-126:] if summary["universeN"]]
-    return {"status": "live", "asOf": latest["date"], "updatedAt": datetime.now(timezone.utc).isoformat(), "source": "個人 Massive 資料服務 · 私人用途", "message": "", "summary": latest, "history": history, "industry": latest.get("industry") or [], "leaderTrend": trend}
+    return {"status": "live", "asOf": latest["date"], "updatedAt": datetime.now(timezone.utc).isoformat(), "source": "Massive 日線資料 · Nasdaq 行業標籤", "message": "", "summary": latest, "history": history, "industry": latest.get("industry") or [], "leaderTrend": trend}
 
 
 def main() -> int:
