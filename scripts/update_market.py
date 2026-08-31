@@ -169,7 +169,11 @@ def fetch_metadata(base_url: str, api_key: str) -> dict[str, dict[str, Any]]:
         for item in page.get("results") or []:
             ticker = item.get("ticker")
             if ticker:
-                metadata[ticker] = {"type": (item.get("type") or "").upper(), "name": item.get("name") or ticker}
+                metadata[ticker] = {
+                    "type": (item.get("type") or "").upper(),
+                    "name": item.get("name") or ticker,
+                    "primaryExchange": item.get("primary_exchange") or "",
+                }
         path = page.get("next_url")
     return metadata
 

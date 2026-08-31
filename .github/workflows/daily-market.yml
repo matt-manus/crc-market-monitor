@@ -22,6 +22,11 @@ on:
         required: false
         default: false
         type: boolean
+      refresh_metadata:
+        description: "Refresh Massive ticker types and primary exchanges for a scope audit"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -57,6 +62,7 @@ jobs:
           if [ "${{ inputs.bootstrap }}" = "true" ]; then ARGS="$ARGS --bootstrap"; fi
           if [ -n "${{ inputs.as_of }}" ]; then ARGS="$ARGS --as-of ${{ inputs.as_of }}"; fi
           if [ "${{ inputs.refresh_benchmarks }}" = "true" ]; then ARGS="$ARGS --refresh-benchmarks"; fi
+          if [ "${{ inputs.refresh_metadata }}" = "true" ]; then ARGS="$ARGS --refresh-metadata"; fi
           python scripts/update_market.py $ARGS
 
       - name: Synchronize Pages files after a verified update
