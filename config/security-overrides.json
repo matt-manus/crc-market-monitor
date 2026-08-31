@@ -1,0 +1,5 @@
+{
+  "excludedTickers": [],
+  "industryOverrides": {},
+  "notes": "Use this file for reviewed security-type exclusions or approved industry mappings. Keep source and review date in the future README change log."
+}

@@ -1,0 +1,8 @@
+# CRC Market Monitor: never commit credentials or local environments.
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.DS_Store
+.pytest_cache/

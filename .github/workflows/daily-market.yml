@@ -1,0 +1,66 @@
+name: CRC daily market refresh
+
+on:
+  schedule:
+    # 22:25 UTC on weekdays. This is deliberately after the U.S. regular session;
+    # the script also refuses to publish a partial or inconsistent trade date.
+    - cron: "25 22 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      bootstrap:
+        description: "Fetch enough recent sessions to initialize 50D/63-session indicators"
+        required: false
+        default: false
+        type: boolean
+      as_of:
+        description: "Optional YYYY-MM-DD backfill date; leave blank for today"
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crc-market-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    env:
+      MASSIVE_API_KEY: ${{ secrets.MASSIVE_API_KEY }}
+      MASSIVE_BASE_URL: ${{ vars.MASSIVE_BASE_URL || 'https://api.massive.com' }}
+    steps:
+      - name: Check out private dashboard repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install market-data client
+        run: python -m pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Fetch data and calculate daily statistics
+        run: |
+          ARGS=""
+          if [ "${{ inputs.bootstrap }}" = "true" ]; then ARGS="$ARGS --bootstrap"; fi
+          if [ -n "${{ inputs.as_of }}" ]; then ARGS="$ARGS --as-of ${{ inputs.as_of }}"; fi
+          python scripts/update_market.py $ARGS
+
+      - name: Commit a verified update only
+        run: |
+          if git diff --quiet -- data/ site/data/; then
+            echo "No verified market update to commit."
+            exit 0
+          fi
+          git config user.name "CRC Market Monitor"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ site/data/
+          git commit -m "data: refresh market metrics [skip ci]"
+          git push
