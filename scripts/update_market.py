@@ -17,6 +17,7 @@ import json
 import math
 import os
 import sys
+import time
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -32,6 +33,8 @@ OVERRIDES_PATH = ROOT / "config" / "security-overrides.json"
 WINDOW_DAYS = 84
 MIN_EXPECTED_UNIVERSE = 500
 EXCLUDED_TYPES = {"ETF", "ETN", "FUND", "MF", "WARRANT", "WT", "RIGHT", "RT", "UNIT", "PFD", "PREF"}
+MIN_SECONDS_BETWEEN_REQUESTS = 12.5
+LAST_REQUEST_AT = 0.0
 
 
 def load_json(path: Path, fallback: dict[str, Any]) -> dict[str, Any]:
@@ -50,11 +53,27 @@ def environment() -> tuple[str | None, str]:
 
 
 def get_json(base_url: str, path_or_url: str, api_key: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
+    global LAST_REQUEST_AT
     url = path_or_url if path_or_url.startswith("http") else f"{base_url}{path_or_url}"
     query = {"apiKey": api_key, **(params or {})}
-    response = requests.get(url, params=query, timeout=55)
+    for attempt in range(4):
+        delay = MIN_SECONDS_BETWEEN_REQUESTS - (time.monotonic() - LAST_REQUEST_AT)
+        if delay > 0:
+            time.sleep(delay)
+        response = requests.get(url, params=query, timeout=55)
+        LAST_REQUEST_AT = time.monotonic()
+        if response.status_code != 429:
+            response.raise_for_status()
+            return response.json()
+        retry_after = response.headers.get("Retry-After")
+        try:
+            cooldown = max(float(retry_after), 60.0) if retry_after else 60.0
+        except ValueError:
+            cooldown = 60.0
+        print(f"Rate limit reached; waiting {cooldown:.0f}s before retry {attempt + 1}/3…")
+        time.sleep(cooldown)
     response.raise_for_status()
-    return response.json()
+    return {}
 
 
 def fetch_grouped_bars(base_url: str, api_key: str, session: date) -> list[dict[str, Any]]:
@@ -90,6 +109,25 @@ def session_candidates(end: date, bootstrap: bool) -> list[date]:
             candidates.append(cursor)
         cursor -= timedelta(days=1)
     return list(reversed(candidates))
+
+
+def ingest_bars(state: dict[str, Any], raw_bars: list[dict[str, Any]], session: date, keep: set[str]) -> None:
+    """Keep only the final-session candidate universe plus SPY/QQQ history.
+
+    The grouped endpoint contains every U.S. symbol. Persisting all of it would
+    make a single bootstrap state excessively large, despite only about 2,400
+    securities being relevant to this dashboard's daily eligibility rules.
+    """
+    for raw in raw_bars:
+        normalized = normalize_bar(raw, session)
+        if not normalized:
+            continue
+        ticker, bar = normalized
+        if ticker not in keep:
+            continue
+        series = [row for row in state["bars"].get(ticker, []) if row["date"] != bar["date"]]
+        series.append(bar)
+        state["bars"][ticker] = sorted(series, key=lambda row: row["date"])[-WINDOW_DAYS:]
 
 
 def normalize_bar(raw: dict[str, Any], session: date) -> tuple[str, dict[str, Any]] | None:
@@ -241,8 +279,37 @@ def main() -> int:
         state["metadata"] = fetch_metadata(base_url, api_key)
         state["lastMetadataRefresh"] = today.isoformat()
 
-    fetched_sessions: list[str] = []
-    for candidate in session_candidates(args.as_of, args.bootstrap):
+    candidates = session_candidates(args.as_of, args.bootstrap)
+    if args.bootstrap:
+        # Resolve the latest actual market session first, then build history only
+        # for securities that meet that session's price/volume screen.
+        current_raw: list[dict[str, Any]] = []
+        target_date: date | None = None
+        for candidate in reversed(candidates):
+            try:
+                current_raw = fetch_grouped_bars(base_url, api_key, candidate)
+            except requests.RequestException as error:
+                print(f"Provider request failed for {candidate}: {error}")
+                continue
+            if current_raw:
+                target_date = candidate
+                break
+        if target_date is None:
+            print("SAFE EXIT: no completed provider session was returned; existing published output is untouched.")
+            return 0
+        keep = {"SPY", "QQQ"}
+        for raw in current_raw:
+            ticker = raw.get("T") or raw.get("ticker")
+            if ticker and (raw.get("c") or 0) >= 5 and (raw.get("v") or 0) >= 300_000:
+                keep.add(ticker)
+        ingest_bars(state, current_raw, target_date, keep)
+        fetched_sessions: list[str] = [target_date.isoformat()]
+        requested_sessions = [candidate for candidate in candidates if candidate < target_date]
+    else:
+        fetched_sessions = []
+        requested_sessions = candidates
+
+    for candidate in requested_sessions:
         try:
             raw_bars = fetch_grouped_bars(base_url, api_key, candidate)
         except requests.RequestException as error:
@@ -252,14 +319,15 @@ def main() -> int:
             continue
         if not raw_bars:
             continue
-        for raw in raw_bars:
-            normalized = normalize_bar(raw, candidate)
-            if not normalized:
-                continue
-            ticker, bar = normalized
-            series = [row for row in state["bars"].get(ticker, []) if row["date"] != bar["date"]]
-            series.append(bar)
-            state["bars"][ticker] = sorted(series, key=lambda row: row["date"])[-WINDOW_DAYS:]
+        if args.bootstrap:
+            ingest_bars(state, raw_bars, candidate, keep)
+        else:
+            daily_keep = {"SPY", "QQQ"}
+            for raw in raw_bars:
+                ticker = raw.get("T") or raw.get("ticker")
+                if ticker and (raw.get("c") or 0) >= 5 and (raw.get("v") or 0) >= 300_000:
+                    daily_keep.add(ticker)
+            ingest_bars(state, raw_bars, candidate, daily_keep)
         fetched_sessions.append(candidate.isoformat())
 
     if not fetched_sessions:
