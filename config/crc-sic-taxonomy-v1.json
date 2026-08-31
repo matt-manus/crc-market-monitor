@@ -1,0 +1,26 @@
+{
+  "version": "crc-sic-taxonomy-v1",
+  "name": "CRC SIC industry taxonomy",
+  "scope": "Fixed SIC-to-display-industry rules for CRC Market Monitor. This is not claimed to match another publisher's private mapping.",
+  "rules": [
+    {"industry": "Software & IT Services", "sic": [7370, 7371, 7372, 7373, 7374, 7375, 7376, 7377, 7378, 7379]},
+    {"industry": "Biotech & Pharma", "sic": [2830, 2831, 2833, 2834, 2835, 2836, 8731]},
+    {"industry": "Instruments & Medical Devices", "sic": [3823, 3825, 3826, 3827, 3829, 3841, 3842, 3843, 3844, 3845, 3851]},
+    {"industry": "Banks & Financial Services", "ranges": [[6000, 6299], [6700, 6799]]},
+    {"industry": "Insurance", "ranges": [[6300, 6399]]},
+    {"industry": "Health Care Services", "ranges": [[8000, 8099]]},
+    {"industry": "Retail", "ranges": [[5200, 5999]]},
+    {"industry": "Petroleum Refining", "sic": [1311, 1381, 1382, 1389, 2911, 2990, 2992, 2999]},
+    {"industry": "Metals & Coal Mining", "ranges": [[1000, 1499]]},
+    {"industry": "Industrial Materials", "ranges": [[2400, 2829], [2840, 2899], [3000, 3499]]},
+    {"industry": "Computer Hardware", "sic": [3571, 3572, 3575, 3576, 3577, 3578, 3579, 3674, 3675, 3676, 3677, 3678, 3679]},
+    {"industry": "Transportation & Logistics", "ranges": [[4000, 4799]]},
+    {"industry": "Telecom & Media", "ranges": [[4800, 4899]]},
+    {"industry": "Professional Services", "ranges": [[7300, 7369], [7380, 7399], [8700, 8999]]},
+    {"industry": "Business Services", "ranges": [[7300, 7369], [7380, 7399]]},
+    {"industry": "Real Estate", "ranges": [[6500, 6599]]},
+    {"industry": "Consumer Products", "ranges": [[2000, 2399], [2900, 2999], [3600, 3999]]}
+  ],
+  "precedence": ["Software & IT Services", "Biotech & Pharma", "Instruments & Medical Devices", "Banks & Financial Services", "Insurance", "Health Care Services", "Retail", "Petroleum Refining", "Metals & Coal Mining", "Industrial Materials", "Computer Hardware", "Transportation & Logistics", "Telecom & Media", "Real Estate", "Business Services", "Professional Services", "Consumer Products"],
+  "unmappedIndustry": "Unclassified"
+}
