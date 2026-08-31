@@ -173,6 +173,8 @@ def fetch_metadata(base_url: str, api_key: str) -> dict[str, dict[str, Any]]:
                     "type": (item.get("type") or "").upper(),
                     "name": item.get("name") or ticker,
                     "primaryExchange": item.get("primary_exchange") or "",
+                    "sicCode": item.get("sic_code") or "",
+                    "sicDescription": item.get("sic_description") or "",
                 }
         path = page.get("next_url")
     return metadata
