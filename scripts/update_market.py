@@ -30,6 +30,8 @@ ROOT = Path(__file__).resolve().parents[1]
 STATE_PATH = ROOT / "data" / "market-state.json"
 OUTPUT_PATH = ROOT / "site" / "data" / "latest.json"
 OVERRIDES_PATH = ROOT / "config" / "security-overrides.json"
+SIC_CACHE_PATH = ROOT / "data" / "sic-candidates-v1.json"
+SIC_TAXONOMY_PATH = ROOT / "config" / "crc-sic-taxonomy-v1.json"
 WINDOW_DAYS = 84
 BENCHMARK_WINDOW_DAYS = 320
 MIN_EXPECTED_UNIVERSE = 500
@@ -94,6 +96,40 @@ def fetch_nasdaq_industry_map() -> dict[str, str]:
 
 def load_json(path: Path, fallback: dict[str, Any]) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else fallback
+
+
+def load_sic_industry_map() -> tuple[dict[str, str], dict[str, int | str]]:
+    """Map tickers to the versioned CRC industry taxonomy from cached SEC SIC data."""
+    cache = load_json(SIC_CACHE_PATH, {"candidates": [], "records": {}})
+    taxonomy = load_json(SIC_TAXONOMY_PATH, {"version": "unavailable", "rules": [], "precedence": [], "unmappedIndustry": "Unclassified"})
+    rules = {rule["industry"]: rule for rule in taxonomy.get("rules", [])}
+
+    def classify(sic_value: Any) -> str:
+        try:
+            sic = int(sic_value)
+        except (TypeError, ValueError):
+            return taxonomy.get("unmappedIndustry", "Unclassified")
+        for label in taxonomy.get("precedence", []):
+            rule = rules.get(label, {})
+            if sic in set(rule.get("sic") or []):
+                return label
+            if any(start <= sic <= end for start, end in rule.get("ranges") or []):
+                return label
+        return taxonomy.get("unmappedIndustry", "Unclassified")
+
+    result: dict[str, str] = {}
+    matched = 0
+    with_sic = 0
+    for candidate in cache.get("candidates") or []:
+        ticker, cik = candidate.get("ticker"), candidate.get("cik")
+        if not ticker or not cik:
+            continue
+        matched += 1
+        record = (cache.get("records") or {}).get(cik, {})
+        if record.get("sic"):
+            with_sic += 1
+        result[ticker] = classify(record.get("sic"))
+    return result, {"taxonomyVersion": taxonomy.get("version", "unavailable"), "candidateCikMatched": matched, "withSic": with_sic}
 
 
 def write_json_atomic(path: Path, payload: dict[str, Any]) -> None:
@@ -263,7 +299,7 @@ def security_metric(bars: list[dict[str, Any]]) -> dict[str, float | None]:
     }
 
 
-def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) -> dict[str, Any] | None:
+def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any], official_industry_map: dict[str, str] | None = None, sic_coverage: dict[str, int | str] | None = None) -> dict[str, Any] | None:
     bars_by_ticker = state["bars"]
     metadata = state.get("metadata") or {}
     eligible: list[tuple[str, dict[str, Any]]] = []
@@ -302,7 +338,7 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
 
     industry_pool: dict[str, int] = defaultdict(int)
     industry_leaders: dict[str, int] = defaultdict(int)
-    industry_map = state.get("industryMap") or {}
+    industry_map = official_industry_map if official_industry_map is not None else state.get("industryMap") or {}
     reviewed_overrides = overrides.get("industryOverrides", {})
     industry_for = lambda ticker: reviewed_overrides.get(ticker, industry_map.get(ticker, "Unclassified"))
     for ticker, _, _ in analysis_pool:
@@ -335,7 +371,9 @@ def summarize(state: dict[str, Any], session: str, overrides: dict[str, Any]) ->
         "analysisN": len(analysis_pool),
         "sp500Close": None,
         "industry": industry[:20],
-        "industrySource": "Nasdaq screener labels mapped to CRC display taxonomy",
+        "industrySource": "SEC submissions SIC mapped to CRC fixed taxonomy",
+        "industryStatus": "crc_sic_v1" if official_industry_map is not None else "awaiting_sic_verification",
+        "industryCoverage": sic_coverage or {},
     }
 
 
@@ -348,7 +386,8 @@ def build_output(state: dict[str, Any]) -> dict[str, Any]:
             "date": summary["date"][5:], "up4": summary["up4"], "down4": summary["down4"], "sma20Pct": summary["sma20Pct"], "sma50Pct": summary["sma50Pct"], "spyAtr": summary["spyAtr"], "qqqAtr": summary["qqqAtr"], "mliReturn": summary["mliReturn"], "mliUpPct": summary["mliUpPct"], "mliN": summary["mliN"], "universeN": summary["universeN"], "sp500Close": summary["sp500Close"]
         })
     trend = [round(summary["mliN"] / summary["universeN"] * 100, 1) for summary in summaries[-126:] if summary["universeN"]]
-    return {"status": "live", "asOf": latest["date"], "updatedAt": datetime.now(timezone.utc).isoformat(), "source": "Massive 日線資料", "message": "", "summary": latest, "history": history, "industry": latest.get("industry") or [], "industryStatus": "awaiting_sic_verification", "industryMessage": "行業成員現正按可驗證 SIC 資料校對；為免以粗略標籤造成錯誤排行，暫停顯示未驗證行業數字。", "leaderTrend": trend}
+    verified = latest.get("industryStatus") == "crc_sic_v1"
+    return {"status": "live", "asOf": latest["date"], "updatedAt": datetime.now(timezone.utc).isoformat(), "source": "Massive 日線資料 · SEC SIC 分類", "message": "", "summary": latest, "history": history, "industry": latest.get("industry") or [], "industryStatus": latest.get("industryStatus", "awaiting_sic_verification"), "industryMessage": "CRC 固定 SIC 對照規則已套用；個別未返回 SIC 或未對照的公司歸入 Unclassified。" if verified else "行業成員現正按可驗證 SIC 資料校對；為免以粗略標籤造成錯誤排行，暫停顯示未驗證行業數字。", "industryCoverage": latest.get("industryCoverage") or {}, "leaderTrend": trend}
 
 
 def main() -> int:
@@ -365,6 +404,7 @@ def main() -> int:
 
     state = load_json(STATE_PATH, {"bars": {}, "metadata": {}, "industryMap": {}, "summaries": [], "lastMetadataRefresh": None, "lastIndustryRefresh": None, "schemaVersion": 1})
     overrides = load_json(OVERRIDES_PATH, {"excludedTickers": [], "industryOverrides": {}})
+    sic_industry_map, sic_coverage = load_sic_industry_map()
     today = datetime.now(timezone.utc).date()
     metadata_is_old = not state.get("lastMetadataRefresh") or date.fromisoformat(state["lastMetadataRefresh"]) < today - timedelta(days=7)
     if args.bootstrap or args.refresh_metadata or metadata_is_old:
@@ -451,7 +491,7 @@ def main() -> int:
     # final history request, otherwise every series ends one day ahead of the
     # selected summary and the quality gate correctly rejects the mismatch.
     target_session = target_date.isoformat() if args.bootstrap and target_date else fetched_sessions[-1]
-    summary = summarize(state, target_session, overrides)
+    summary = summarize(state, target_session, overrides, sic_industry_map, sic_coverage)
     if summary is None:
         return 0
     state["summaries"] = [item for item in state.get("summaries", []) if item["date"] != target_session] + [summary]

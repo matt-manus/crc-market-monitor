@@ -103,7 +103,8 @@
           <div class="panel-header">
             <div>
               <h3>行業組成</h3>
-              <p>只在逐代號 SIC 分類完成校對後顯示排行；未驗證分類不會用作研究結論。</p>
+              <p>以逐代號 SEC SIC 資料及固定 CRC 對照規則計算；可追溯資料覆蓋率見下方。</p>
+              <p id="industry-source-note" class="industry-source-note">正在載入行業分類狀態…</p>
             </div>
             <span class="reference-tag">LEADER / POOL</span>
           </div>
@@ -129,7 +130,7 @@
         <div class="methods-grid">
           <p><strong>股票範圍。</strong> 普通股及 ADR；系統設計預留 ETF、基金、認股權證、單位及優先股的排除規則。收市價、成交量和成交金額條件會在每日更新程序中重新套用。</p>
           <p><strong>技術讀數。</strong> 20／50 日線百分比的分母只包括擁有足夠交易日資料的證券；SPY 和 QQQ 讀數使用收市價相對 50 日 EMA 的 14 日 ATR 距離。</p>
-          <p><strong>領導股與行業。</strong> 領導股條件為符合分析股票池、成交金額門檻及相對 63 個交易日前收市價的動量門檻。行業組成只有在逐代號 SIC 資料及歸類規則完成校對後才發布；未驗證的粗略標籤不會顯示為排行結論。</p>
+          <p><strong>領導股與行業。</strong> 領導股條件為符合分析股票池、成交金額門檻及相對 63 個交易日前收市價的動量門檻。行業組成以 SEC submissions 的逐公司 SIC 資料套用 CRC SIC taxonomy v1；沒有 CIK、沒有 SIC 或不在固定對照範圍的公司歸入 Unclassified。這是 CRC 的固定研究規則，不是其他網站的未公開分類規則。</p>
           <p><strong>資料更新。</strong> GitHub Actions 只在資料完整和品質檢查通過後寫入每日結果；如資料尚未完成，網站保留上一個成功交易日。</p>
         </div>
       </section>

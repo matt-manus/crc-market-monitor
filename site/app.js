@@ -73,6 +73,17 @@ function renderIndustry(rows, status, message) {
   }).join("");
 }
 
+function renderIndustrySource(data) {
+  const coverage = data.industryCoverage || {};
+  const note = $("#industry-source-note");
+  if (!note) return;
+  if (data.industryStatus === "crc_sic_v1") {
+    note.textContent = `${data.industryMessage} SIC 快取：${coverage.withSic || 0}／${coverage.candidateCikMatched || 0} 間有 CIK 公司；規則：${coverage.taxonomyVersion || "CRC SIC taxonomy v1"}。`;
+    return;
+  }
+  note.textContent = data.industryMessage || "行業分類資料尚未完成。";
+}
+
 function renderTrend(values) {
   const svg = $("#leader-trend");
   if (!values.length) { svg.innerHTML = ""; return; }
@@ -97,7 +108,7 @@ async function loadDashboard() {
     $("#breadth-date").textContent = data.asOf || "尚未更新";
     $("#header-meta").textContent = `收市 ${data.asOf || "—"}　｜　總分析股票 ${number(data.summary?.universeN)} 隻　｜　${data.source || "未設定資料來源"}`;
     if (data.status !== "live") { const box = $("#data-status"); box.classList.add("visible"); box.textContent = data.message || "目前尚未載入已驗證的市場資料。"; }
-    renderKpis(data.summary || {}); renderHistory(data.history || []); renderPulse(data.history || []); renderLeaderKpis(data.summary || {}); renderIndustry(data.industry || [], data.industryStatus, data.industryMessage); renderTrend(data.leaderTrend || []);
+    renderKpis(data.summary || {}); renderHistory(data.history || []); renderPulse(data.history || []); renderLeaderKpis(data.summary || {}); renderIndustry(data.industry || [], data.industryStatus, data.industryMessage); renderIndustrySource(data); renderTrend(data.leaderTrend || []);
   } catch (error) { $("#data-status").classList.add("visible"); $("#data-status").textContent = `無法載入每日資料：${error.message}`; }
 }
 loadDashboard();

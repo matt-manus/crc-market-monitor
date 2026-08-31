@@ -10,16 +10,17 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from update_market import OVERRIDES_PATH, STATE_PATH, build_output, load_json, summarize, write_json_atomic
+from update_market import OVERRIDES_PATH, STATE_PATH, build_output, load_json, load_sic_industry_map, summarize, write_json_atomic
 
 
 def main() -> int:
     state = load_json(STATE_PATH, {"bars": {}, "metadata": {}, "summaries": []})
     overrides = load_json(OVERRIDES_PATH, {"excludedTickers": [], "industryOverrides": {}})
+    sic_industry_map, sic_coverage = load_sic_industry_map()
     sessions = sorted({bar["date"] for bars in state.get("bars", {}).values() for bar in bars})
     summaries = []
     for session in sessions:
-        summary = summarize(state, session, overrides)
+        summary = summarize(state, session, overrides, sic_industry_map, sic_coverage)
         if summary is not None:
             summaries.append(summary)
     if not summaries:

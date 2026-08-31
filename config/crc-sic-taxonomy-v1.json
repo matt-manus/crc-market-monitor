@@ -16,7 +16,7 @@
     {"industry": "Computer Hardware", "sic": [3571, 3572, 3575, 3576, 3577, 3578, 3579, 3674, 3675, 3676, 3677, 3678, 3679]},
     {"industry": "Transportation & Logistics", "ranges": [[4000, 4799]]},
     {"industry": "Telecom & Media", "ranges": [[4800, 4899]]},
-    {"industry": "Professional Services", "ranges": [[7300, 7369], [7380, 7399], [8700, 8999]]},
+    {"industry": "Professional Services", "ranges": [[8700, 8999]]},
     {"industry": "Business Services", "ranges": [[7300, 7369], [7380, 7399]]},
     {"industry": "Real Estate", "ranges": [[6500, 6599]]},
     {"industry": "Consumer Products", "ranges": [[2000, 2399], [2900, 2999], [3600, 3999]]}
