@@ -17,3 +17,8 @@
 - [x] 保存首次成功運行的 Actions 結果和輸出版本，作為日後每日更新的基線。
 - [x] 撰寫從建立 private repository、設定 Secrets、測試每日工作到個人查看的逐步說明。
 - [x] 驗證程式碼及工作流格式，然後推送至使用者的 private GitHub repository。
+- [ ] 確認網站網址採公開存取或登入保護模式，並記錄相應的資料展示界線。
+- [ ] 選擇可由手機完成授權的靜態網站部署服務，將 private GitHub repository 的 `site/` 資料夾連接為部署來源。
+- [ ] 部署 CRC Market Monitor，確保首頁載入 `site/data/latest.json` 的已驗證真實市場數據。
+- [ ] 用瀏覽器檢查部署網址的圖表、繁體中文排版與資料日期，並驗證後續 GitHub 更新會觸發網站部署。
+- [ ] 提供使用者可在手機打開的網站網址與最簡查看指南。

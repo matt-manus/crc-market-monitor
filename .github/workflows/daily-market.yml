@@ -53,14 +53,22 @@ jobs:
           if [ -n "${{ inputs.as_of }}" ]; then ARGS="$ARGS --as-of ${{ inputs.as_of }}"; fi
           python scripts/update_market.py $ARGS
 
+      - name: Synchronize Pages files after a verified update
+        run: |
+          if ! git diff --quiet -- site/data/; then
+            rm -rf docs
+            cp -R site docs
+            touch docs/.nojekyll
+          fi
+
       - name: Commit a verified update only
         run: |
-          if git diff --quiet -- data/ site/data/; then
+          if git diff --quiet -- data/ site/data/ docs/; then
             echo "No verified market update to commit."
             exit 0
           fi
           git config user.name "CRC Market Monitor"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ site/data/
+          git add data/ site/data/ docs/
           git commit -m "data: refresh market metrics [skip ci]"
           git push

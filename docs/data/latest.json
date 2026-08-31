@@ -1,0 +1,62 @@
+{
+  "status": "live",
+  "asOf": "2026-08-28",
+  "updatedAt": "2026-08-31T06:26:48.032369+00:00",
+  "source": "個人 Massive 資料服務 · 私人用途",
+  "message": "",
+  "summary": {
+    "date": "2026-08-28",
+    "up4": 51,
+    "down4": 370,
+    "sma20Pct": 45.2,
+    "sma20N": 2452,
+    "sma50Pct": 52.8,
+    "sma50N": 2424,
+    "spyAtr": 2.25,
+    "qqqAtr": 0.18,
+    "mliReturn": -0.68,
+    "mliUpPct": 44.1,
+    "mliN": 499,
+    "universeN": 2459,
+    "sp500Close": null,
+    "industry": [
+      {
+        "name": "Unclassified",
+        "leaderN": 499,
+        "leaderShare": 100.0,
+        "poolShare": 100.0,
+        "penetration": 20.3,
+        "excess": 0.0
+      }
+    ]
+  },
+  "history": [
+    {
+      "date": "08-28",
+      "up4": 51,
+      "down4": 370,
+      "sma20Pct": 45.2,
+      "sma50Pct": 52.8,
+      "spyAtr": 2.25,
+      "qqqAtr": 0.18,
+      "mliReturn": -0.68,
+      "mliUpPct": 44.1,
+      "mliN": 499,
+      "universeN": 2459,
+      "sp500Close": null
+    }
+  ],
+  "industry": [
+    {
+      "name": "Unclassified",
+      "leaderN": 499,
+      "leaderShare": 100.0,
+      "poolShare": 100.0,
+      "penetration": 20.3,
+      "excess": 0.0
+    }
+  ],
+  "leaderTrend": [
+    20.3
+  ]
+}

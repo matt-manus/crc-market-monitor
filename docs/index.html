@@ -1,0 +1,138 @@
+<!doctype html>
+<!--
+  CRC Market Monitor visual reference: user-authorized market-monitor screenshots.
+  Fidelity rules: cold-gray canvas, compact Traditional Chinese data editorial layout,
+  black hairline dividers, green/red breadth scale, navy industry comparison bars.
+-->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>CRC Market Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="masthead">
+        <div class="brand-block">
+          <p class="eyebrow">CRC / PRIVATE RESEARCH</p>
+          <h1>市寬與動能監察表</h1>
+          <p id="header-meta" class="meta-line">正在載入市場資料狀態</p>
+        </div>
+        <nav aria-label="頁面導覽">
+          <a href="#breadth">市場廣度</a>
+          <a href="#leaders">動力股</a>
+          <a href="#methods">定義</a>
+        </nav>
+      </header>
+
+      <section id="data-status" class="data-status" aria-live="polite"></section>
+
+      <section id="breadth" class="section-block">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">01 / MARKET BREADTH</p>
+            <h2><span id="breadth-date">—</span> 讀數</h2>
+          </div>
+          <p class="section-note">以收市對收市計算。顏色是範圍提示，不代表買賣訊號。</p>
+        </div>
+
+        <div id="kpis" class="kpi-grid"></div>
+
+        <article class="panel ledger-panel">
+          <div class="panel-header">
+            <div>
+              <h3>每日監察表</h3>
+              <p>本頁只讀取已完成計算的每日個人研究彙總結果。</p>
+            </div>
+            <span class="reference-tag">REFERENCE / ±300</span>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日期</th><th>UP 4%</th><th>DN 4%</th><th>% &gt; 20D</th><th>% &gt; 50D</th><th>SPY ATR</th><th>QQQ ATR</th><th>MLI %</th><th>MLI 升%</th><th>MLI N</th><th>股票總數</th><th>S&amp;P 500</th>
+                </tr>
+              </thead>
+              <tbody id="history-body"></tbody>
+            </table>
+          </div>
+          <div class="legend breadth-legend" aria-label="市場廣度色彩說明">
+            <span><i class="swatch up-strong"></i>Up 4% ≥ 300</span>
+            <span><i class="swatch up-soft"></i>Up 4% &lt; 300</span>
+            <span><i class="swatch down-soft"></i>Down 4% &lt; 300</span>
+            <span><i class="swatch down-strong"></i>Down 4% ≥ 300</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="section-block pulse-block">
+        <div class="section-heading compact">
+          <div>
+            <p class="section-index">02 / MOMENTUM PULSE</p>
+            <h2>4% 動量脈搏</h2>
+          </div>
+          <p class="section-note">上半部為升幅至少 4% 的證券數目；下半部為跌幅至少 4% 的證券數目。</p>
+        </div>
+        <article class="panel chart-panel">
+          <div id="pulse-chart" class="pulse-chart" aria-label="4% 動量脈搏柱狀圖"></div>
+          <div class="chart-axis"><span>較早</span><span>最新</span></div>
+          <div class="legend"><span><i class="swatch up-strong"></i>Up 4% ≥ 300</span><span><i class="swatch down-strong"></i>Down 4% ≥ 300</span></div>
+        </article>
+      </section>
+
+      <section id="leaders" class="section-block leaders-block">
+        <div class="section-heading">
+          <div>
+            <p class="section-index">03 / LEADERS</p>
+            <h2>動力股分析</h2>
+          </div>
+          <p class="section-note">領導股以流動性及 63 個交易日動量規則界定；完整規則見頁末。</p>
+        </div>
+
+        <div id="leader-kpis" class="leader-kpi-grid"></div>
+
+        <article class="panel industry-panel">
+          <div class="panel-header">
+            <div>
+              <h3>行業組成</h3>
+              <p>深藍橫條為領導股佔比；灰色刻度為同一行業於分析股票池內的佔比。</p>
+            </div>
+            <span class="reference-tag">LEADER / POOL</span>
+          </div>
+          <div class="industry-table" role="table" aria-label="領導股行業組成">
+            <div class="industry-row industry-head" role="row"><span>行業</span><span>佔比</span><span>數量</span><span>佔比%</span><span>池內%</span><span>滲透率</span><span>超額 PP</span></div>
+            <div id="industry-body"></div>
+          </div>
+          <div class="legend"><span><i class="swatch navy"></i>橫條長度：領導股佔比</span><span><i class="swatch tick"></i>灰色刻度：池內佔比</span></div>
+        </article>
+
+        <div class="trend-layout">
+          <div class="trend-copy">
+            <p class="section-index">04 / LEADER TREND</p>
+            <h3>領導股數目走勢</h3>
+            <p>領導股數目佔每日分析股票池的百分比。每日分母重新界定，因此可觀察有資格股票中實際跑出的比例。</p>
+          </div>
+          <article class="panel trend-panel"><svg id="leader-trend" viewBox="0 0 700 230" role="img" aria-label="領導股數目比例趨勢圖"></svg></article>
+        </div>
+      </section>
+
+      <section id="methods" class="methods-section">
+        <div class="methods-title"><p class="section-index">05 / METHODS</p><h2>方法與資料狀態</h2></div>
+        <div class="methods-grid">
+          <p><strong>股票範圍。</strong> 普通股及 ADR；系統設計預留 ETF、基金、認股權證、單位及優先股的排除規則。收市價、成交量和成交金額條件會在每日更新程序中重新套用。</p>
+          <p><strong>技術讀數。</strong> 20／50 日線百分比的分母只包括擁有足夠交易日資料的證券；SPY 和 QQQ 讀數使用收市價相對 50 日 EMA 的 14 日 ATR 距離。</p>
+          <p><strong>領導股。</strong> 領導股條件為符合分析股票池、成交金額門檻及相對 63 個交易日前收市價的動量門檻。這是個人研究指標，不是發行指數或交易標的。</p>
+          <p><strong>資料更新。</strong> GitHub Actions 只在資料完整和品質檢查通過後寫入每日結果；如資料尚未完成，網站保留上一個成功交易日。</p>
+        </div>
+      </section>
+
+      <footer><span>CRC Market Monitor · Personal research workspace</span><span>Not investment advice</span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
