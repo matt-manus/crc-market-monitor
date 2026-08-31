@@ -1,8 +1,8 @@
 {
   "status": "live",
   "asOf": "2026-08-28",
-  "updatedAt": "2026-08-31T08:48:11.086875+00:00",
-  "source": "Massive 日線資料 · Nasdaq 行業標籤",
+  "updatedAt": "2026-08-31T08:50:13.734509+00:00",
+  "source": "Massive 日線資料",
   "message": "",
   "summary": {
     "date": "2026-08-28",
@@ -580,6 +580,8 @@
       "excess": -3.8
     }
   ],
+  "industryStatus": "awaiting_sic_verification",
+  "industryMessage": "行業成員現正按可驗證 SIC 資料校對；為免以粗略標籤造成錯誤排行，暫停顯示未驗證行業數字。",
   "leaderTrend": [
     0.0,
     0.0,
