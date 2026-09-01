@@ -393,7 +393,7 @@ def build_output(state: dict[str, Any]) -> dict[str, Any]:
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bootstrap", action="store_true")
-    parser.add_argument("--as-of", type=date.fromisoformat, default=date.today())
+    parser.add_argument("--as-of", type=date.fromisoformat, default=None)
     parser.add_argument("--refresh-metadata", action="store_true")
     parser.add_argument("--refresh-benchmarks", action="store_true")
     args = parser.parse_args()
@@ -420,7 +420,17 @@ def main() -> int:
         except requests.RequestException as error:
             print(f"Industry mapping refresh failed; preserving cached mapping: {error}")
 
-    candidates = session_candidates(args.as_of, args.bootstrap)
+    # Manual runs often happen before the U.S. session closes. If no explicit
+    # date is supplied, probe recent weekdays and use the newest completed one.
+    run_end = args.as_of or today
+    candidates = session_candidates(run_end, args.bootstrap)
+    if not args.bootstrap and args.as_of is None:
+        candidates = []
+        cursor = run_end
+        while len(candidates) < 7:
+            if cursor.weekday() < 5:
+                candidates.append(cursor)
+            cursor -= timedelta(days=1)
     if args.bootstrap:
         # Resolve the latest actual market session first, then build history only
         # for securities that meet that session's price/volume screen.
@@ -451,7 +461,7 @@ def main() -> int:
         requested_sessions = candidates
 
     should_refresh_benchmarks = args.bootstrap or args.refresh_benchmarks or any(len(state["bars"].get(ticker, [])) < 150 for ticker in ("SPY", "QQQ"))
-    benchmark_end = target_date if args.bootstrap and target_date else args.as_of
+    benchmark_end = target_date if args.bootstrap and target_date else run_end
     if should_refresh_benchmarks:
         benchmark_start = benchmark_end - timedelta(days=450)
         for ticker in ("SPY", "QQQ"):
@@ -468,6 +478,8 @@ def main() -> int:
         except requests.RequestException as error:
             print(f"Provider request failed for {candidate}: {error}")
             if not args.bootstrap:
+                if args.as_of is None:
+                    continue
                 return 1
             continue
         if not raw_bars:
@@ -482,8 +494,10 @@ def main() -> int:
                     daily_keep.add(ticker)
             ingest_bars(state, raw_bars, candidate, daily_keep)
         fetched_sessions.append(candidate.isoformat())
-
+        if not args.bootstrap and args.as_of is None:
+            break
     if not fetched_sessions:
+
         print("SAFE EXIT: no completed provider session was returned; existing published output is untouched.")
         return 0
     # Bootstrap fetches historical sessions after the latest completed market
