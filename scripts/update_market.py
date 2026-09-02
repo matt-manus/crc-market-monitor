@@ -154,6 +154,10 @@ def get_json(base_url: str, path_or_url: str, api_key: str, params: dict[str, An
         response = requests.get(url, params=query, timeout=55)
         LAST_REQUEST_AT = time.monotonic()
         if response.status_code != 429:
+            if response.status_code == 403:
+                # Keep the provider's diagnostic text in Actions logs without
+                # ever printing the API key or request URL.
+                print(f"Provider 403 diagnostic: {response.text[:500]}")
             response.raise_for_status()
             return response.json()
         retry_after = response.headers.get("Retry-After")
