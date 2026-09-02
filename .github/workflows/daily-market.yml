@@ -2,10 +2,10 @@ name: CRC daily market refresh
 
 on:
   schedule:
-    # 03:00 UTC Tue-Sat (11:00 HKT Tue-Sat). This is several hours after
-    # the U.S. regular session; GitHub may delay scheduled runs, and the
-    # script also refuses to publish a partial or inconsistent trade date.
-    - cron: "0 3 * * 2-6"
+    # 05:00 UTC Tue-Sat (13:00 HKT Tue-Sat). Massive's EOD plan can reject
+    # the prior U.S. session until the provider's calendar day has ended;
+    # this is after midnight U.S. Eastern Time in both DST and standard time.
+    - cron: "0 5 * * 2-6"
   workflow_dispatch:
     inputs:
       bootstrap:
