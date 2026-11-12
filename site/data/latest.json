@@ -1,161 +1,161 @@
 {
   "status": "live",
-  "asOf": "2026-11-10",
-  "updatedAt": "2026-11-11T12:19:16.239207+00:00",
+  "asOf": "2026-11-11",
+  "updatedAt": "2026-11-12T13:28:34.393189+00:00",
   "source": "Massive 日線資料 · SEC SIC 分類",
   "message": "",
   "summary": {
-    "date": "2026-11-10",
-    "up4": 111,
-    "down4": 250,
-    "sma20Pct": 60.8,
-    "sma20N": 2341,
-    "sma50Pct": 55.0,
-    "sma50N": 2178,
-    "spyAtr": -0.98,
-    "qqqAtr": -2.02,
-    "mliReturn": 0.12,
-    "mliUpPct": 53.8,
-    "mliN": 212,
-    "universeN": 2450,
-    "analysisN": 2334,
+    "date": "2026-11-11",
+    "up4": 311,
+    "down4": 77,
+    "sma20Pct": 63.1,
+    "sma20N": 2319,
+    "sma50Pct": 56.7,
+    "sma50N": 2154,
+    "spyAtr": -0.16,
+    "qqqAtr": -1.11,
+    "mliReturn": 1.29,
+    "mliUpPct": 61.0,
+    "mliN": 195,
+    "universeN": 2401,
+    "analysisN": 2278,
     "sp500Close": null,
     "industry": [
       {
         "name": "Biotech & Pharma",
-        "leaderN": 42,
-        "leaderShare": 19.8,
-        "poolShare": 8.5,
-        "penetration": 21.1,
-        "excess": 11.3
+        "leaderN": 37,
+        "leaderShare": 19.0,
+        "poolShare": 8.6,
+        "penetration": 19.0,
+        "excess": 10.4
       },
       {
         "name": "Software & IT Services",
-        "leaderN": 40,
-        "leaderShare": 18.9,
-        "poolShare": 8.2,
-        "penetration": 20.8,
-        "excess": 10.6
-      },
-      {
-        "name": "Unclassified",
-        "leaderN": 20,
-        "leaderShare": 9.4,
-        "poolShare": 24.5,
-        "penetration": 3.5,
-        "excess": -15.1
+        "leaderN": 33,
+        "leaderShare": 16.9,
+        "poolShare": 8.6,
+        "penetration": 16.8,
+        "excess": 8.3
       },
       {
         "name": "Retail",
-        "leaderN": 20,
-        "leaderShare": 9.4,
-        "poolShare": 4.3,
-        "penetration": 19.8,
-        "excess": 5.1
+        "leaderN": 22,
+        "leaderShare": 11.3,
+        "poolShare": 4.4,
+        "penetration": 21.8,
+        "excess": 6.8
       },
       {
-        "name": "Business Services",
-        "leaderN": 15,
-        "leaderShare": 7.1,
-        "poolShare": 3.6,
-        "penetration": 18.1,
-        "excess": 3.5
-      },
-      {
-        "name": "Health Care Services",
-        "leaderN": 14,
-        "leaderShare": 6.6,
-        "poolShare": 1.8,
-        "penetration": 34.1,
-        "excess": 4.8
-      },
-      {
-        "name": "Banks & Financial Services",
-        "leaderN": 13,
-        "leaderShare": 6.1,
-        "poolShare": 13.1,
-        "penetration": 4.3,
-        "excess": -6.9
+        "name": "Unclassified",
+        "leaderN": 17,
+        "leaderShare": 8.7,
+        "poolShare": 23.6,
+        "penetration": 3.2,
+        "excess": -14.9
       },
       {
         "name": "Instruments & Medical Devices",
         "leaderN": 13,
-        "leaderShare": 6.1,
-        "poolShare": 3.7,
-        "penetration": 14.9,
-        "excess": 2.4
+        "leaderShare": 6.7,
+        "poolShare": 3.8,
+        "penetration": 15.1,
+        "excess": 2.9
+      },
+      {
+        "name": "Banks & Financial Services",
+        "leaderN": 12,
+        "leaderShare": 6.2,
+        "poolShare": 13.2,
+        "penetration": 4.0,
+        "excess": -7.0
+      },
+      {
+        "name": "Health Care Services",
+        "leaderN": 12,
+        "leaderShare": 6.2,
+        "poolShare": 1.8,
+        "penetration": 29.3,
+        "excess": 4.4
+      },
+      {
+        "name": "Business Services",
+        "leaderN": 11,
+        "leaderShare": 5.6,
+        "poolShare": 3.6,
+        "penetration": 13.6,
+        "excess": 2.1
       },
       {
         "name": "Consumer Products",
-        "leaderN": 10,
-        "leaderShare": 4.7,
+        "leaderN": 11,
+        "leaderShare": 5.6,
         "poolShare": 8.3,
-        "penetration": 5.2,
-        "excess": -3.6
+        "penetration": 5.8,
+        "excess": -2.7
       },
       {
         "name": "Industrial Materials",
-        "leaderN": 9,
-        "leaderShare": 4.2,
-        "poolShare": 5.5,
-        "penetration": 7.0,
-        "excess": -1.2
+        "leaderN": 8,
+        "leaderShare": 4.1,
+        "poolShare": 5.4,
+        "penetration": 6.5,
+        "excess": -1.3
+      },
+      {
+        "name": "Transportation & Logistics",
+        "leaderN": 4,
+        "leaderShare": 2.1,
+        "poolShare": 3.0,
+        "penetration": 5.9,
+        "excess": -0.9
       },
       {
         "name": "Computer Hardware",
         "leaderN": 3,
-        "leaderShare": 1.4,
-        "poolShare": 4.2,
-        "penetration": 3.1,
-        "excess": -2.7
+        "leaderShare": 1.5,
+        "poolShare": 4.1,
+        "penetration": 3.2,
+        "excess": -2.6
       },
       {
         "name": "Insurance",
         "leaderN": 3,
-        "leaderShare": 1.4,
+        "leaderShare": 1.5,
         "poolShare": 2.4,
         "penetration": 5.5,
         "excess": -0.9
       },
       {
-        "name": "Transportation & Logistics",
+        "name": "Professional Services",
         "leaderN": 3,
-        "leaderShare": 1.4,
-        "poolShare": 3.0,
-        "penetration": 4.3,
-        "excess": -1.5
+        "leaderShare": 1.5,
+        "poolShare": 0.5,
+        "penetration": 25.0,
+        "excess": 1.0
       },
       {
         "name": "Petroleum Refining",
         "leaderN": 3,
-        "leaderShare": 1.4,
+        "leaderShare": 1.5,
         "poolShare": 3.3,
         "penetration": 3.9,
-        "excess": -1.9
+        "excess": -1.8
       },
       {
-        "name": "Professional Services",
+        "name": "Telecom & Media",
         "leaderN": 2,
-        "leaderShare": 0.9,
-        "poolShare": 0.5,
-        "penetration": 16.7,
-        "excess": 0.4
+        "leaderShare": 1.0,
+        "poolShare": 1.6,
+        "penetration": 5.4,
+        "excess": -0.6
       },
       {
         "name": "Metals & Coal Mining",
         "leaderN": 1,
         "leaderShare": 0.5,
         "poolShare": 3.0,
-        "penetration": 1.4,
+        "penetration": 1.5,
         "excess": -2.5
-      },
-      {
-        "name": "Telecom & Media",
-        "leaderN": 1,
-        "leaderShare": 0.5,
-        "poolShare": 1.6,
-        "penetration": 2.7,
-        "excess": -1.1
       }
     ],
     "industrySource": "SEC submissions SIC mapped to CRC fixed taxonomy",
@@ -167,6 +167,20 @@
     }
   },
   "history": [
+    {
+      "date": "11-11",
+      "up4": 311,
+      "down4": 77,
+      "sma20Pct": 63.1,
+      "sma50Pct": 56.7,
+      "spyAtr": -0.16,
+      "qqqAtr": -1.11,
+      "mliReturn": 1.29,
+      "mliUpPct": 61.0,
+      "mliN": 195,
+      "universeN": 2401,
+      "sp500Close": null
+    },
     {
       "date": "11-10",
       "up4": 111,
@@ -432,158 +446,144 @@
       "mliN": 281,
       "universeN": 2529,
       "sp500Close": null
-    },
-    {
-      "date": "10-14",
-      "up4": 46,
-      "down4": 501,
-      "sma20Pct": 37.5,
-      "sma50Pct": 27.9,
-      "spyAtr": 0.63,
-      "qqqAtr": 0.03,
-      "mliReturn": -1.68,
-      "mliUpPct": 33.1,
-      "mliN": 239,
-      "universeN": 2528,
-      "sp500Close": null
     }
   ],
   "industry": [
     {
       "name": "Biotech & Pharma",
-      "leaderN": 42,
-      "leaderShare": 19.8,
-      "poolShare": 8.5,
-      "penetration": 21.1,
-      "excess": 11.3
+      "leaderN": 37,
+      "leaderShare": 19.0,
+      "poolShare": 8.6,
+      "penetration": 19.0,
+      "excess": 10.4
     },
     {
       "name": "Software & IT Services",
-      "leaderN": 40,
-      "leaderShare": 18.9,
-      "poolShare": 8.2,
-      "penetration": 20.8,
-      "excess": 10.6
-    },
-    {
-      "name": "Unclassified",
-      "leaderN": 20,
-      "leaderShare": 9.4,
-      "poolShare": 24.5,
-      "penetration": 3.5,
-      "excess": -15.1
+      "leaderN": 33,
+      "leaderShare": 16.9,
+      "poolShare": 8.6,
+      "penetration": 16.8,
+      "excess": 8.3
     },
     {
       "name": "Retail",
-      "leaderN": 20,
-      "leaderShare": 9.4,
-      "poolShare": 4.3,
-      "penetration": 19.8,
-      "excess": 5.1
+      "leaderN": 22,
+      "leaderShare": 11.3,
+      "poolShare": 4.4,
+      "penetration": 21.8,
+      "excess": 6.8
     },
     {
-      "name": "Business Services",
-      "leaderN": 15,
-      "leaderShare": 7.1,
-      "poolShare": 3.6,
-      "penetration": 18.1,
-      "excess": 3.5
-    },
-    {
-      "name": "Health Care Services",
-      "leaderN": 14,
-      "leaderShare": 6.6,
-      "poolShare": 1.8,
-      "penetration": 34.1,
-      "excess": 4.8
-    },
-    {
-      "name": "Banks & Financial Services",
-      "leaderN": 13,
-      "leaderShare": 6.1,
-      "poolShare": 13.1,
-      "penetration": 4.3,
-      "excess": -6.9
+      "name": "Unclassified",
+      "leaderN": 17,
+      "leaderShare": 8.7,
+      "poolShare": 23.6,
+      "penetration": 3.2,
+      "excess": -14.9
     },
     {
       "name": "Instruments & Medical Devices",
       "leaderN": 13,
-      "leaderShare": 6.1,
-      "poolShare": 3.7,
-      "penetration": 14.9,
-      "excess": 2.4
+      "leaderShare": 6.7,
+      "poolShare": 3.8,
+      "penetration": 15.1,
+      "excess": 2.9
+    },
+    {
+      "name": "Banks & Financial Services",
+      "leaderN": 12,
+      "leaderShare": 6.2,
+      "poolShare": 13.2,
+      "penetration": 4.0,
+      "excess": -7.0
+    },
+    {
+      "name": "Health Care Services",
+      "leaderN": 12,
+      "leaderShare": 6.2,
+      "poolShare": 1.8,
+      "penetration": 29.3,
+      "excess": 4.4
+    },
+    {
+      "name": "Business Services",
+      "leaderN": 11,
+      "leaderShare": 5.6,
+      "poolShare": 3.6,
+      "penetration": 13.6,
+      "excess": 2.1
     },
     {
       "name": "Consumer Products",
-      "leaderN": 10,
-      "leaderShare": 4.7,
+      "leaderN": 11,
+      "leaderShare": 5.6,
       "poolShare": 8.3,
-      "penetration": 5.2,
-      "excess": -3.6
+      "penetration": 5.8,
+      "excess": -2.7
     },
     {
       "name": "Industrial Materials",
-      "leaderN": 9,
-      "leaderShare": 4.2,
-      "poolShare": 5.5,
-      "penetration": 7.0,
-      "excess": -1.2
+      "leaderN": 8,
+      "leaderShare": 4.1,
+      "poolShare": 5.4,
+      "penetration": 6.5,
+      "excess": -1.3
+    },
+    {
+      "name": "Transportation & Logistics",
+      "leaderN": 4,
+      "leaderShare": 2.1,
+      "poolShare": 3.0,
+      "penetration": 5.9,
+      "excess": -0.9
     },
     {
       "name": "Computer Hardware",
       "leaderN": 3,
-      "leaderShare": 1.4,
-      "poolShare": 4.2,
-      "penetration": 3.1,
-      "excess": -2.7
+      "leaderShare": 1.5,
+      "poolShare": 4.1,
+      "penetration": 3.2,
+      "excess": -2.6
     },
     {
       "name": "Insurance",
       "leaderN": 3,
-      "leaderShare": 1.4,
+      "leaderShare": 1.5,
       "poolShare": 2.4,
       "penetration": 5.5,
       "excess": -0.9
     },
     {
-      "name": "Transportation & Logistics",
+      "name": "Professional Services",
       "leaderN": 3,
-      "leaderShare": 1.4,
-      "poolShare": 3.0,
-      "penetration": 4.3,
-      "excess": -1.5
+      "leaderShare": 1.5,
+      "poolShare": 0.5,
+      "penetration": 25.0,
+      "excess": 1.0
     },
     {
       "name": "Petroleum Refining",
       "leaderN": 3,
-      "leaderShare": 1.4,
+      "leaderShare": 1.5,
       "poolShare": 3.3,
       "penetration": 3.9,
-      "excess": -1.9
+      "excess": -1.8
     },
     {
-      "name": "Professional Services",
+      "name": "Telecom & Media",
       "leaderN": 2,
-      "leaderShare": 0.9,
-      "poolShare": 0.5,
-      "penetration": 16.7,
-      "excess": 0.4
+      "leaderShare": 1.0,
+      "poolShare": 1.6,
+      "penetration": 5.4,
+      "excess": -0.6
     },
     {
       "name": "Metals & Coal Mining",
       "leaderN": 1,
       "leaderShare": 0.5,
       "poolShare": 3.0,
-      "penetration": 1.4,
+      "penetration": 1.5,
       "excess": -2.5
-    },
-    {
-      "name": "Telecom & Media",
-      "leaderN": 1,
-      "leaderShare": 0.5,
-      "poolShare": 1.6,
-      "penetration": 2.7,
-      "excess": -1.1
     }
   ],
   "industryStatus": "crc_sic_v1",
@@ -718,6 +718,7 @@
     7.0,
     6.9,
     8.4,
-    8.7
+    8.7,
+    8.1
   ]
 }
